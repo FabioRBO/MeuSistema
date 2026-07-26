@@ -1,0 +1,520 @@
+
+.bible-main {
+  padding-bottom: 16px;
+}
+
+.bible-toolbar {
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+}
+
+.toolbar-grid {
+  display: grid;
+  grid-template-columns: 1fr .7fr 1.45fr auto;
+  gap: 14px;
+  align-items: end;
+}
+
+.toolbar-field label,
+.font-controls label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-muted);
+  font-size: .8rem;
+}
+
+.form-select,
+.form-control,
+.btn-control {
+  background-color: var(--panel-bg-2);
+  border-color: var(--panel-border);
+  color: var(--text-main);
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 .2rem rgba(var(--accent-rgb),.14);
+}
+
+.font-controls .btn-group { display: flex; gap: 6px; }
+
+.btn-control {
+  min-width: 54px;
+  border-radius: 8px !important;
+}
+
+.toolbar-bottom {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.accent-picker-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.accent-picker { display: flex; gap: 10px; }
+
+.accent-dot {
+  width: 34px;
+  height: 34px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+}
+
+.accent-dot.active {
+  border-color: var(--text-main);
+  outline: 2px solid var(--accent);
+}
+
+.accent-dot.purple { background:#7c3aed; }
+.accent-dot.blue { background:#0d8eff; }
+.accent-dot.green { background:#00b83d; }
+.accent-dot.orange { background:#ff8e00; }
+.accent-dot.red { background:#ff3f45; }
+.accent-dot.gray { background:#b8bec7; }
+
+.view-buttons { display:flex; gap:10px; }
+
+.btn-view {
+  border:1px solid var(--panel-border);
+  color:var(--text-main);
+  background:var(--panel-bg);
+}
+
+.btn-view.active {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+
+.bible-layout {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 18px;
+  align-items: start;
+}
+
+.bible-content-panel,
+.details-card {
+  border-radius: 16px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--shadow);
+}
+
+.bible-content-panel { overflow: hidden; }
+
+.bible-header-row {
+  display:grid;
+  grid-template-columns: 52px 1.1fr 1fr 1fr 76px;
+  gap: 16px;
+  padding: 16px;
+  color:var(--accent);
+  font-weight:700;
+  border-bottom:1px solid rgba(var(--accent-rgb),.35);
+  background:linear-gradient(90deg, rgba(var(--accent-rgb),.20), rgba(var(--accent-rgb),.08));
+}
+
+.words-list { padding: 10px; }
+
+.word-row {
+  position:relative;
+  display:grid;
+  grid-template-columns: 52px 1.1fr 1fr 1fr 76px;
+  gap:16px;
+  align-items:center;
+  min-height:116px;
+  margin-bottom:10px;
+  padding:16px;
+  border:1px solid var(--panel-border);
+  border-radius:12px;
+  background:var(--panel-bg-2);
+  cursor:pointer;
+  transition:border-color .18s ease, transform .18s ease;
+}
+
+.word-row:hover,
+.word-row.active {
+  border-color:var(--accent);
+  transform:translateY(-1px);
+}
+
+.word-row.active::before {
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:6px;
+  border-radius:12px 0 0 12px;
+  background:var(--accent);
+}
+
+.word-number {
+  width:42px;
+  height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:8px;
+  background:rgba(var(--accent-rgb),.16);
+  font-size:1.15rem;
+}
+
+.word-original {
+  font-size:2rem;
+  font-family:"Times New Roman",serif;
+}
+
+.word-original.hebraico { direction:rtl; text-align:left; }
+
+.word-translit,
+.word-portuguese { font-size:1.15rem; }
+
+.word-meta {
+  margin-top:8px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.strong-tag,
+.mini-action {
+  border:1px solid var(--panel-border);
+  border-radius:7px;
+  padding:5px 10px;
+  background:transparent;
+  color:var(--text-main);
+  font-size:.85rem;
+}
+
+.word-actions {
+  display:flex;
+  gap:6px;
+  justify-content:flex-end;
+}
+
+.line-mode-card,
+.table-mode-wrap {
+  margin: 12px;
+  padding: 22px;
+  border-radius: 12px;
+  background: var(--panel-bg-2);
+  border: 1px solid var(--panel-border);
+}
+
+.line-original {
+  font-size:2rem;
+  line-height:1.8;
+  font-family:"Times New Roman",serif;
+}
+
+.line-original.hebraico { direction:rtl; text-align:left; }
+
+.line-translit { color:var(--accent); font-weight:700; }
+.line-portuguese { font-size:1.08rem; }
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text-main);
+  --bs-table-border-color: var(--panel-border);
+}
+
+.details-column {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.details-card { padding:20px; }
+
+.details-card-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.details-card h2,
+.details-card h3 { margin:0 0 14px; }
+
+.detail-original {
+  color:var(--accent);
+  font-size:2.4rem;
+  font-family:"Times New Roman",serif;
+}
+
+.detail-original.hebraico { direction:rtl; text-align:left; }
+
+.detail-translit {
+  margin:8px 0;
+  color:var(--accent);
+  font-size:1.25rem;
+}
+
+.note-area { min-height:140px; }
+
+.pagination-demo {
+  padding: 12px 16px 18px;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+
+.pagination-demo button {
+  min-width:34px;
+  height:34px;
+  border:1px solid var(--panel-border);
+  border-radius:7px;
+  background:var(--panel-bg-2);
+  color:var(--text-main);
+}
+
+.pagination-demo button.active {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+
+.app-footer {
+  padding:16px 0 0;
+  text-align:center;
+  color:var(--text-muted);
+  font-size:.85rem;
+}
+
+#conteudoBiblico {
+  --biblia-font-scale: 1;
+}
+
+#conteudoBiblico .word-row,
+#conteudoBiblico .grid-word-card,
+#conteudoBiblico .line-mode-card,
+#conteudoBiblico .table-mode-wrap {
+  font-size: calc(1rem * var(--biblia-font-scale));
+}
+
+#conteudoBiblico .word-original,
+#conteudoBiblico .grid-card-original,
+#conteudoBiblico .line-original {
+  font-size: calc(2rem * var(--biblia-font-scale));
+}
+
+#conteudoBiblico .word-translit,
+#conteudoBiblico .word-portuguese,
+#conteudoBiblico .grid-card-translit,
+#conteudoBiblico .grid-card-portuguese,
+#conteudoBiblico .line-translit,
+#conteudoBiblico .line-portuguese {
+  font-size: calc(1.15rem * var(--biblia-font-scale));
+}
+
+#conteudoBiblico .strong-tag,
+#conteudoBiblico .mini-action,
+#conteudoBiblico .table {
+  font-size: calc(.88rem * var(--biblia-font-scale));
+}
+
+@media (max-width: 1199.98px) {
+  .toolbar-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .font-controls { grid-column: 1 / -1; }
+  .bible-layout { grid-template-columns: 1fr; }
+  .details-column { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 767.98px) {
+  .toolbar-grid { grid-template-columns:1fr; }
+  .toolbar-bottom { align-items:flex-start; flex-direction:column; }
+  .view-buttons { width:100%; }
+  .view-buttons .btn { flex:1; }
+  .accent-picker-wrap { align-items:flex-start; flex-direction:column; }
+  .bible-header-row { display:none; }
+  .word-row {
+    grid-template-columns:44px 1fr;
+    gap:10px;
+    min-height:auto;
+  }
+  .word-original,
+  .word-translit,
+  .word-portuguese,
+  .word-actions {
+    grid-column:2;
+  }
+  .word-actions { justify-content:flex-start; }
+  .details-column { grid-template-columns:1fr; }
+}
+
+
+/* No modo Linhas, mantemos somente as notas pessoais */
+.bible-layout.modo-linhas {
+  grid-template-columns: minmax(0, 1fr) 380px;
+}
+
+.bible-layout.modo-linhas .lexical-details {
+  display: none;
+}
+
+.bible-layout.modo-linhas .details-column {
+  display: flex;
+}
+
+/* No modo Linhas, o cabeçalho de colunas não é necessário */
+.bible-layout.modo-linhas .bible-header-row {
+  display: none;
+}
+
+
+/* Opções de visualização */
+.view-options {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.compact-table-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: .88rem;
+  cursor: pointer;
+}
+
+/* Cartões em grade */
+.cards-grid {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.grid-word-card {
+  min-height: 210px;
+  padding: 20px;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: var(--panel-bg-2);
+  cursor: pointer;
+  position: relative;
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.grid-word-card:hover,
+.grid-word-card.active {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 30px rgba(0,0,0,.12);
+}
+
+.grid-word-card.active::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  border-radius: 14px 0 0 14px;
+  background: var(--accent);
+}
+
+.grid-card-number {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(var(--accent-rgb),.16);
+  margin-bottom: 16px;
+}
+
+.grid-card-original {
+  font-size: 2rem;
+  font-family: "Times New Roman", serif;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.grid-card-original.hebraico {
+  direction: rtl;
+  text-align: left;
+}
+
+.grid-card-translit {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.grid-card-portuguese {
+  margin-bottom: 16px;
+}
+
+.grid-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Tabela compacta */
+.table-mode-wrap.table-compacta th,
+.table-mode-wrap.table-compacta td {
+  padding-top: .35rem;
+  padding-bottom: .35rem;
+  font-size: .88rem;
+}
+
+.table-mode-wrap.table-compacta .word-original {
+  font-size: 1.35rem;
+}
+
+/* No modo grade o cabeçalho de colunas não é necessário */
+.bible-layout.modo-grade .bible-header-row {
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .bible-layout.modo-linhas {
+    grid-template-columns: 1fr;
+  }
+
+  .bible-layout.modo-linhas .details-column {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .view-options,
+  .view-buttons {
+    width: 100%;
+  }
+
+  .view-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* No modo Tabela, o cabeçalho externo de colunas é redundante */
+.bible-layout.modo-tabela .bible-header-row {
+  display: none;
+}
+
+
+/* Catálogo em JSON: Livro, Capítulo e Versículo */
+.toolbar-grid {
+  grid-template-columns: 1fr .65fr .65fr 1.45fr auto;
+}

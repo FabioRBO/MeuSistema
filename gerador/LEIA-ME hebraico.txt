@@ -1,0 +1,42 @@
+ARQUIVOS DO GERADOR HEBRAICO
+
+Copie preservando a estrutura:
+
+gerar-json-hebraico.php
+config/livros-vt.php
+
+Estrutura recomendada:
+
+seu-builder/
+├── gerar-json-hebraico.php
+├── config/
+│   └── livros-vt.php
+├── macula-hebrew/
+│   └── WLC/
+│       └── tsv/
+└── dados/
+    └── antigo-testamento/
+
+TESTE PRIMEIRO:
+
+php gerar-json-hebraico.php --inspecionar
+
+DEPOIS GERE GÊNESIS:
+
+php gerar-json-hebraico.php genesis
+
+GERAR TODOS:
+
+php gerar-json-hebraico.php --todos
+
+Se os TSVs estiverem em outro local:
+
+php gerar-json-hebraico.php genesis --base=C:\caminho\macula-hebrew\WLC\tsv
+
+O gerador:
+- procura TSVs automaticamente;
+- ignora macula_to_marble_map.tsv e marble_unmapped.tsv;
+- detecta nomes de colunas de diferentes versões;
+- gera hebraico e identifica aramaico quando a base informa;
+- gera transliteração acadêmica simplificada;
+- preserva lema, Strong, morfologia, classe e glosa disponíveis.

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <title>Login | Teologia Ninja</title>
+
+  <script>
+    (() => {
+      const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+      const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+      document.documentElement.setAttribute('data-bs-theme', tema);
+      document.documentElement.setAttribute('data-accent', cor);
+    })();
+  </script>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="pagina-login">
+
+  <button
+    id="btnTema"
+    class="btn btn-tema-login position-fixed top-0 end-0 m-3"
+    type="button"
+    aria-label="Alternar tema"
+  >🌙</button>
+
+  <main class="container min-vh-100 d-flex align-items-center justify-content-center py-4">
+    <section class="card login-card border-0 shadow-lg">
+      <div class="card-body p-4 p-md-5">
+        <div class="text-center mb-4">
+          <div class="logo-ninja mb-3">🥷</div>
+          <h1 class="h3 fw-bold mb-1">Teologia Ninja</h1>
+          <p class="text-secondary mb-0">Bíblia, mapas e estudos bíblicos</p>
+        </div>
+
+        <form id="formLogin">
+          <div class="mb-3">
+            <label for="usuario" class="form-label fw-semibold">Usuário</label>
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="usuario"
+              placeholder="Digite seu usuário"
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label for="senha" class="form-label fw-semibold">Senha</label>
+            <div class="input-group input-group-lg">
+              <input
+                type="password"
+                class="form-control"
+                id="senha"
+                placeholder="Digite sua senha"
+                required
+              >
+              <button class="btn btn-outline-secondary" type="button" id="btnMostrarSenha">👁️</button>
+            </div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="lembrar">
+            <label class="form-check-label" for="lembrar">Lembrar acesso</label>
+          </div>
+
+          <button type="submit" class="btn btn-accent btn-lg w-100">Acessar</button>
+        </form>
+
+        <p class="text-center text-secondary small mt-4 mb-0">
+          Protótipo inicial — sem autenticação real
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+</html>

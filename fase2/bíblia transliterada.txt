@@ -1,0 +1,266 @@
+Bíblia transliterada:
+
+Agora vêm as partes que vão tornar o Teologia Ninja diferente.
+
+Eu tenho várias ideias.
+
+1) Ocorrências da palavra ⭐⭐⭐⭐⭐
+
+Ao clicar em uma palavra:
+
+λόγος
+
+João 1:1
+João 1:14
+João 8:31
+...
+330 ocorrências
+
+Sem pesquisar na Bíblia inteira toda vez.
+
+O Builder gera um índice.
+
+2) Clique no Strong
+
+Ao invés de abrir apenas o popup:
+
+G3056
+
+abre
+
+λόγος
+
+Significado
+
+Strong
+
+Léxico
+
+Ocorrências
+
+Versículos
+
+Palavras relacionadas
+3) Palavras relacionadas
+
+Exemplo:
+
+ἀγάπη
+
+Relacionado:
+
+φιλέω
+ἀγαπάω
+ἔρως
+4) Concordância
+
+Pesquisar
+
+amor
+
+Resultado
+
+NT
+OT
+
+Livro
+
+Capítulo
+
+Versículo
+
+Original
+
+Strong
+5) Pesquisa em hebraico
+
+Pesquisar
+
+אלהים
+
+e localizar tudo.
+
+6) Pesquisa pela transliteração
+bereshit
+
+ou
+
+logos
+7) Pesquisa por Strong
+G3056
+
+H430
+8) Clique no lema
+
+Em vez da palavra.
+
+Exemplo:
+
+λέγω
+
+disse
+dizem
+dirá
+falou
+
+Tudo agrupado.
+
+9) Estatísticas
+
+Muito legal.
+
+λόγος
+
+330 vezes
+
+João
+87
+
+Lucas
+45
+
+Atos
+30
+
+...
+10) Família de palavras
+
+Exemplo
+
+πιστεύω
+
+πίστις
+
+πιστός
+
+πιστεύων
+11) Morfologia colorida
+
+Ao invés de mostrar
+
+V-AAI-3S
+
+Mostrar
+
+🟦 Verbo
+
+🟩 Aoristo
+
+🟨 Indicativo
+
+🟥 3ª pessoa
+
+Singular
+
+E clicando explica.
+
+12) Comparação de traduções
+
+Muito útil.
+
+Original
+
+Transliteração
+
+Sua tradução literal
+
+ARA
+
+NAA
+
+NVI
+
+King James
+
+Septuaginta
+13) Linha sintática
+
+Essa seria incrível.
+
+Mostrar:
+
+Deus
+   │
+Criou
+   │
+Céus
+   │
+Terra
+
+Como uma árvore simples.
+
+A MACULA possui essas relações.
+
+A minha favorita
+
+Acho que seria o diferencial do Teologia Ninja.
+
+Modo Professor
+
+Quando abrir João 1:1
+
+Em vez de apenas mostrar:
+
+ἐν
+
+ἀρχῇ
+
+ἦν
+
+mostrar:
+
+ἐν
+
+Preposição
+
+Strong G1722
+
+Significa:
+
+"em"
+
+Aparece 2.750 vezes
+
+Primeira ocorrência:
+
+Mateus 1:18
+
+Última:
+
+Apocalipse 22:16
+
+Veja também:
+
+διά
+
+εἰς
+
+πρός
+
+Tudo isso sem abrir outra página.
+
+E tenho uma ideia que me deixou muito animado...
+
+Você está construindo:
+
+Bíblia
+Mapas
+Linha do Tempo
+Arqueologia
+Personagens
+História de Israel
+Bibliologia
+Escatologia
+
+Sabe o que une tudo isso?
+
+Uma biblioteca de referências cruzadas.
+
+Imagine abrir Êxodo 3:1 e, na lateral, aparecer automaticamente:
+
+📍 Mapa: Monte Horebe.
+🕰️ Linha do tempo: Êxodo.
+👤 Personagem: Moisés.
+🏺 Arqueologia: Península do Sinai.
+📚 Bibliologia: Manuscritos relevantes.
+❤️ Favoritos e Anotações: suas notas daquele texto.

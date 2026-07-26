@@ -1,0 +1,44 @@
+RELATÓRIO — NOVO TESTAMENTO EM PORTUGUÊS
+
+Livros: 27
+Palavras: 137741
+Campos alterados: 58716
+Cobertura estimada: 100.00%
+Ocorrências com inglês residual detectável: 2
+
+O grego, transliteração, Strong, lema, pronúncia, morfologia e classe foram preservados.
+O inglês original permanece em glosaOriginal.
+portugues, significado e traducaoLiteral foram atualizados.
+
+POR LIVRO
+1-corintios.json: 6812 palavras; 2693 alteradas; 0 com inglês residual
+1-joao.json: 2137 palavras; 873 alteradas; 0 com inglês residual
+1-pedro.json: 1678 palavras; 604 alteradas; 0 com inglês residual
+1-tessalonicenses.json: 1473 palavras; 518 alteradas; 0 com inglês residual
+1-timoteo.json: 1591 palavras; 572 alteradas; 0 com inglês residual
+2-corintios.json: 4473 palavras; 1582 alteradas; 0 com inglês residual
+2-joao.json: 245 palavras; 105 alteradas; 0 com inglês residual
+2-pedro.json: 1098 palavras; 385 alteradas; 0 com inglês residual
+2-tessalonicenses.json: 820 palavras; 259 alteradas; 0 com inglês residual
+2-timoteo.json: 1235 palavras; 396 alteradas; 0 com inglês residual
+3-joao.json: 219 palavras; 87 alteradas; 0 com inglês residual
+apocalipse.json: 9833 palavras; 4412 alteradas; 1 com inglês residual
+atos.json: 18412 palavras; 7870 alteradas; 0 com inglês residual
+colossenses.json: 1580 palavras; 574 alteradas; 0 com inglês residual
+efesios.json: 2416 palavras; 917 alteradas; 0 com inglês residual
+filemom.json: 334 palavras; 113 alteradas; 0 com inglês residual
+filipenses.json: 1626 palavras; 535 alteradas; 0 com inglês residual
+galatas.json: 2226 palavras; 842 alteradas; 0 com inglês residual
+hebreus.json: 4935 palavras; 1981 alteradas; 0 com inglês residual
+joao.json: 15625 palavras; 7417 alteradas; 0 com inglês residual
+judas.json: 459 palavras; 163 alteradas; 0 com inglês residual
+lucas.json: 19446 palavras; 8736 alteradas; 0 com inglês residual
+marcos.json: 11286 palavras; 5277 alteradas; 1 com inglês residual
+mateus.json: 18329 palavras; 8348 alteradas; 0 com inglês residual
+romanos.json: 7055 palavras; 2596 alteradas; 0 com inglês residual
+tiago.json: 1739 palavras; 662 alteradas; 0 com inglês residual
+tito.json: 659 palavras; 199 alteradas; 0 com inglês residual
+
+GLOSAS MAIS FREQUENTES PARA REVISÃO
+1x | nós shall reign
+1x | shall nós dizer?

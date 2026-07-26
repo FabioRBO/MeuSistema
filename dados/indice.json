@@ -1,0 +1,36 @@
+{
+  "livros": [
+    {
+      "ordem": 1,
+      "id": "genesis",
+      "nome": "Gênesis",
+      "testamento": "antigo",
+      "arquivo": "dados/antigo-testamento/genesis.json",
+      "status": "amostra"
+    },
+    {
+      "ordem": 43,
+      "id": "joao",
+      "nome": "João",
+      "testamento": "novo",
+      "arquivo": "dados/novo-testamento/joao.json",
+      "status": "amostra"
+    },
+    {
+      "ordem": 57,
+      "id": "filemom",
+      "nome": "Filemom",
+      "testamento": "novo",
+      "arquivo": "dados/novo-testamento/filemom.json",
+      "status": "completo"
+    },
+    {
+      "ordem": 65,
+      "id": "judas",
+      "nome": "Judas",
+      "testamento": "novo",
+      "arquivo": "dados/novo-testamento/judas.json",
+      "status": "completo"
+    }
+  ]
+}

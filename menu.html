@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+
+  <title>Menu | Teologia Ninja</title>
+
+  <script>
+    (() => {
+      const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+      const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+      document.documentElement.setAttribute('data-bs-theme', tema);
+      document.documentElement.setAttribute('data-accent', cor);
+    })();
+  </script>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="app-shell">
+
+  <aside class="sidebar d-none d-lg-flex">
+    <div class="sidebar-brand">
+      <div>
+        <strong>TEOLOGIA</strong>
+        <span>NINJA</span>
+        <small>PAINEL PRINCIPAL</small>
+      </div>
+    </div>
+
+    <button
+      id="btnOcultarMenu"
+      class="sidebar-collapse-button"
+      type="button"
+      aria-label="Ocultar menu lateral"
+      title="Ocultar menu"
+    >«</button>
+
+    <nav class="sidebar-nav">
+      <a href="menu.html" class="active">🏠 <span>Menu Principal</span></a>
+      <a href="#" class="disabled-link">🏺 <span>Arqueologia</span></a>
+      <a href="biblia.html">📖 <span>Bíblia Interlinear</span></a>
+      <a href="#" class="disabled-link">📚 <span>Bibliologia</span></a>
+      <a href="#" class="disabled-link">⌛ <span>Escatologia</span></a>
+      <a href="#" class="disabled-link">✡ <span>História de Israel</span></a>
+      <a href="#" class="disabled-link">📅 <span>Linha do Tempo</span></a>
+      <a href="#" class="disabled-link">🗺️ <span>Mapas Bíblicos</span></a>
+      <a href="#" class="disabled-link">👥 <span>Personagens</span></a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="#" class="disabled-link">✎ <span>Anotações</span></a>
+      <a href="#" class="disabled-link">📁 <span>Arquivos</span></a>
+      <a href="#" class="disabled-link">Aa <span>Dicionário Strong</span></a>
+      <a href="#" class="disabled-link">❤️ <span>Favoritos</span></a>
+
+      <div class="sidebar-divider"></div>
+
+      <button class="sidebar-link-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙ <span>Configurações</span></button>
+      <button class="sidebar-link-button" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">ⓘ <span>Sobre o Projeto</span></button>
+      <a href="index.html">↪ <span>Sair</span></a>
+    </nav>
+
+
+
+    <div class="sidebar-footer sidebar-footer-tema">
+      <span class="tema-icone">☀</span>
+      <button id="btnTema" class="theme-switch" aria-label="Alternar tema">
+        <span></span>
+      </button>
+      <span class="tema-icone">☾</span>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <div class="d-flex align-items-center gap-3">
+      <button
+        class="btn btn-icon d-lg-none"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuMobile"
+        aria-label="Abrir menu"
+      >☰</button>
+      <h1 class="topbar-title">Menu Principal</h1>
+    </div>
+
+    <div class="topbar-actions">
+      <button class="btn btn-icon" title="Busca">⌕</button>
+      <button class="btn btn-icon" title="Favoritos">♡</button>
+      <button class="btn btn-icon" title="Configurações" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙</button>
+    </div>
+  </header>
+
+  <div class="offcanvas offcanvas-start app-offcanvas" id="menuMobile" tabindex="-1">
+    <div class="offcanvas-header border-bottom">
+      <div class="sidebar-brand mb-0">
+          <div>
+          <strong>TEOLOGIA</strong>
+          <span>NINJA</span>
+        </div>
+      </div>
+      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <nav class="sidebar-nav mobile-nav">
+      <a href="menu.html" class="active">🏠 <span>Menu Principal</span></a>
+      <a href="#" class="disabled-link">🏺 <span>Arqueologia</span></a>
+      <a href="biblia.html">📖 <span>Bíblia Interlinear</span></a>
+      <a href="#" class="disabled-link">📚 <span>Bibliologia</span></a>
+      <a href="#" class="disabled-link">⌛ <span>Escatologia</span></a>
+      <a href="#" class="disabled-link">✡ <span>História de Israel</span></a>
+      <a href="#" class="disabled-link">📅 <span>Linha do Tempo</span></a>
+      <a href="#" class="disabled-link">🗺️ <span>Mapas Bíblicos</span></a>
+      <a href="#" class="disabled-link">👥 <span>Personagens</span></a>
+
+      <div class="sidebar-divider"></div>
+
+      <a href="#" class="disabled-link">✎ <span>Anotações</span></a>
+      <a href="#" class="disabled-link">📁 <span>Arquivos</span></a>
+      <a href="#" class="disabled-link">Aa <span>Dicionário Strong</span></a>
+      <a href="#" class="disabled-link">❤️ <span>Favoritos</span></a>
+
+      <div class="sidebar-divider"></div>
+
+      <button class="sidebar-link-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙ <span>Configurações</span></button>
+      <button class="sidebar-link-button" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">ⓘ <span>Sobre o Projeto</span></button>
+      <a href="index.html">↪ <span>Sair</span></a>
+      </nav>
+
+
+    </div>
+  </div>
+
+  <main class="app-main">
+    <section class="welcome-card welcome-card-compact">
+      <div>
+        <span class="eyebrow">TEOLOGIA NINJA</span>
+        <h2>Seu centro de estudos bíblicos</h2>
+        <p>
+          Bíblia interlinear, mapas, linha do tempo e conteúdos de apoio em um único sistema.
+        </p>
+      </div>
+
+      <div class="welcome-actions">
+<div class="welcome-symbol">✦</div>
+      </div>
+    </section>
+
+    <section class="module-grid module-grid-compact" id="moduleGrid">
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">🏺</div>
+        <h3>Arqueologia</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <a href="biblia.html" class="module-card module-card-centered">
+        <div class="module-icon module-icon-large">📖</div>
+        <h3>Bíblia Interlinear</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Disponível</span>
+      </a>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">📚</div>
+        <h3>Bibliologia</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">⌛</div>
+        <h3>Escatologia</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">✡</div>
+        <h3>História de Israel</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">📅</div>
+        <h3>Linha do Tempo</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">🗺️</div>
+        <h3>Mapas Bíblicos</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">👥</div>
+        <h3>Personagens</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">✎</div>
+        <h3>Anotações</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">📁</div>
+        <h3>Arquivos</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">Aa</div>
+        <h3>Dicionário Strong</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+
+      <article class="module-card module-card-centered is-disabled">
+        <div class="module-icon module-icon-large">❤️</div>
+        <h3>Favoritos</h3>
+        <div class="module-card-divider"></div>
+        <span class="module-status">Em breve</span>
+      </article>
+    </section>
+  </main>
+
+
+  <div class="offcanvas offcanvas-end painel-configuracoes" tabindex="-1" id="configuracoesPainel">
+    <div class="offcanvas-header border-bottom">
+      <h2 class="offcanvas-title h5 mb-0">Configurações</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex align-items-center justify-content-center text-center">
+      <div>
+        <div class="config-placeholder">⚙</div>
+        <p class="text-secondary mb-1">Em breve</p>
+        <small class="text-secondary">Novas opções serão adicionadas aqui.</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="sobreModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content sobre-modal">
+        <div class="modal-header">
+          <h2 class="modal-title h5">Sobre o Projeto</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h3 class="h5 accent-text">Teologia Ninja</h3>
+          <p class="mb-1">Sistema de estudos bíblicos</p>
+          <p class="text-secondary mb-0">Versão 1.0.0</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-accent" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/sistema.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+</html>

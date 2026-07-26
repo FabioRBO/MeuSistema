@@ -1,0 +1,259 @@
+
+.descricao_total{ font-size:14px;line-height:1.5;color:#333;background-color: #00000055;padding:5px }
+.descricao_subtitulo { margin:0 0 8px;font-style:italic;color:#555; }
+hr.linha_dividir{ border:0;border-top:1px solid #ccc;margin:8px 0; }
+p.descricao_strong{ margin:4px 0;font-style: strong }
+.descricao_destaque{ margin-top:10px;padding:8px;border-left:3px solid #2980b9; }
+.descricao_destaqueP{ margin:4px 0 0; }
+
+/* Permite posicionar o botão dentro da área do media */
+#timeline-embed .tl-media { position: relative !important; }
+
+/* Botão sobre a imagem ou vídeo */
+.btn_toggle_media {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 999;
+    width: 38px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: 14px;
+    background: rgba(35, 25, 15, .85);
+    color: #fff;
+    font-size: 21px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: transform .3s, background .3s;
+}
+
+.btn_toggle_media:hover { background: #8b6b3f; }
+
+/* Oculta somente a imagem, vídeo, legenda e crédito */
+#timeline-embed .tl-media-content-container { opacity: 1; visibility: visible; transition: opacity .4s ease, visibility .4s ease; }
+#timeline-embed .tl-media.midia_oculta .tl-media-content-container { opacity: 0; visibility: hidden; pointer-events: none; }
+
+/* Inverte a seta quando o conteúdo estiver oculto */
+#timeline-embed .tl-media.midia_oculta .btn_toggle_media { transform: rotate(180deg); }
+/* ==================================================
+   INTEGRAÇÃO COM O SISTEMA TEOLOGIA NINJA
+   ================================================== */
+
+html,
+body.pagina-linha-tempo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pagina-linha-tempo {
+  background: var(--app-bg);
+}
+
+.timeline-topbar {
+  gap: 16px;
+}
+
+.topbar-subtitle {
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.min-w-0 {
+  min-width: 0;
+}
+
+.timeline-main {
+  position: fixed;
+  top: var(--topbar-height);
+  left: var(--sidebar-width);
+  right: 0;
+  bottom: 0;
+  background: var(--app-bg);
+  transition: left .2s ease;
+}
+
+#timeline-embed {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-timeline-action {
+  min-width: 92px;
+  min-height: 38px;
+  padding: 7px 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  background: var(--panel-bg-2);
+  color: var(--text-main);
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.btn-timeline-action:hover,
+.btn-timeline-action.midia_visivel {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), .12);
+}
+
+.btn-timeline-action:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+body.menu-recolhido {
+  --sidebar-width: 82px;
+}
+
+body.menu-recolhido .sidebar-brand > div,
+body.menu-recolhido .sidebar-nav a span:last-child,
+body.menu-recolhido .sidebar-link-button span:last-child,
+body.menu-recolhido .sidebar-footer .tema-icone {
+  display: none;
+}
+
+body.menu-recolhido .sidebar-brand {
+  justify-content: center;
+  min-height: 90px;
+  padding: 20px 8px;
+}
+
+body.menu-recolhido .sidebar-nav a,
+body.menu-recolhido .sidebar-link-button {
+  justify-content: center;
+  padding-inline: 10px;
+  font-size: 1.15rem;
+}
+
+body.menu-recolhido .sidebar-footer {
+  padding-inline: 10px;
+}
+
+body.menu-recolhido .theme-switch {
+  width: 44px;
+}
+
+body.menu-recolhido .sidebar-collapse-button {
+  transform: rotate(180deg);
+}
+
+/* Cores internas da TimelineJS acompanhando o tema */
+#timeline-embed .tl-timeline,
+#timeline-embed .tl-storyslider,
+#timeline-embed .tl-slider-container-mask,
+#timeline-embed .tl-menubar,
+#timeline-embed .tl-timegroup-message {
+  background-color: var(--panel-bg) !important;
+  color: var(--text-main) !important;
+}
+
+#timeline-embed .tl-slide-content,
+#timeline-embed .tl-text,
+#timeline-embed .tl-text-content,
+#timeline-embed .tl-headline,
+#timeline-embed .tl-headline-date,
+#timeline-embed .tl-timeaxis-tick-text,
+#timeline-embed .tl-timeaxis-major .tl-timeaxis-tick-text,
+#timeline-embed .tl-timemarker-text h2,
+#timeline-embed .tl-timemarker-content-container {
+  color: var(--text-main) !important;
+}
+
+#timeline-embed .tl-text p,
+#timeline-embed .tl-text li,
+#timeline-embed .tl-caption,
+#timeline-embed .tl-credit,
+#timeline-embed .tl-timegroup-message {
+  color: var(--text-muted) !important;
+}
+
+#timeline-embed .tl-timenav,
+#timeline-embed .tl-timeaxis-background,
+#timeline-embed .tl-timeaxis,
+#timeline-embed .tl-timegroup {
+  background: var(--panel-bg-2) !important;
+}
+
+#timeline-embed .tl-timegroup,
+#timeline-embed .tl-timeaxis,
+#timeline-embed .tl-menubar-button,
+#timeline-embed .tl-timemarker-content-container {
+  border-color: var(--panel-border) !important;
+}
+
+#timeline-embed .tl-timemarker-active .tl-timemarker-content-container,
+#timeline-embed .tl-timemarker:hover .tl-timemarker-content-container {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(var(--accent-rgb), .18) !important;
+}
+
+#timeline-embed .tl-slidenav-icon,
+#timeline-embed .tl-menubar-button,
+#timeline-embed .tl-attribution {
+  color: var(--text-main) !important;
+}
+
+#timeline-embed .descricao_total,
+#timeline-embed .descricao_destaque,
+#timeline-embed .tl-text-content > div {
+  color: var(--text-main) !important;
+}
+
+#timeline-embed .descricao_subtitulo,
+#timeline-embed .descricao_strong,
+#timeline-embed .descricao_destaqueP {
+  color: inherit !important;
+}
+
+#timeline-embed .descricao_destaque,
+#timeline-embed .tl-text-content div[style*="background: #f9f9f9"],
+#timeline-embed .tl-text-content div[style*="background:#f9f9f9"] {
+  background: var(--panel-bg-2) !important;
+  border-left-color: var(--accent) !important;
+}
+
+#timeline-embed .tl-slide .tl-slide-content-container {
+  padding-top: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .timeline-main {
+    left: 0;
+  }
+
+  .timeline-topbar {
+    padding-inline: 14px;
+  }
+
+  .btn-timeline-action {
+    min-width: 76px;
+    padding-inline: 11px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --topbar-height: 66px;
+  }
+
+  .timeline-topbar .topbar-actions {
+    gap: 4px;
+  }
+
+  .timeline-topbar .btn-icon {
+    font-size: 1.15rem;
+  }
+
+  .btn-timeline-action {
+    min-width: 68px;
+    min-height: 34px;
+    font-size: .8rem;
+  }
+
+  #timeline-embed .tl-slide-content {
+    width: 92% !important;
+  }
+}

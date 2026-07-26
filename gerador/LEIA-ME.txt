@@ -1,0 +1,136 @@
+GERADOR PHP — NOVO TESTAMENTO GREGO
+
+O QUE ESTE PACOTE FAZ
+
+- Lê o arquivo MACULA Greek em formato TSV.
+- Gera os 27 livros do Novo Testamento.
+- Gera um único livro ou todos.
+- Separa capítulos e versículos.
+- Inclui:
+  - texto grego;
+  - transliteração;
+  - glosa portuguesa preliminar;
+  - glosa inglesa original;
+  - lema;
+  - Strong;
+  - pronúncia transliterada;
+  - morfologia;
+  - classe;
+  - espaçamento/pontuação original.
+- Cria uma tradução literal preliminar juntando as glosas.
+- Não altera o layout do sistema.
+
+REQUISITOS
+
+- PHP 8.0 ou superior.
+- Extensão Intl ativada.
+- Arquivo macula-greek-SBLGNT.tsv.
+
+ESTRUTURA
+
+gerador_biblia_grego_php/
+├── bases/
+│   └── macula-greek-SBLGNT.tsv
+├── config/
+│   ├── livros-nt.php
+│   └── glossario-pt.php
+├── dados/
+│   └── novo-testamento/
+└── gerar-json.php
+
+O QUE VOCÊ PRECISA FAZER
+
+1. Extraia este pacote.
+
+2. Baixe a base MACULA Greek.
+
+3. Renomeie o arquivo TSV para:
+
+   macula-greek-SBLGNT.tsv
+
+4. Coloque o arquivo dentro de:
+
+   bases/
+
+5. Abra o terminal nessa pasta.
+
+No Laragon:
+- clique com o botão direito na pasta;
+- escolha Terminal;
+- ou abra o Terminal do Laragon e entre na pasta.
+
+6. Confira o PHP:
+
+   php -v
+
+7. Ative a extensão Intl, caso necessário:
+
+   Laragon > Menu > PHP > Extensions > intl
+
+8. Liste os livros disponíveis:
+
+   php gerar-json.php --listar
+
+9. Gere 2 Pedro:
+
+   php gerar-json.php 2-pedro
+
+O resultado aparecerá em:
+
+   dados/novo-testamento/2-pedro.json
+
+GERAR OUTRO LIVRO
+
+   php gerar-json.php 1-pedro
+   php gerar-json.php romanos
+   php gerar-json.php efesios
+
+GERAR TODO O NOVO TESTAMENTO
+
+   php gerar-json.php --todos
+
+Se alguns arquivos já existirem, eles serão preservados.
+
+Para substituir os existentes:
+
+   php gerar-json.php --todos --sobrescrever
+
+USAR OUTRA PASTA DE SAÍDA
+
+   php gerar-json.php 2-pedro --saida=C:\laragon\www\teologia-ninja\dados\novo-testamento
+
+GERAR DIRETAMENTE NO SEU PROJETO
+
+Exemplo:
+
+   php gerar-json.php --todos --saida=C:\laragon\www\teologia-ninja\dados\novo-testamento
+
+IMPORTANTE SOBRE O PORTUGUÊS
+
+A base MACULA fornece glosas em inglês.
+
+O arquivo:
+
+   config/glossario-pt.php
+
+faz substituições automáticas para português.
+
+Por isso:
+
+- o grego, lema, Strong e morfologia vêm da base;
+- a transliteração é gerada automaticamente;
+- a glosa portuguesa é preliminar;
+- a tradução literal é preliminar;
+- o português deve ser revisado depois.
+
+O gerador preserva também o campo:
+
+   glosaOriginal
+
+Assim você nunca perde a glosa inglesa da base.
+
+SOMENTE GREGO?
+
+Sim. Este gerador é para os 27 livros do Novo Testamento grego.
+
+O Antigo Testamento exigirá outra base e outro gerador para hebraico e aramaico.
