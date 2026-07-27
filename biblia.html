@@ -1,295 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#7c3aed">
-
-  <title>Bíblia Interlinear | Teologia Ninja</title>
-
-  <script>
-    (() => {
-      const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
-      const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
-      document.documentElement.setAttribute('data-bs-theme', tema);
-      document.documentElement.setAttribute('data-accent', cor);
-    })();
-  </script>
-
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/biblia.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#7c3aed" name="theme-color" />
+    <title>Bíblia Interlinear | Teologia Ninja</title>
+    <script>
+        (() => {
+          const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+          const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+          document.documentElement.setAttribute('data-bs-theme', tema);
+          document.documentElement.setAttribute('data-accent', cor);
+        })();
+    </script>
+    <link href="manifest.json" rel="manifest" />
+    <link href="icons/icon-192.svg" rel="icon" type="image/svg+xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/estilo.css" rel="stylesheet" />
+    <link href="css/biblia.css" rel="stylesheet" />
 </head>
+
 <body class="app-shell">
+    <div id="layoutSistema"></div>
 
-  <aside class="sidebar d-none d-lg-flex">
-    <div class="sidebar-brand">
-      <div>
-        <strong>TEOLOGIA</strong>
-        <span>NINJA</span>
-        <small>BÍBLIA INTERLINEAR</small>
-      </div>
-    </div>
+    <main class="app-main bible-main">
+        <section class="bible-toolbar">
+            <div class="toolbar-grid">
+                <div class="toolbar-field">
+                    <label>Livro</label>
+                    <select class="form-select" id="livro"></select>
+                </div>
+                <div class="toolbar-field">
+                    <label>Capítulo</label>
+                    <select class="form-select" id="capitulo">
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="toolbar-field">
+                    <label>Versículo</label>
+                    <select class="form-select" id="versiculo"></select>
+                </div>
+            </div>
 
-    <button
-      id="btnOcultarMenu"
-      class="sidebar-collapse-button"
-      type="button"
-      aria-label="Ocultar menu lateral"
-      title="Ocultar menu"
-    >«</button>
+            <div class="toolbar-field toolbar-version">
+                <label>Versão</label>
+                <select class="form-select" id="versao">
+                    <option value="literal">Transliteração Literal</option>
+                    <option disabled="">Almeida antiga — futura importação</option>
+                    <option disabled="">ARA — exige autorização</option>
+                    <option disabled="">NAA — exige autorização</option>
+                    <option disabled="">NVI — exige autorização</option>
+                </select>
+            </div>
 
-    <nav class="sidebar-nav">
-      <a href="menu.html">🏠 <span>Menu Principal</span></a>
-      <a href="#" class="disabled-link">🏺 <span>Arqueologia</span></a>
-      <a href="biblia.html" class="active">📖 <span>Bíblia Interlinear</span></a>
-      <a href="#" class="disabled-link">📚 <span>Bibliologia</span></a>
-      <a href="#" class="disabled-link">⌛ <span>Escatologia</span></a>
-      <a href="#" class="disabled-link">✡ <span>História de Israel</span></a>
-      <a href="linha_tempo.html">📅 <span>Linha do Tempo</span></a>
-      <a href="mapa_linha_tempo.html">🗺️ <span>Mapas Bíblicos</span></a>
-      <a href="#" class="disabled-link">👥 <span>Personagens</span></a>
+            <div class="font-controls">
+                <label>Tamanho da fonte</label>
+                <div class="btn-group">
+                    <button class="btn btn-control" id="fonteMenos">A-</button>
+                    <button class="btn btn-control" id="fonteAtual">100%</button>
+                    <button class="btn btn-control" id="fonteMais">A+</button>
+                </div>
+            </div>
 
-      <div class="sidebar-divider"></div>
+            </div>
 
-      <a href="#" class="disabled-link">✎ <span>Anotações</span></a>
-      <a href="#" class="disabled-link">📁 <span>Arquivos</span></a>
-      <a href="#" class="disabled-link">Aa <span>Dicionário Strong</span></a>
-      <a href="#" class="disabled-link">❤️ <span>Favoritos</span></a>
+            <div class="toolbar-bottom">
+                <div class="accent-picker-wrap">
+                    <span>Cor de destaque</span>
+                    <div class="accent-picker" id="accentPicker">
+                        <button aria-label="Roxo" class="accent-dot purple" data-accent-option="purple"></button>
+                        <button aria-label="Azul" class="accent-dot blue" data-accent-option="blue"></button>
+                        <button aria-label="Verde" class="accent-dot green" data-accent-option="green"></button>
+                        <button aria-label="Laranja" class="accent-dot orange" data-accent-option="orange"></button>
+                        <button aria-label="Vermelho" class="accent-dot red" data-accent-option="red"></button>
+                        <button aria-label="Cinza" class="accent-dot gray" data-accent-option="gray"></button>
+                    </div>
+                </div>
 
-      <div class="sidebar-divider"></div>
+                <div class="view-options">
+                    <div class="view-buttons">
+                        <button class="btn btn-view active" data-modo="cartoes">☷ Cartões</button>
+                        <button class="btn btn-view" data-modo="grade">▦ Grade</button>
+                        <button class="btn btn-view" data-modo="linhas">≡ Linhas</button>
+                        <button class="btn btn-view" data-modo="tabela">▤ Tabela</button>
+                    </div>
 
-      <button class="sidebar-link-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙️ <span>Configurações</span></button>
-      <button class="sidebar-link-button" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">ℹ️ <span>Sobre o Projeto</span></button>
-      <a href="index.html">↪ <span>Sair</span></a>
-    </nav>
-
-    <div class="sidebar-footer sidebar-footer-tema">
-      <span class="tema-icone">☀</span>
-      <button id="btnTema" class="theme-switch" aria-label="Alternar tema">
-        <span></span>
-      </button>
-      <span class="tema-icone">☾</span>
-    </div>
-  </aside>
-
-  <header class="topbar">
-    <div class="d-flex align-items-center gap-3">
-      <button class="btn btn-icon d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#menuMobile">☰</button>
-      <h1 class="topbar-title">Bíblia Interlinear</h1>
-    </div>
-
-    <div class="topbar-actions">
-      <button class="btn btn-icon" title="Busca">🔎</button>
-      <button class="btn btn-icon" title="Favoritos">❤️</button>
-      <button class="btn btn-icon" title="Configurações" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙️</button>
-    </div>
-  </header>
-
-  <div class="offcanvas offcanvas-start app-offcanvas" id="menuMobile" tabindex="-1">
-    <div class="offcanvas-header border-bottom">
-      <div class="sidebar-brand mb-0">
-          <div>
-          <strong>TEOLOGIA</strong>
-          <span>NINJA</span>
-        </div>
-      </div>
-      <button class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <nav class="sidebar-nav mobile-nav">
-        <a href="menu.html">⌂ <span>Menu Principal</span></a>
-        <a href="#" class="disabled-link">🏺 <span>Arqueologia</span></a>
-        <a href="biblia.html" class="active">📖 <span>Bíblia Interlinear</span></a>
-        <a href="#" class="disabled-link">📚 <span>Bibliologia</span></a>
-        <a href="#" class="disabled-link">⌛ <span>Escatologia</span></a>
-        <a href="#" class="disabled-link">✡ <span>História de Israel</span></a>
-        <a href="linha_tempo.html">📅 <span>Linha do Tempo</span></a>
-        <a href="mapa_linha_tempo.html">🗺️ <span>Mapas Bíblicos</span></a>
-        <a href="#" class="disabled-link">👥 <span>Personagens</span></a>
-
-        <div class="sidebar-divider"></div>
-
-        <a href="#" class="disabled-link">✎ <span>Anotações</span></a>
-        <a href="#" class="disabled-link">📁 <span>Arquivos</span></a>
-        <a href="#" class="disabled-link">Aa <span>Dicionário Strong</span></a>
-        <a href="#" class="disabled-link">❤️ <span>Favoritos</span></a>
-
-        <div class="sidebar-divider"></div>
-
-        <button class="sidebar-link-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙️ <span>Configurações</span></button>
-        <button class="sidebar-link-button" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">ℹ️ <span>Sobre o Projeto</span></button>
-        <a href="index.html">↪ <span>Sair</span></a>
-      </nav>
-
-    </div>
-  </div>
-
-  <main class="app-main bible-main">
-    <section class="bible-toolbar">
-      <div class="toolbar-grid">
-        <div class="toolbar-field">
-          <label>Livro</label>
-          <select id="livro" class="form-select"></select>
-        </div>
-
-        <div class="toolbar-field">
-          <label>Capítulo</label>
-          <select id="capitulo" class="form-select">
-            <option value="1">1</option>
-          </select>
-        </div>
-        <div class="toolbar-field">
-          <label>Versículo</label>
-          <select id="versiculo" class="form-select"></select>
-        </div>
-
-        <div class="toolbar-field toolbar-version">
-          <label>Versão</label>
-          <select id="versao" class="form-select">
-            <option value="literal">Transliteração Literal</option>
-            <option disabled>Almeida antiga — futura importação</option>
-            <option disabled>ARA — exige autorização</option>
-            <option disabled>NAA — exige autorização</option>
-            <option disabled>NVI — exige autorização</option>
-          </select>
-        </div>
-
-        <div class="font-controls">
-          <label>Tamanho da fonte</label>
-          <div class="btn-group">
-            <button class="btn btn-control" id="fonteMenos">A-</button>
-            <button class="btn btn-control" id="fonteAtual">100%</button>
-            <button class="btn btn-control" id="fonteMais">A+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="toolbar-bottom">
-        <div class="accent-picker-wrap">
-          <span>Cor de destaque</span>
-          <div class="accent-picker" id="accentPicker">
-            <button data-accent-option="purple" class="accent-dot purple" aria-label="Roxo"></button>
-            <button data-accent-option="blue" class="accent-dot blue" aria-label="Azul"></button>
-            <button data-accent-option="green" class="accent-dot green" aria-label="Verde"></button>
-            <button data-accent-option="orange" class="accent-dot orange" aria-label="Laranja"></button>
-            <button data-accent-option="red" class="accent-dot red" aria-label="Vermelho"></button>
-            <button data-accent-option="gray" class="accent-dot gray" aria-label="Cinza"></button>
-          </div>
-        </div>
-
-        <div class="view-options">
-          <div class="view-buttons">
-            <button class="btn btn-view active" data-modo="cartoes">☷ Cartões</button>
-            <button class="btn btn-view" data-modo="grade">▦ Grade</button>
-            <button class="btn btn-view" data-modo="linhas">≡ Linhas</button>
-            <button class="btn btn-view" data-modo="tabela">▤ Tabela</button>
-          </div>
-
-          <label class="compact-table-option d-none" id="compactTableOption">
-            <input class="form-check-input" type="checkbox" id="tabelaCompacta">
-            <span>Tabela compacta</span>
-          </label>
-        </div>
-      </div>
-    </section>
-
-    <div id="mensagemBiblia" class="alert d-none mb-3"></div>
-
-    <section class="bible-layout" id="bibleLayout">
-      <div class="bible-content-panel">
-        <div class="bible-header-row" id="bibleHeaderRow">
-          <span aria-hidden="true"></span>
-          <span>Original</span>
-          <span>Transliteração</span>
-          <span>Português</span>
-          <span aria-hidden="true"></span>
-        </div>
-
-        <div id="conteudoBiblico"></div>
-
-        <div class="pagination-demo" id="paginacaoVersiculos"></div>
-      </div>
-
-      <aside class="details-column" id="detailsColumn">
-        <section class="details-card lexical-details">
-          <div class="details-card-header">
-            <h2 id="tituloPassagem">Gênesis 1:1</h2>
-          </div>
-
-          <div id="detalhePalavra" class="details-content">
-            <div class="detail-original hebraico">בְּרֵאשִׁית</div>
-            <div class="detail-translit">Bereshit</div>
-            <div>No princípio</div>
-            <hr>
-            <p><strong>Strong:</strong> <span class="accent-text">H7225</span></p>
-            <p><strong>Pronúncia:</strong> beh-resh-eet'</p>
-            <p><strong>Significado:</strong> No princípio, no começo</p>
-
-            <button class="btn btn-outline-accent w-100 mb-2">Ver detalhes</button>
-            <button class="btn btn-outline-accent w-100">Adicionar aos favoritos ♡</button>
-          </div>
+                    <label class="compact-table-option d-none" id="compactTableOption">
+                        <input class="form-check-input" id="tabelaCompacta" type="checkbox" />
+                        <span>Tabela compacta</span>
+                    </label>
+                </div>
+            </div>
         </section>
 
-        <section class="details-card notes-details">
-          <h3>Notas pessoais</h3>
-          <textarea class="form-control note-area" placeholder="Adicione suas notas aqui..."></textarea>
-          <button class="btn btn-accent mt-3 ms-auto d-block">Salvar nota</button>
+        <div class="alert d-none mb-3" id="mensagemBiblia"></div>
+
+        <section class="bible-layout" id="bibleLayout">
+            <div class="bible-content-panel">
+                <div class="bible-header-row" id="bibleHeaderRow">
+                    <span aria-hidden="true"></span>
+                    <span>Original</span>
+                    <span>Transliteração</span>
+                    <span>Português</span>
+                    <span aria-hidden="true"></span>
+                </div>
+                <div id="conteudoBiblico"></div>
+                <div class="pagination-demo" id="paginacaoVersiculos"></div>
+            </div>
+
+            <aside class="details-column" id="detailsColumn">
+                <section class="details-card lexical-details">
+                    <div class="details-card-header">
+                        <h2 id="tituloPassagem">Gênesis 1:1</h2></div>
+                    <div class="details-content" id="detalhePalavra">
+                        <div class="detail-original hebraico">בְּרֵאשִׁית</div>
+                        <div class="detail-translit">Bereshit</div>
+                        <div>No princípio</div>
+                        <hr/>
+                        <p><strong>Strong:</strong> <span class="accent-text">H7225</span></p>
+                        <p><strong>Pronúncia:</strong> beh-resh-eet'</p>
+                        <p><strong>Significado:</strong> No princípio, no começo</p>
+                        <button class="btn btn-outline-accent w-100 mb-2">Ver detalhes</button>
+                        <button class="btn btn-outline-accent w-100">Adicionar aos favoritos ♡</button>
+                    </div>
+                </section>
+                <section class="details-card notes-details">
+                    <h3>Notas pessoais</h3>
+                    <textarea class="form-control note-area" placeholder="Adicione suas notas aqui..."></textarea>
+                    <button class="btn btn-accent mt-3 ms-auto d-block">Salvar nota</button>
+                </section>
+            </aside>
         </section>
-      </aside>
-    </section>
 
-    <footer class="app-footer">
-      Teologia Ninja © 2026 — Todos os direitos reservados
-    </footer>
-  </main>
+        <footer class="app-footer">Teologia Ninja © 2026 — Todos os direitos reservados</footer>
+    </main>
 
 
-  <div
-    class="offcanvas offcanvas-end painel-configuracoes"
-    tabindex="-1"
-    id="configuracoesPainel"
-    aria-labelledby="configuracoesTitulo"
-  >
-    <div class="offcanvas-header border-bottom">
-      <h2 class="offcanvas-title h5 mb-0" id="configuracoesTitulo">Configurações</h2>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
-    </div>
-    <div class="offcanvas-body d-flex align-items-center justify-content-center text-center">
-      <div>
-        <div class="config-placeholder">⚙</div>
-        <p class="text-secondary mb-1">Em breve</p>
-        <small class="text-secondary">Novas opções serão adicionadas aqui.</small>
-      </div>
-    </div>
-  </div>
+    <script>
+        window.TEOLOGIA_NINJA_PAGINA = {
+              "pagina": "biblia.html",
+              "ativo": "biblia",
+              "titulo": "Bíblia Interlinear",
+              "subtitulo": "Texto original, transliteração e tradução",
+              "secao": "BÍBLIA INTERLINEAR"
+            };
+    </script>
 
-  <div class="modal fade" id="sobreModal" tabindex="-1" aria-labelledby="sobreModalTitulo" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content sobre-modal">
-        <div class="modal-header">
-          <h2 class="modal-title h5" id="sobreModalTitulo">Sobre o Projeto</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-        </div>
-        <div class="modal-body">
-          <h3 class="h5 accent-text">Teologia Ninja</h3>
-          <p class="mb-1">Bíblia Interlinear</p>
-          <p class="text-secondary mb-0">Versão 1.0.0</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-accent" data-bs-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/tema.js"></script>
-  <script src="js/sistema.js"></script>
-  <script src="js/dados-biblia.js"></script>
-  <script src="js/biblia.js"></script>
-  <script src="js/pwa.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/tema.js"></script>
+    <script src="js/sistema.js"></script>
+    <script src="js/dados-biblia.js"></script>
+    <script src="js/biblia.js"></script>
+    <script src="js/pwa.js"></script>
 </body>
+
 </html>

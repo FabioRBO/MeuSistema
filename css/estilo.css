@@ -850,3 +850,15 @@ html[data-bs-theme="dark"] .sobre-modal .btn-close {
     min-height: 180px !important;
   }
 }
+
+/* Adicionar ao final de css/estilo.css */
+.accent-options{display:flex;flex-wrap:wrap;gap:12px}
+.accent-options .accent-dot{width:32px;height:32px;padding:0;border:2px solid rgba(255,255,255,.65);border-radius:50%;cursor:pointer;box-shadow:inset 0 0 0 2px rgba(255,255,255,.16),0 2px 6px rgba(0,0,0,.25);transition:transform .16s ease}
+.accent-options .accent-dot:hover{transform:scale(1.08)}
+.accent-options .accent-dot.active{outline:2px solid var(--text-main);outline-offset:3px}
+.accent-purple{background:#7c3aed!important}
+.accent-blue{background:#0d8eff!important}
+.accent-green{background:#00b83d!important}
+.accent-orange{background:#ff8e00!important}
+.accent-red{background:#ff3f45!important}
+.accent-gray{background:#b8bec7!important}

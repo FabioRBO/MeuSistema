@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#7c3aed">
+
+    <title>Linha do Tempo Bíblica | Teologia Ninja</title>
+
+    <script>
+      (() => {
+        const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+        const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+        document.documentElement.setAttribute('data-bs-theme', tema);
+        document.documentElement.setAttribute('data-accent', cor);
+      })();
+    </script>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/linha_tempo.css">
+    
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  </head>
+
+<body class="app-shell">
+    <aside class="sidebar d-none d-lg-flex">
+      <div class="sidebar-brand">
+        <div>
+          <strong>TEOLOGIA</strong>
+          <span>NINJA</span>
+          <small>LINHA DO TEMPO</small>
+        </div>
+      </div>
+
+      <button id="btnOcultarMenu" class="sidebar-collapse-button" type="button" aria-label="Ocultar menu lateral" title="Ocultar menu">«</button>
+
+      <nav class="sidebar-nav">
+        <a href="menu.html">🏠 <span>Menu Principal</span></a>
+        <a href="#" class="disabled-link">🏺 <span>Arqueologia</span></a>
+        <a href="biblia.html">📖 <span>Bíblia Interlinear</span></a>
+        <a href="#" class="disabled-link">📚 <span>Bibliologia</span></a>
+        <a href="#" class="disabled-link">⌛ <span>Escatologia</span></a>
+        <a href="#" class="disabled-link">✡ <span>História de Israel</span></a>
+        <a href="linha_tempo.html" class="active">📅 <span>Linha do Tempo</span></a>
+        <a href="mapa_linha_tempo.html">🗺️ <span>Mapas Bíblicos</span></a>
+        <a href="#" class="disabled-link">👥 <span>Personagens</span></a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="#" class="disabled-link">✎ <span>Anotações</span></a>
+        <a href="#" class="disabled-link">📁 <span>Arquivos</span></a>
+        <a href="#" class="disabled-link">Aa <span>Dicionário Strong</span></a>
+        <a href="#" class="disabled-link">❤️ <span>Favoritos</span></a>
+
+        <div class="sidebar-divider"></div>
+
+        <button class="sidebar-link-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙️<span>Configurações</span></button>
+        <button class="sidebar-link-button" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">ℹ️<span>Sobre o Projeto</span></button>
+        <a href="index.html">↪ <span>Sair</span></a>
+      </nav>
+
+      <div class="sidebar-footer sidebar-footer-tema">
+        <span class="tema-icone">☀</span><button id="btnTema" class="theme-switch" aria-label="Alternar tema"><span></span></button><span class="tema-icone">☾</span>
+      </div>
+    </aside>
+
+    <header class="topbar timeline-topbar">
+      <div class="d-flex align-items-center gap-3 min-w-0">
+        <button class="btn-icon d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-label="Abrir menu">☰</button>
+        <div class="min-w-0">
+          <h1 class="topbar-title text-truncate">Linha do Tempo Bíblica</h1>
+          <small class="topbar-subtitle d-none d-sm-block">Panorama histórico interativo</small>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <button type="button" id="btn-toggle-midia" class="btn-timeline-action" title="Mostrar ou ocultar mídia">Mídia</button>
+        <button class="btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#painelConfiguracoes" title="Configurações">⚙️</button>
+      </div>
+    </header>
+
+    <main class="timeline-main"><div id="timeline-embed" aria-label="Linha do tempo bíblica"></div></main>
+
+    <div class="offcanvas offcanvas-start app-offcanvas" id="menuMobile" tabindex="-1">
+      <div class="offcanvas-header border-bottom">
+        <div class="sidebar-brand mb-0">
+            <div>
+            <strong>TEOLOGIA</strong>
+            <span>NINJA</span>
+          </div>
+        </div>
+        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <nav class="sidebar-nav mobile-nav">
+          <a href="menu.html">⌂ <span>Menu Principal</span></a>
+          <a href="#" class="disabled-link">🏺 <span>Arqueologia</span></a>
+          <a href="biblia.html">📖 <span>Bíblia Interlinear</span></a>
+          <a href="#" class="disabled-link">📚 <span>Bibliologia</span></a>
+          <a href="#" class="disabled-link">⌛ <span>Escatologia</span></a>
+          <a href="#" class="disabled-link">✡ <span>História de Israel</span></a>
+          <a href="linha_tempo.html" class="active">📅 <span>Linha do Tempo</span></a>
+          <a href="mapa_linha_tempo.html">🗺️ <span>Mapas Bíblicos</span></a>
+          <a href="#" class="disabled-link">👥 <span>Personagens</span></a>
+
+          <div class="sidebar-divider"></div>
+
+          <a href="#" class="disabled-link">✎ <span>Anotações</span></a>
+          <a href="#" class="disabled-link">📁 <span>Arquivos</span></a>
+          <a href="#" class="disabled-link">Aa <span>Dicionário Strong</span></a>
+          <a href="#" class="disabled-link">❤️ <span>Favoritos</span></a>
+
+          <div class="sidebar-divider"></div>
+
+          <button class="sidebar-link-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#configuracoesPainel">⚙️ <span>Configurações</span></button>
+          <button class="sidebar-link-button" type="button" data-bs-toggle="modal" data-bs-target="#sobreModal">ℹ️ <span>Sobre o Projeto</span></button>
+          <a href="index.html">↪ <span>Sair</span></a>
+        </nav>
+
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end painel-configuracoes" tabindex="-1" id="painelConfiguracoes" aria-labelledby="painelConfiguracoesLabel">
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title fs-5" id="painelConfiguracoesLabel">Configurações</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+      </div>
+      <div class="offcanvas-body text-center d-flex flex-column align-items-center justify-content-center">
+        <div class="config-placeholder">⚙️</div>
+        <p class="text-secondary mb-0">Este painel está preparado para as próximas configurações da linha do tempo.</p>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalSobre" tabindex="-1" aria-labelledby="modalSobreLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content sobre-modal">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalSobreLabel">Sobre a Linha do Tempo</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Panorama histórico interativo integrado ao sistema Teologia Ninja.</p>
+            <p class="mb-0 text-secondary">Os eventos, datas e imagens da versão anterior foram preservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <script src="js/tema.js"></script>
+    <script src="js/sistema.js"></script>
+    <script src="js/integracao-linha-tempo.js"></script>
+    <script src="js/timeline.js"></script>
+  </body>
+</html>
