@@ -24,79 +24,56 @@
 
 <body class="app-shell">
     <div id="layoutSistema"></div>
-
     <main class="app-main bible-main">
         <section class="bible-toolbar">
             <div class="toolbar-grid">
-                <div class="toolbar-field">
-                    <label>Livro</label>
+                <div class="toolbar-field toolbar-livro">
+                    <label for="livro">Livro</label>
                     <select class="form-select" id="livro"></select>
                 </div>
-                <div class="toolbar-field">
-                    <label>Capítulo</label>
+                <div class="toolbar-field toolbar-capitulo">
+                    <label for="capitulo">Capítulo</label>
                     <select class="form-select" id="capitulo">
                         <option value="1">1</option>
                     </select>
                 </div>
-                <div class="toolbar-field">
-                    <label>Versículo</label>
+                <div class="toolbar-field toolbar-versiculo">
+                    <label for="versiculo">Versículo</label>
                     <select class="form-select" id="versiculo"></select>
                 </div>
-            </div>
-
-            <div class="toolbar-field toolbar-version">
-                <label>Versão</label>
-                <select class="form-select" id="versao">
-                    <option value="literal">Transliteração Literal</option>
-                    <option disabled="">Almeida antiga — futura importação</option>
-                    <option disabled="">ARA — exige autorização</option>
-                    <option disabled="">NAA — exige autorização</option>
-                    <option disabled="">NVI — exige autorização</option>
-                </select>
-            </div>
-
-            <div class="font-controls">
-                <label>Tamanho da fonte</label>
-                <div class="btn-group">
-                    <button class="btn btn-control" id="fonteMenos">A-</button>
-                    <button class="btn btn-control" id="fonteAtual">100%</button>
-                    <button class="btn btn-control" id="fonteMais">A+</button>
+                <div class="toolbar-field toolbar-versao">
+                    <label for="versao">Versão</label>
+                    <select class="form-select" id="versao">
+                        <option value="literal">Transliteração Literal</option>
+                        <option disabled="">Almeida antiga — futura importação</option>
+                        <option disabled="">ARA — exige autorização</option>
+                        <option disabled="">NAA — exige autorização</option>
+                        <option disabled="">NVI — exige autorização</option>
+                    </select>
+                </div>
+                <div class="font-controls">
+                    <label>Tamanho da fonte</label>
+                    <div class="font-buttons">
+                        <button class="btn btn-control" id="fonteMenos" type="button">A−</button>
+                        <button class="btn btn-control" id="fonteAtual" type="button">100%</button>
+                        <button class="btn btn-control" id="fonteMais" type="button">A+</button>
+                    </div>
                 </div>
             </div>
-
-            </div>
-
             <div class="toolbar-bottom">
-                <div class="accent-picker-wrap">
-                    <span>Cor de destaque</span>
-                    <div class="accent-picker" id="accentPicker">
-                        <button aria-label="Roxo" class="accent-dot purple" data-accent-option="purple"></button>
-                        <button aria-label="Azul" class="accent-dot blue" data-accent-option="blue"></button>
-                        <button aria-label="Verde" class="accent-dot green" data-accent-option="green"></button>
-                        <button aria-label="Laranja" class="accent-dot orange" data-accent-option="orange"></button>
-                        <button aria-label="Vermelho" class="accent-dot red" data-accent-option="red"></button>
-                        <button aria-label="Cinza" class="accent-dot gray" data-accent-option="gray"></button>
-                    </div>
-                </div>
-
-                <div class="view-options">
+                <div class="view-options"><span class="toolbar-section-title">Visualização</span>
                     <div class="view-buttons">
-                        <button class="btn btn-view active" data-modo="cartoes">☷ Cartões</button>
-                        <button class="btn btn-view" data-modo="grade">▦ Grade</button>
-                        <button class="btn btn-view" data-modo="linhas">≡ Linhas</button>
-                        <button class="btn btn-view" data-modo="tabela">▤ Tabela</button>
+                        <button class="btn btn-view active" data-modo="cartoes" type="button">☷ Cartões</button>
+                        <button class="btn btn-view" data-modo="grade" type="button">▦ Grade</button>
+                        <button class="btn btn-view" data-modo="linhas" type="button">≡ Linhas</button>
+                        <button class="btn btn-view" data-modo="tabela" type="button">▤ Tabela</button>
                     </div>
-
                     <label class="compact-table-option d-none" id="compactTableOption">
-                        <input class="form-check-input" id="tabelaCompacta" type="checkbox" />
-                        <span>Tabela compacta</span>
-                    </label>
+                        <input class="form-check-input" id="tabelaCompacta" type="checkbox" /><span>Tabela compacta</span></label>
                 </div>
             </div>
         </section>
-
         <div class="alert d-none mb-3" id="mensagemBiblia"></div>
-
         <section class="bible-layout" id="bibleLayout">
             <div class="bible-content-panel">
                 <div class="bible-header-row" id="bibleHeaderRow">
@@ -109,7 +86,6 @@
                 <div id="conteudoBiblico"></div>
                 <div class="pagination-demo" id="paginacaoVersiculos"></div>
             </div>
-
             <aside class="details-column" id="detailsColumn">
                 <section class="details-card lexical-details">
                     <div class="details-card-header">
@@ -133,11 +109,8 @@
                 </section>
             </aside>
         </section>
-
         <footer class="app-footer">Teologia Ninja © 2026 — Todos os direitos reservados</footer>
     </main>
-
-
     <script>
         window.TEOLOGIA_NINJA_PAGINA = {
               "pagina": "biblia.html",
@@ -147,7 +120,6 @@
               "secao": "BÍBLIA INTERLINEAR"
             };
     </script>
-
     <script src="js/layout.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/tema.js"></script>

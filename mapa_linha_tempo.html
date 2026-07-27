@@ -9,36 +9,217 @@
     <title>Mapa | Teologia Ninja</title>
     <script>
         (() => {
-        				const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
-        				const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
-        				document.documentElement.setAttribute('data-bs-theme', tema);
-        				document.documentElement.setAttribute('data-accent', cor);
-        			})();
+			const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+			const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+			document.documentElement.setAttribute('data-bs-theme', tema);
+			document.documentElement.setAttribute('data-accent', cor);
+		})();
     </script>
     <link href="manifest.json" rel="manifest" />
     <link href="icons/icon-192.svg" rel="icon" type="image/svg+xml" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/estilo.css" rel="stylesheet">
-    <link href="css/mapa.css" rel="stylesheet">
-    <link href="leaflet/leaflet.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet" />
+    <link href="css/mapa.css" rel="stylesheet" />
+    <link href="leaflet/leaflet.css" rel="stylesheet" />
     <script src="leaflet/leaflet.js"></script>
     <script src="leaflet/leaflet.polylineDecorator.js"></script>
-    </link>
-    </link>
-    </link>
+    <style>
+        /* Toolbar exclusiva desta página */
+        .mapa-toolbar-pagina {
+          position: fixed;
+          top: var(--topbar-height, 70px);
+          right: 0;
+          left: var(--sidebar-width, 84px);
+        
+          min-height: 54px;
+          padding: 8px 14px;
+        
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        
+          background: var(--panel-bg);
+          border-bottom: 1px solid var(--panel-border);
+        }
+        
+        body.menu-recolhido .mapa-toolbar-pagina {
+          left: var(--sidebar-width-collapsed, 68px);
+        }
+        
+        .mapa-toolbar-pagina .mapa-toolbar {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 7px;
+        }
+        
+        .mapa-toolbar-pagina .btn-controles-mapa {
+          display: none;
+          margin-left: auto;
+        }
+        
+        /* O mapa começa abaixo do header e da toolbar exclusiva */
+        .pagina-mapa #meu_mapa {
+          top: calc(var(--topbar-height, 70px) + 54px);
+        }
+        
+        /* Painéis laterais do mapa também respeitam a toolbar */
+        .pagina-mapa #sidebar {
+          top: calc(var(--topbar-height, 70px) + 54px);
+        }
+        
+        /* Tablet e celular: um único botão abre todos os controles */
+        @media (max-width: 1199.98px) {
+          .mapa-toolbar-pagina {
+            left: 0;
+            min-height: 50px;
+            padding: 6px 12px;
+          }
+        
+          body.menu-recolhido .mapa-toolbar-pagina {
+            left: 0;
+          }
+        
+          .mapa-toolbar-pagina .mapa-toolbar {
+            display: none;
+          }
+        
+          .mapa-toolbar-pagina .btn-controles-mapa {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+          }
+        
+          .pagina-mapa #meu_mapa,
+          .pagina-mapa #sidebar {
+            top: calc(var(--topbar-height, 70px) + 50px);
+          }
+        }
+        
+        @media (max-width: 991.98px) {
+          .mapa-toolbar-pagina {
+            left: 0;
+          }
+        }
+    </style>
+    <style>
+        /* Ferramentas do mapa sempre visíveis no desktop */
+        .mapa-toolbar-pagina .mapa-acoes-diretas {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 7px;
+          flex-wrap: nowrap;
+        }
+        
+        .mapa-toolbar-pagina .mapa-acoes-diretas > button {
+          flex: 0 0 auto;
+          white-space: nowrap;
+        }
+        
+        /* Em telas intermediárias, reduz um pouco os botões */
+        @media (max-width: 1550px) and (min-width: 1200px) {
+          .mapa-toolbar-pagina .mapa-acoes-diretas {
+            gap: 5px;
+          }
+        
+          .mapa-toolbar-pagina .mapa-acoes-diretas > button {
+            padding-inline: 8px;
+            font-size: 12px;
+          }
+        
+          .mapa-toolbar-pagina #filtro-navegacao {
+            max-width: 220px;
+          }
+        
+          .mapa-toolbar-pagina #seletor-mapa {
+            max-width: 150px;
+          }
+        }
+        
+        /* Ao ficar pequeno, tudo é unificado em Controles */
+        @media (max-width: 1199.98px) {
+          .mapa-toolbar-pagina .mapa-toolbar {
+            display: none !important;
+          }
+        
+          .mapa-toolbar-pagina .btn-controles-mapa {
+            display: inline-flex !important;
+          }
+        }
+    </style>
+    <style>
+        /* =========================================================
+           MODO DE APRESENTAÇÃO EM TELA CHEIA
+           ========================================================= */
+        
+        /* Mantém somente os controles exclusivos do mapa */
+        body.modo-apresentacao-mapa #layoutSistema {
+          display: none !important;
+        }
+        
+        body.modo-apresentacao-mapa .mapa-toolbar-pagina {
+          top: 0 !important;
+          right: 0 !important;
+          left: 0 !important;
+        }
+        
+        body.modo-apresentacao-mapa #meu_mapa {
+          top: 54px !important;
+          left: 0 !important;
+        }
+        
+        body.modo-apresentacao-mapa #sidebar {
+          top: 54px !important;
+        }
+        
+        body.modo-apresentacao-mapa #legenda-paises {
+          left: 14px !important;
+        }
+        
+        /* Botão aceso enquanto estiver em tela cheia */
+        #btn-tela.ativo,
+        #btn-tela[aria-pressed="true"] {
+          color: #fff !important;
+          background: var(--accent) !important;
+          border-color: var(--accent) !important;
+          box-shadow:
+            0 0 0 3px rgba(var(--accent-rgb), .20),
+            0 0 18px rgba(var(--accent-rgb), .26);
+        }
+        
+        /* Tablet/celular: a barra exclusiva continua sendo o único menu */
+        @media (max-width: 1199.98px) {
+          body.modo-apresentacao-mapa .mapa-toolbar-pagina {
+            min-height: 50px;
+          }
+        
+          body.modo-apresentacao-mapa #meu_mapa,
+          body.modo-apresentacao-mapa #sidebar {
+            top: 50px !important;
+          }
+        }
+    </style>
 </head>
 
 <body class="app-shell pagina-mapa">
     <div id="layoutSistema"></div>
-    <template id="paginaHeaderActions">
+    <section aria-label="Controles do mapa" class="mapa-toolbar-pagina">
         <div class="mapa-toolbar">
             <div class="mapa-acoes-diretas">
                 <button onclick="passoAnterior()" title="Anterior" type="button">←</button>
                 <button onclick="proximoPasso()" title="Próximo" type="button">→</button>
-                <button id="btn-tela" onclick="alternarTelaCheia()" type="button">Tela cheia</button>
+                <button id="btn-tela" onclick="alternarTelaCheia()" type="button" aria-pressed="false">Tela cheia</button>
                 <button onclick="centralizar()" type="button">Centralizar</button>
                 <button onclick="verCemPorCento()" type="button">100%</button>
-                <button class="dropdown-item" id="btn-paises" onclick="alternarPaises()">Mostrar países</button>
+                <button onclick="alternarPaises()" type="button">Mostrar países</button>
+                <button id="btn-nomes" onclick="alternarNomes()" type="button">Ocultar nomes</button>
+                <button id="btn-linhas" onclick="alternarLinhas()" type="button">Ocultar linhas</button>
+                <button id="btn-esmaecer-rota" onclick="alternarEsmaecerRota()" type="button">Esmaecer rota</button>
+                <button onclick="alternarSidebar()" type="button">Informações</button>
+                <button onclick="abrirModalResumo()" type="button">Resumo</button>
             </div>
             <select id="filtro-navegacao" onchange="filtrarNavegacao()" title="Jornada">
                 <optgroup label="Linhas do Tempo">
@@ -87,31 +268,14 @@
                 <option value="gray">Tons de Cinza</option>
                 <option value="terrain">Terreno Físico</option>
             </select>
-            <div class="toolbar-mais dropdown">
-                <button aria-expanded="false" data-bs-toggle="dropdown" title="Mais ferramentas" type="button">⋯</button>
-                <div class="dropdown-menu dropdown-menu-end mapa-menu-ferramentas">
-                    <div class="mapa-acoes-compactas">
-                        <button class="dropdown-item" onclick="alternarTelaCheia()" type="button">Tela cheia</button>
-                        <button class="dropdown-item" onclick="centralizar()" type="button">Centralizar</button>
-                        <button class="dropdown-item" onclick="verCemPorCento()" type="button">Ver 100%</button>
-                        <div class="dropdown-divider"></div>
-                    </div>
-                    <button class="dropdown-item" id="btn-nomes" onclick="alternarNomes()">Ocultar nomes</button>
-                    <button class="dropdown-item" id="btn-linhas" onclick="alternarLinhas()">Ocultar linhas</button>
-                    <button class="dropdown-item" id="btn-esmaecer-rota" onclick="alternarEsmaecerRota()">Esmaecer rota</button>
-                    <div class="dropdown-divider"></div>
-                    <button class="dropdown-item" onclick="alternarSidebar()">Informações</button>
-                    <button class="dropdown-item" onclick="abrirModalResumo()">Resumo</button>
-                </div>
-            </div>
+
+            <button class="btn-icon" data-bs-target="#configuracoesPainel" data-bs-toggle="offcanvas" title="Configurações" type="button">⚙️</button>
         </div>
         <button aria-controls="controlesMapaMobile" aria-label="Abrir controles do mapa" class="btn-controles-mapa" data-bs-target="#controlesMapaMobile" data-bs-toggle="offcanvas" type="button">
             <span aria-hidden="true">☰</span>
             <span>Controles</span>
         </button>
-    </template>
-
-
+    </section>
     <div aria-labelledby="controlesMapaMobileLabel" class="offcanvas offcanvas-end painel-controles-mapa" id="controlesMapaMobile" tabindex="-1">
         <div class="offcanvas-header">
             <div>
@@ -185,9 +349,6 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- LEGENDA DE PAÍSES -->
     <div id="legenda-paises" style="display:none;">
         <h4>Países Percorridos</h4>
@@ -252,8 +413,7 @@
           "titulo": "Mapas Bíblicos",
           "subtitulo": "Jornadas e acontecimentos bíblicos",
           "secao": "MAPA COMPLETO DA BÍBLIA",
-          "headerClass": "mapa-topbar",
-          "actionsClass": "mapa-actions"
+          "headerClass": "mapa-topbar"
         };
     </script>
     <script src="js/layout.js"></script>
@@ -1284,13 +1444,56 @@
         				passoAtual = -1;
         			}
         
-        			function alternarTelaCheia() {
-        				if (!document.fullscreenElement) {
-        					document.documentElement.requestFullscreen();
-        				} else {
-        					document.exitFullscreen();
+        			async function alternarTelaCheia() {
+        				try {
+        					if (!document.fullscreenElement) {
+        						await document.documentElement.requestFullscreen();
+        					} else {
+        						await document.exitFullscreen();
+        					}
+        				} catch (erro) {
+        					console.error(
+        						'Não foi possível alternar a tela cheia:',
+        						erro
+        					);
         				}
         			}
+
+        			function atualizarModoTelaCheia() {
+        				const ativo = Boolean(document.fullscreenElement);
+        				const botao = document.getElementById('btn-tela');
+
+        				document.body.classList.toggle(
+        					'modo-apresentacao-mapa',
+        					ativo
+        				);
+
+        				if (botao) {
+        					botao.classList.toggle('ativo', ativo);
+        					botao.setAttribute(
+        						'aria-pressed',
+        						String(ativo)
+        					);
+        					botao.textContent = ativo
+        						? 'Sair da tela cheia'
+        						: 'Tela cheia';
+        				}
+
+        				setTimeout(() => {
+        					if (
+        						typeof mapa !== 'undefined' &&
+        						mapa &&
+        						typeof mapa.invalidateSize === 'function'
+        					) {
+        						mapa.invalidateSize();
+        					}
+        				}, 180);
+        			}
+
+        			document.addEventListener(
+        				'fullscreenchange',
+        				atualizarModoTelaCheia
+        			);
         
         			function alternarLinhas() {
         				linhasVisiveis = !linhasVisiveis;
