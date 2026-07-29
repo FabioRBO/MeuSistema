@@ -1,0 +1,330 @@
+{
+  "title": {
+    "text": {
+      "headline": "História de Israel",
+      "text": "<p>Uma visão panorâmica desde os patriarcas até o período contemporâneo, observando formação, fé, exílios, diásporas, conflitos, reconstruções e desafios.</p><p><small>As datas antigas são aproximadas e algumas permanecem debatidas.</small></p>"
+    },
+    "media": {
+      "url": "imagens/historia/capa-israel.jpg",
+      "caption": "Imagem de abertura — substitua por uma imagem local.",
+      "alt": "Imagem representativa da história de Israel"
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": -2000,
+        "display_date": "c. 2000–1700 a.C."
+      },
+      "text": {
+        "headline": "Patriarcas",
+        "text": "<p>As narrativas de Abraão, Isaque e Jacó apresentam as origens familiares e pactuais de Israel.</p><p><strong>Textos:</strong> Gênesis 12–50.</p>"
+      },
+      "group": "Período bíblico"
+    },
+    {
+      "start_date": {
+        "year": -1500,
+        "display_date": "Data debatida"
+      },
+      "text": {
+        "headline": "Êxodo e formação nacional",
+        "text": "<p>A tradição bíblica descreve a libertação do Egito, a aliança no Sinai e a organização de Israel como povo.</p><p><strong>Textos:</strong> Êxodo–Deuteronômio.</p>"
+      },
+      "group": "Período bíblico"
+    },
+    {
+      "start_date": {
+        "year": -1200,
+        "display_date": "c. séculos XIII–XI a.C."
+      },
+      "text": {
+        "headline": "Conquista, assentamento e Juízes",
+        "text": "<p>Israel se estabelece em Canaã em um processo narrado por Josué e Juízes, marcado por conflitos, alianças e ciclos de instabilidade.</p>"
+      },
+      "group": "Período bíblico"
+    },
+    {
+      "start_date": {
+        "year": -1050,
+        "display_date": "c. 1050–930 a.C."
+      },
+      "text": {
+        "headline": "Monarquia unida",
+        "text": "<p>Saul, Davi e Salomão representam a formação e consolidação da monarquia, com Jerusalém tornando-se centro político e religioso.</p>"
+      },
+      "group": "Período bíblico"
+    },
+    {
+      "start_date": {
+        "year": -930,
+        "display_date": "c. 930 a.C."
+      },
+      "text": {
+        "headline": "Divisão dos reinos",
+        "text": "<p>Após Salomão, a monarquia divide-se em Israel ao norte e Judá ao sul, cada reino seguindo trajetórias políticas e religiosas próprias.</p>"
+      },
+      "group": "Período bíblico"
+    },
+    {
+      "start_date": {
+        "year": -722,
+        "display_date": "722/721 a.C."
+      },
+      "text": {
+        "headline": "Queda do Reino do Norte",
+        "text": "<p>A Assíria conquista Samaria. O Reino de Israel deixa de existir como unidade política independente.</p>"
+      },
+      "group": "Impérios e exílios"
+    },
+    {
+      "start_date": {
+        "year": -586,
+        "display_date": "586 a.C."
+      },
+      "text": {
+        "headline": "Queda de Jerusalém e exílio babilônico",
+        "text": "<p>Jerusalém e o Primeiro Templo são destruídos pelos babilônios. Parte da população de Judá é deportada.</p>"
+      },
+      "group": "Impérios e exílios"
+    },
+    {
+      "start_date": {
+        "year": -539,
+        "display_date": "539–515 a.C."
+      },
+      "text": {
+        "headline": "Domínio persa e retorno",
+        "text": "<p>Com a conquista persa da Babilônia, grupos judaítas retornam e reorganizam Jerusalém. O Templo é reconstruído.</p>"
+      },
+      "group": "Impérios e exílios"
+    },
+    {
+      "start_date": {
+        "year": -332,
+        "display_date": "A partir de 332 a.C."
+      },
+      "text": {
+        "headline": "Período helenístico",
+        "text": "<p>As conquistas de Alexandre difundem a cultura grega. A Judeia passa por sucessivos governos helenísticos e intensos debates culturais.</p>"
+      },
+      "group": "Segundo Templo"
+    },
+    {
+      "start_date": {
+        "year": -167,
+        "display_date": "167–160 a.C."
+      },
+      "text": {
+        "headline": "Revolta dos Macabeus",
+        "text": "<p>Uma revolta contra as políticas selêucidas conduz à purificação do Templo e ao surgimento de um governo judaico independente.</p>"
+      },
+      "group": "Segundo Templo"
+    },
+    {
+      "start_date": {
+        "year": -63,
+        "display_date": "63 a.C."
+      },
+      "text": {
+        "headline": "Domínio romano",
+        "text": "<p>Pompeu entra em Jerusalém, e a Judeia passa a integrar a esfera política romana.</p>"
+      },
+      "group": "Segundo Templo"
+    },
+    {
+      "start_date": {
+        "year": 30,
+        "display_date": "Século I"
+      },
+      "text": {
+        "headline": "Jesus e o judaísmo do Segundo Templo",
+        "text": "<p>Jesus vive e ensina em ambiente judaico sob domínio romano, em meio a diferentes grupos, interpretações e expectativas.</p>"
+      },
+      "group": "Segundo Templo"
+    },
+    {
+      "start_date": {
+        "year": 70,
+        "display_date": "70 d.C."
+      },
+      "text": {
+        "headline": "Destruição de Jerusalém e do Segundo Templo",
+        "text": "<p>Após a revolta judaica, o exército romano destrói Jerusalém e o Templo. O acontecimento transforma profundamente o judaísmo.</p>"
+      },
+      "group": "Roma e diáspora"
+    },
+    {
+      "start_date": {
+        "year": 132,
+        "display_date": "132–135 d.C."
+      },
+      "text": {
+        "headline": "Revolta de Bar Kokhba",
+        "text": "<p>Nova revolta contra Roma termina em derrota e amplia a dispersão e as restrições impostas à população judaica da região.</p>"
+      },
+      "group": "Roma e diáspora"
+    },
+    {
+      "start_date": {
+        "year": 200,
+        "display_date": "c. 200 d.C."
+      },
+      "text": {
+        "headline": "Redação da Mishná",
+        "text": "<p>A tradição oral é organizada em uma coleção que se torna fundamental para o desenvolvimento do judaísmo rabínico.</p>"
+      },
+      "group": "Judaísmo rabínico"
+    },
+    {
+      "start_date": {
+        "year": 500,
+        "display_date": "c. séculos V–VI"
+      },
+      "text": {
+        "headline": "Formação dos Talmudes",
+        "text": "<p>Discussões rabínicas sobre a Mishná são preservadas nos Talmudes de Jerusalém e da Babilônia.</p>"
+      },
+      "group": "Judaísmo rabínico"
+    },
+    {
+      "start_date": {
+        "year": 1096,
+        "display_date": "A partir de 1096"
+      },
+      "text": {
+        "headline": "Cruzadas e perseguições medievais",
+        "text": "<p>Comunidades judaicas europeias enfrentam massacres, expulsões e restrições durante diferentes períodos da Idade Média.</p>"
+      },
+      "group": "Diáspora"
+    },
+    {
+      "start_date": {
+        "year": 1492,
+        "display_date": "1492"
+      },
+      "text": {
+        "headline": "Expulsão da Espanha",
+        "text": "<p>Judeus são expulsos dos reinos espanhóis. Muitos se estabelecem no Norte da África, no Império Otomano e em outras regiões.</p>"
+      },
+      "group": "Diáspora"
+    },
+    {
+      "start_date": {
+        "year": 1897,
+        "display_date": "1897"
+      },
+      "text": {
+        "headline": "Primeiro Congresso Sionista",
+        "text": "<p>O sionismo político organiza-se internacionalmente, defendendo um lar nacional para o povo judeu.</p>"
+      },
+      "group": "Período moderno"
+    },
+    {
+      "start_date": {
+        "year": 1933,
+        "display_date": "1933–1945"
+      },
+      "text": {
+        "headline": "Holocausto",
+        "text": "<p>A Alemanha nazista e seus colaboradores assassinam cerca de seis milhões de judeus, além de perseguirem e matarem milhões de outras vítimas.</p>"
+      },
+      "group": "Período moderno"
+    },
+    {
+      "start_date": {
+        "year": 1948,
+        "month": 5,
+        "day": 14,
+        "display_date": "14 de maio de 1948"
+      },
+      "text": {
+        "headline": "Criação do Estado de Israel",
+        "text": "<p>É proclamado o Estado de Israel. O período é acompanhado por guerra, deslocamentos e profundas transformações regionais.</p>"
+      },
+      "group": "Israel contemporâneo"
+    },
+    {
+      "start_date": {
+        "year": 1967,
+        "month": 6,
+        "display_date": "Junho de 1967"
+      },
+      "text": {
+        "headline": "Guerra dos Seis Dias",
+        "text": "<p>Israel conquista territórios em uma guerra contra países vizinhos. As consequências territoriais e políticas permanecem centrais no conflito.</p>"
+      },
+      "group": "Israel contemporâneo"
+    },
+    {
+      "start_date": {
+        "year": 1993,
+        "display_date": "1993"
+      },
+      "text": {
+        "headline": "Acordos de Oslo",
+        "text": "<p>Israel e a Organização para a Libertação da Palestina estabelecem reconhecimento mútuo e um processo político que não alcança solução definitiva.</p>"
+      },
+      "group": "Israel contemporâneo"
+    },
+    {
+      "start_date": {
+        "year": 2023,
+        "month": 10,
+        "day": 7,
+        "display_date": "A partir de 7 de outubro de 2023"
+      },
+      "text": {
+        "headline": "Nova fase da guerra Israel–Hamas",
+        "text": "<p>Os ataques do Hamas contra Israel e a guerra subsequente em Gaza provocam mortes, sequestros, deslocamentos, destruição e uma grave crise humanitária.</p><p><small>Este tópico exigirá atualização constante e fontes múltiplas.</small></p>"
+      },
+      "group": "Israel contemporâneo"
+    }
+  ],
+  "eras": [
+    {
+      "start_date": {
+        "year": -2000
+      },
+      "end_date": {
+        "year": -586
+      },
+      "text": {
+        "headline": "Israel bíblico"
+      }
+    },
+    {
+      "start_date": {
+        "year": -586
+      },
+      "end_date": {
+        "year": 135
+      },
+      "text": {
+        "headline": "Exílios e Segundo Templo"
+      }
+    },
+    {
+      "start_date": {
+        "year": 135
+      },
+      "end_date": {
+        "year": 1897
+      },
+      "text": {
+        "headline": "Diáspora e judaísmo rabínico"
+      }
+    },
+    {
+      "start_date": {
+        "year": 1897
+      },
+      "end_date": {
+        "year": 2026
+      },
+      "text": {
+        "headline": "Período moderno e contemporâneo"
+      }
+    }
+  ]
+}

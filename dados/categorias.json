@@ -1,0 +1,129 @@
+{
+  "grupos": [
+    {
+      "titulo": "História",
+      "itens": [
+        {
+          "nome": "Linha do tempo completa",
+          "href": "historia-israel.html",
+          "icone": "📅"
+        },
+        {
+          "nome": "Patriarcas",
+          "href": "historia-israel.html#patriarcas",
+          "icone": "👨‍👩‍👦"
+        },
+        {
+          "nome": "Monarquia",
+          "href": "historia-israel.html#monarquia",
+          "icone": "👑"
+        },
+        {
+          "nome": "Israel moderno",
+          "href": "historia-israel.html#moderno",
+          "icone": "🏙️"
+        }
+      ]
+    },
+    {
+      "titulo": "Cultura e costumes",
+      "itens": [
+        {
+          "nome": "Vestimentas",
+          "href": "cultura-israel.html#vestimentas",
+          "icone": "👕"
+        },
+        {
+          "nome": "Alimentação",
+          "href": "cultura-israel.html#alimentacao",
+          "icone": "🍞"
+        },
+        {
+          "nome": "Família e casamento",
+          "href": "cultura-israel.html#familia",
+          "icone": "🏠"
+        },
+        {
+          "nome": "Vida diária",
+          "href": "cultura-israel.html#vida-diaria",
+          "icone": "🪔"
+        }
+      ]
+    },
+    {
+      "titulo": "Festas e calendário",
+      "itens": [
+        {
+          "nome": "Shabat",
+          "href": "cultura-israel.html#shabat",
+          "icone": "🕯️"
+        },
+        {
+          "nome": "Pessach",
+          "href": "cultura-israel.html#pessach",
+          "icone": "🍷"
+        },
+        {
+          "nome": "Shavuot",
+          "href": "cultura-israel.html#shavuot",
+          "icone": "🌾"
+        },
+        {
+          "nome": "Sucot",
+          "href": "cultura-israel.html#sucot",
+          "icone": "⛺"
+        }
+      ]
+    },
+    {
+      "titulo": "Escritos judaicos",
+      "itens": [
+        {
+          "nome": "Torá Shebichtav",
+          "href": "escritos-israel.html#shebichtav",
+          "icone": "📜"
+        },
+        {
+          "nome": "Torá Shebe’al Peh",
+          "href": "escritos-israel.html#shebealpeh",
+          "icone": "🗣️"
+        },
+        {
+          "nome": "Mishná",
+          "href": "escritos-israel.html#mishna",
+          "icone": "📚"
+        },
+        {
+          "nome": "Talmude",
+          "href": "escritos-israel.html#talmude",
+          "icone": "📖"
+        }
+      ]
+    },
+    {
+      "titulo": "Objetos e símbolos",
+      "itens": [
+        {
+          "nome": "Kipá",
+          "href": "objeto-israel.html?id=kipa",
+          "icone": "◉"
+        },
+        {
+          "nome": "Talit",
+          "href": "objeto-israel.html?id=talit",
+          "icone": "🧣"
+        },
+        {
+          "nome": "Tefilin",
+          "href": "objeto-israel.html?id=tefilin",
+          "icone": "⬛"
+        },
+        {
+          "nome": "Mezuzá",
+          "href": "objeto-israel.html?id=mezuza",
+          "icone": "🚪"
+        }
+      ]
+    }
+  ]
+}

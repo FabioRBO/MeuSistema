@@ -8,7 +8,7 @@
     ['biblia.html','biblia','📖','Bíblia Interlinear'],
     ['#','bibliologia','📚','Bibliologia',true],
     ['#','escatologia','⌛','Escatologia',true],
-    ['#','historia-israel','✡️','História de Israel',true],
+    ['cultura-israel.html','historia-israel','✡️','História de Israel',true],
     ['linha_tempo.html','linha-tempo','📅','Linha do Tempo'],
     ['mapa_linha_tempo.html','mapas','🗺️','Mapas Bíblicos'],
     ['#','personagens','👥','Personagens',true],

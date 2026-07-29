@@ -1,0 +1,345 @@
+{
+  "storymap": {
+    "map_type": "osm:standard",
+    "map_as_image": false,
+    "calculate_zoom": true,
+    "slides": [
+      {
+        "type": "overview",
+        "text": {
+          "headline": "História de Israel",
+          "text": "<p>Uma viagem geográfica e histórica desde os patriarcas até o período contemporâneo.</p><p><small>Este é um protótipo inicial. Datas antigas e localizações podem ser aproximadas ou debatidas.</small></p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 30.962,
+          "lon": 46.103,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "c. 2000 a.C.",
+        "text": {
+          "headline": "Ur — origem de Abraão",
+          "text": "<p>As narrativas patriarcais relacionam Abraão a Ur dos caldeus, na Mesopotâmia.</p><p><strong>Texto bíblico:</strong> Gênesis 11:27–12:5.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Ur, região da antiga Mesopotâmia.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 32.213,
+          "lon": 35.281,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "Período patriarcal",
+        "text": {
+          "headline": "Canaã — terra dos patriarcas",
+          "text": "<p>Abraão, Isaque e Jacó vivem em diferentes regiões de Canaã. A terra torna-se central nas promessas e na identidade de Israel.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Região histórica de Canaã.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 30.044,
+          "lon": 31.236,
+          "zoom": 6,
+          "line": true
+        },
+        "date": "Data do Êxodo debatida",
+        "text": {
+          "headline": "Egito — escravidão e libertação",
+          "text": "<p>A tradição bíblica descreve a opressão dos israelitas e sua saída do Egito sob a liderança de Moisés.</p><p><strong>Textos:</strong> Êxodo 1–15.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Egito, cenário das narrativas do Êxodo.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 28.539,
+          "lon": 33.975,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "Período do Êxodo",
+        "text": {
+          "headline": "Sinai — aliança e Lei",
+          "text": "<p>No Sinai, Israel recebe a Lei e é organizado como povo da aliança segundo a narrativa bíblica.</p><p><strong>Textos:</strong> Êxodo 19–40.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Região tradicionalmente associada ao Sinai.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 31.778,
+          "lon": 35.235,
+          "zoom": 8,
+          "line": true
+        },
+        "date": "c. 1000–586 a.C.",
+        "text": {
+          "headline": "Jerusalém — monarquia e Primeiro Templo",
+          "text": "<p>Jerusalém torna-se capital sob Davi e centro religioso com a construção do Templo durante o reinado de Salomão.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Jerusalém, centro político e religioso.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 32.276,
+          "lon": 35.195,
+          "zoom": 8,
+          "line": true
+        },
+        "date": "c. 930–722 a.C.",
+        "text": {
+          "headline": "Samaria — Reino do Norte",
+          "text": "<p>Após a divisão da monarquia, Samaria torna-se capital do Reino de Israel. Em 722/721 a.C., a cidade cai diante do Império Assírio.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Samaria, capital do Reino do Norte.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 32.536,
+          "lon": 44.42,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "586 a.C.",
+        "text": {
+          "headline": "Babilônia — exílio",
+          "text": "<p>Jerusalém é destruída pelos babilônios e parte da população de Judá é deportada. O exílio transforma a vida religiosa e a identidade judaíta.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Babilônia, centro do império neobabilônico.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 32.19,
+          "lon": 48.257,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "Período persa",
+        "text": {
+          "headline": "Susã e o domínio persa",
+          "text": "<p>Com a conquista persa da Babilônia, grupos judaítas podem retornar e reconstruir Jerusalém. Susã aparece em narrativas como Ester e Neemias.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Susã, uma das capitais persas.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 36.202,
+          "lon": 36.16,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "Séculos IV–II a.C.",
+        "text": {
+          "headline": "Antioquia — mundo helenístico",
+          "text": "<p>Após Alexandre, a Judeia passa por disputas entre dinastias helenísticas. O conflito com os selêucidas contribui para a Revolta dos Macabeus.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Antioquia, importante centro helenístico.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 41.902,
+          "lon": 12.496,
+          "zoom": 6,
+          "line": true
+        },
+        "date": "63 a.C.–135 d.C.",
+        "text": {
+          "headline": "Roma — domínio imperial",
+          "text": "<p>A Judeia entra na esfera romana. Revoltas, repressões e a destruição de Jerusalém em 70 d.C. alteram profundamente o judaísmo e a região.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Roma, centro do império.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 31.778,
+          "lon": 35.235,
+          "zoom": 9,
+          "line": true
+        },
+        "date": "70 d.C.",
+        "text": {
+          "headline": "Jerusalém — destruição do Segundo Templo",
+          "text": "<p>O exército romano destrói Jerusalém e o Segundo Templo. O acontecimento marca uma profunda reorganização da vida judaica.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Jerusalém após a guerra judaico-romana.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 31.768,
+          "lon": 35.214,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "Séculos II–VI",
+        "text": {
+          "headline": "Judaísmo rabínico e diáspora",
+          "text": "<p>A Mishná e os Talmudes tornam-se referências centrais. Comunidades judaicas desenvolvem-se na Palestina, Babilônia, Europa, Norte da África e outras regiões.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Formação de comunidades judaicas em diferentes regiões.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 40.416,
+          "lon": -3.703,
+          "zoom": 5,
+          "line": true
+        },
+        "date": "1492",
+        "text": {
+          "headline": "Espanha — expulsão dos judeus",
+          "text": "<p>Os reis espanhóis decretam a expulsão dos judeus. Muitos sefarditas seguem para o Norte da África, Império Otomano, Portugal e outras regiões.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Espanha, importante centro da cultura sefardita.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 47.559,
+          "lon": 7.588,
+          "zoom": 6,
+          "line": true
+        },
+        "date": "1897",
+        "text": {
+          "headline": "Basileia — Congresso Sionista",
+          "text": "<p>O Primeiro Congresso Sionista organiza politicamente o movimento que defendia um lar nacional para o povo judeu.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Basileia, sede do congresso de 1897.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 52.52,
+          "lon": 13.405,
+          "zoom": 5,
+          "line": true
+        },
+        "date": "1933–1945",
+        "text": {
+          "headline": "Europa — Holocausto",
+          "text": "<p>A Alemanha nazista e seus colaboradores assassinam aproximadamente seis milhões de judeus, além de milhões de outras vítimas perseguidas pelo regime.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Europa sob o regime nazista.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 32.085,
+          "lon": 34.781,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "14 de maio de 1948",
+        "text": {
+          "headline": "Tel Aviv — criação do Estado de Israel",
+          "text": "<p>É proclamado o Estado de Israel. A guerra de 1948, os deslocamentos palestinos e as transformações regionais marcam profundamente o período.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Tel Aviv, local da declaração de independência.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 31.768,
+          "lon": 35.214,
+          "zoom": 7,
+          "line": true
+        },
+        "date": "1967",
+        "text": {
+          "headline": "Jerusalém e a Guerra dos Seis Dias",
+          "text": "<p>A guerra de 1967 altera o controle territorial da região. Suas consequências políticas e humanas permanecem centrais no conflito israelense-palestino.</p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Jerusalém no contexto contemporâneo.",
+          "credit": ""
+        }
+      },
+      {
+        "location": {
+          "lat": 31.5,
+          "lon": 34.466,
+          "zoom": 8,
+          "line": true
+        },
+        "date": "Século XXI",
+        "text": {
+          "headline": "Israel, Gaza e o conflito contemporâneo",
+          "text": "<p>O conflito envolve segurança, ocupação, terrorismo, deslocamentos, assentamentos, direitos nacionais e graves crises humanitárias.</p><p><small>Esta parte deverá receber fontes múltiplas e atualização constante.</small></p>"
+        },
+        "media": {
+          "url": "",
+          "caption": "Região de Israel e territórios palestinos.",
+          "credit": ""
+        }
+      }
+    ]
+  }
+}

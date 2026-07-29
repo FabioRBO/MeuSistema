@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Cultura e História de Israel | Teologia Ninja</title>
+  <script>
+    (() => {
+      const tema=localStorage.getItem('teologiaNinja_tema')||'dark';
+      const cor=localStorage.getItem('teologiaNinja_corDestaque')||'purple';
+      document.documentElement.setAttribute('data-bs-theme',tema);
+      document.documentElement.setAttribute('data-accent',cor);
+    })();
+  </script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/cultura-israel.css">
+</head>
+<body class="app-shell">
+  <div id="layoutSistema"></div>
+  <main class="app-main cultura-main">
+<section class="cultura-hero">
+  <div><h2>Cultura e História de Israel</h2><p>História, costumes, festas, escritos judaicos e vida cotidiana.</p></div>
+  <div class="cultura-hero-acoes"><button class="btn-cultura" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuCultura">☰ Explorar Israel</button><a class="btn-cultura ativo" href="historia-israel.html">📅 Ver história</a></div>
+</section>
+<section class="cultura-grid">
+  <article class="cultura-card"><div class="cultura-card-icone">📅</div><h3>História de Israel</h3><p>Dos patriarcas aos dias atuais.</p><a href="historia-israel.html">Abrir módulo</a></article>
+  <article class="cultura-card"><div class="cultura-card-icone">👕</div><h3>Costumes e vestimentas</h3><p>Kipá, talit, tzitzit, tefilin e costumes.</p><a href="objeto-israel.html?id=kipa">Explorar objetos</a></article>
+  <article class="cultura-card"><div class="cultura-card-icone">📜</div><h3>Escritos judaicos</h3><p>Torá escrita, Torá oral, Mishná e Talmude.</p><a href="escritos-israel.html">Abrir escritos</a></article>
+  <article class="cultura-card"><div class="cultura-card-icone">🎉</div><h3>Festas e calendário</h3><p>Shabat, Pessach, Shavuot, Sucot, Purim e Hanucá.</p><a href="#">Em construção</a></article>
+  <article class="cultura-card"><div class="cultura-card-icone">🍞</div><h3>Alimentação</h3><p>Alimentos, leis alimentares e refeições.</p><a href="#">Em construção</a></article>
+  <article class="cultura-card"><div class="cultura-card-icone">🏠</div><h3>Vida cotidiana</h3><p>Família, casamento, educação, trabalho e luto.</p><a href="#">Em construção</a></article>
+</section></main>
+
+  <div class="offcanvas offcanvas-start menu-cultura" tabindex="-1" id="menuCultura">
+    <div class="offcanvas-header border-bottom">
+      <div>
+        <h2 class="offcanvas-title h5 mb-1">Explorar Israel</h2>
+        <small class="text-secondary">História, cultura, festas e escritos</small>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body" id="menuCulturaConteudo"></div>
+  </div>
+
+  <script>
+    window.TEOLOGIA_NINJA_PAGINA={
+      pagina:'cultura-israel.html',
+      ativo:'historia-israel',
+      titulo:'Cultura e História de Israel',
+      subtitulo:'História, costumes, festas e escritos judaicos',
+      secao:'CULTURA E HISTÓRIA DE ISRAEL'
+    };
+  </script>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/sistema.js"></script>
+  <script src="js/menu-cultura.js"></script>
+  
+</body>
+</html>

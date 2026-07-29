@@ -1,0 +1,54 @@
+{
+  "itens": [
+    {
+      "id": "kipa",
+      "nome": "Kipá",
+      "categoria": "vestimentas",
+      "resumo": "Cobertura tradicional usada sobre a cabeça no judaísmo.",
+      "imagemPrincipal": "imagens/kipa/kipa-principal.jpg",
+      "pontos": [
+        {
+          "ordem": 1,
+          "titulo": "Formato",
+          "descricao": "Pequena cobertura colocada sobre a cabeça."
+        },
+        {
+          "ordem": 2,
+          "titulo": "Significado",
+          "descricao": "Expressa reverência e consciência da presença divina."
+        },
+        {
+          "ordem": 3,
+          "titulo": "Origem histórica",
+          "descricao": "O uso consolidado pertence principalmente ao desenvolvimento do judaísmo rabínico."
+        },
+        {
+          "ordem": 4,
+          "titulo": "Mandamento ou costume?",
+          "descricao": "É importante distinguir tradição judaica, costume comunitário e mandamento explícito da Torá."
+        }
+      ],
+      "fontes": []
+    },
+    {
+      "id": "talit",
+      "nome": "Talit",
+      "categoria": "vestimentas",
+      "resumo": "Manto de oração associado aos tzitzit e à tradição judaica.",
+      "imagemPrincipal": "imagens/talit/talit-principal.jpg",
+      "pontos": [
+        {
+          "ordem": 1,
+          "titulo": "Quatro cantos",
+          "descricao": "O talit possui quatro cantos onde são presos os tzitzit."
+        },
+        {
+          "ordem": 2,
+          "titulo": "Tzitzit",
+          "descricao": "Franjas relacionadas ao mandamento de Números 15."
+        }
+      ],
+      "fontes": []
+    }
+  ]
+}

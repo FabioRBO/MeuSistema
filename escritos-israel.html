@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Escritos Judaicos | Teologia Ninja</title>
+  <script>
+    (() => {
+      const tema=localStorage.getItem('teologiaNinja_tema')||'dark';
+      const cor=localStorage.getItem('teologiaNinja_corDestaque')||'purple';
+      document.documentElement.setAttribute('data-bs-theme',tema);
+      document.documentElement.setAttribute('data-accent',cor);
+    })();
+  </script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/cultura-israel.css">
+</head>
+<body class="app-shell">
+  <div id="layoutSistema"></div>
+  <main class="app-main cultura-main">
+<section class="cultura-hero">
+  <div><h2>Escritos judaicos</h2><p>Torá escrita, Torá oral e principais obras da tradição judaica.</p></div>
+  <div class="cultura-hero-acoes"><button class="btn-cultura" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuCultura">☰ Explorar Israel</button><a class="btn-cultura" href="cultura-israel.html">← Voltar</a></div>
+</section>
+<section class="cultura-grid">
+  <article class="cultura-card" id="shebichtav"><div class="cultura-card-icone">📜</div><h3>Torá Shebichtav</h3><p>Torá escrita e sua relação com o Tanakh.</p></article>
+  <article class="cultura-card" id="shebealpeh"><div class="cultura-card-icone">🗣️</div><h3>Torá Shebe’al Peh</h3><p>Tradição oral e seu desenvolvimento histórico.</p></article>
+  <article class="cultura-card" id="mishna"><div class="cultura-card-icone">📚</div><h3>Mishná</h3><p>Organização da tradição oral em tratados.</p></article>
+  <article class="cultura-card" id="talmude"><div class="cultura-card-icone">📖</div><h3>Talmude</h3><p>Mishná, Guemará e tradições interpretativas.</p></article>
+</section></main>
+
+  <div class="offcanvas offcanvas-start menu-cultura" tabindex="-1" id="menuCultura">
+    <div class="offcanvas-header border-bottom">
+      <div>
+        <h2 class="offcanvas-title h5 mb-1">Explorar Israel</h2>
+        <small class="text-secondary">História, cultura, festas e escritos</small>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body" id="menuCulturaConteudo"></div>
+  </div>
+
+  <script>
+    window.TEOLOGIA_NINJA_PAGINA={
+      pagina:'escritos-israel.html',
+      ativo:'historia-israel',
+      titulo:'Escritos Judaicos',
+      subtitulo:'Torá escrita, Torá oral, Mishná e Talmude',
+      secao:'CULTURA E HISTÓRIA DE ISRAEL'
+    };
+  </script>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/sistema.js"></script>
+  <script src="js/menu-cultura.js"></script>
+  
+</body>
+</html>

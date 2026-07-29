@@ -1,0 +1,407 @@
+.cultura-main{padding-bottom:28px}
+.cultura-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:22px;margin-bottom:22px;padding:26px;border:1px solid var(--panel-border);border-radius:18px;background:linear-gradient(135deg,rgba(var(--accent-rgb),.18),rgba(var(--accent-rgb),.04)),var(--panel-bg);box-shadow:var(--shadow)}
+.cultura-hero h2{margin:0 0 10px;color:var(--text-main);font-size:clamp(1.8rem,4vw,3rem)}
+.cultura-hero p{margin:0;color:var(--text-muted);line-height:1.7}
+.cultura-hero-acoes{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap}
+.btn-cultura{min-height:42px;padding:9px 14px;border:1px solid var(--panel-border);border-radius:9px;color:var(--text-main);background:var(--panel-bg-2);text-decoration:none;cursor:pointer}
+.btn-cultura:hover,.btn-cultura.ativo{color:#fff;background:var(--accent);border-color:var(--accent)}
+.cultura-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cultura-card{min-height:210px;padding:20px;border:1px solid var(--panel-border);border-radius:14px;background:var(--panel-bg);box-shadow:var(--shadow)}
+.cultura-card h3{margin:10px 0 8px;color:var(--text-main);font-size:1.1rem}
+.cultura-card p{color:var(--text-muted);line-height:1.55}
+.cultura-card-icone{font-size:2rem}
+.cultura-card a{color:var(--accent);font-weight:700;text-decoration:none}
+.menu-cultura{width:min(390px,92vw)!important;color:var(--text-main);background:var(--panel-bg);border-right:1px solid var(--panel-border)}
+.menu-cultura-grupo{margin-bottom:12px}
+.menu-cultura-grupo h3{margin:0 0 8px;color:var(--accent);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+.menu-cultura-lista{display:flex;flex-direction:column;gap:5px}
+.menu-cultura-lista a{display:block;padding:9px 10px;border-radius:8px;color:var(--text-main);text-decoration:none}
+.menu-cultura-lista a:hover{color:var(--accent);background:rgba(var(--accent-rgb),.10)}
+.pagina-conteudo{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px}
+.conteudo-principal,.conteudo-lateral{border:1px solid var(--panel-border);border-radius:14px;background:var(--panel-bg);box-shadow:var(--shadow)}
+.conteudo-principal{padding:22px}.conteudo-lateral{padding:18px}
+.objeto-hero{position:relative;min-height:520px;overflow:hidden;border-radius:16px;background:linear-gradient(rgba(0,0,0,.28),rgba(0,0,0,.48)),var(--panel-bg-2);border:1px solid var(--panel-border);background-size:cover;background-position:center}
+.objeto-mensagem{position:absolute;inset:auto 18px 18px;max-width:540px;padding:16px;color:#fff;background:rgba(0,0,0,.62);border-radius:12px}
+.objeto-pontos{display:grid;gap:12px;margin-top:18px}
+.objeto-ponto{padding:15px;border:1px solid var(--panel-border);border-radius:10px;background:var(--panel-bg-2)}
+.timeline-placeholder{min-height:560px;display:grid;place-items:center;padding:24px;border:1px dashed var(--panel-border);border-radius:14px;background:var(--panel-bg);text-align:center}
+@media(max-width:1100px){.cultura-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pagina-conteudo{grid-template-columns:1fr}}
+@media(max-width:767.98px){.cultura-hero{grid-template-columns:1fr;padding:18px}.cultura-hero-acoes{justify-content:flex-start}.cultura-grid{grid-template-columns:1fr}.objeto-hero{min-height:420px}}
+
+
+/* =========================================================
+   TIMELINEJS — HISTÓRIA DE ISRAEL
+   ========================================================= */
+
+.timeline-area {
+  overflow: hidden;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+}
+
+.timeline-aviso {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 11px 15px;
+  color: var(--text-main);
+  background: var(--panel-bg-2);
+  border-bottom: 1px solid var(--panel-border);
+  font-size: 12px;
+}
+
+.timeline-aviso strong {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+#timeline-embed {
+  width: 100%;
+  height: 650px;
+}
+
+/* Integração visual com o sistema */
+.tl-timeline,
+.tl-storyslider,
+.tl-slider-container-mask,
+.tl-slide,
+.tl-timenav,
+.tl-menubar {
+  background-color: var(--panel-bg) !important;
+}
+
+.tl-slide-content-container,
+.tl-text-content,
+.tl-text-content p,
+.tl-text-content li,
+.tl-headline,
+.tl-headline-date,
+.tl-timeaxis-tick-text,
+.tl-timeaxis-major .tl-timeaxis-tick-text,
+.tl-timemarker-text h2 {
+  color: var(--text-main) !important;
+}
+
+.tl-text-content p,
+.tl-text-content li,
+.tl-credit,
+.tl-caption,
+.tl-headline-date {
+  color: var(--text-muted) !important;
+}
+
+.tl-timenav,
+.tl-timenav-slider-background,
+.tl-timeaxis-background {
+  background: var(--panel-bg-2) !important;
+}
+
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
+  background: rgba(var(--accent-rgb), .18) !important;
+  border-color: var(--accent) !important;
+}
+
+.tl-timemarker.tl-timemarker-active .tl-timemarker-line-left,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-line-right,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-line-left:after,
+.tl-timemarker.tl-timemarker-active .tl-timemarker-line-right:after {
+  border-color: var(--accent) !important;
+}
+
+.tl-slidenav-previous:hover .tl-slidenav-icon,
+.tl-slidenav-next:hover .tl-slidenav-icon {
+  color: var(--accent) !important;
+}
+
+@media (max-width: 767.98px) {
+  #timeline-embed {
+    height: 720px;
+  }
+
+  .timeline-aviso {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+
+/* =========================================================
+   STORYMAPJS — HISTÓRIA DE ISRAEL
+   ========================================================= */
+
+.storymap-area {
+  overflow: hidden;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+}
+
+.storymap-aviso {
+  min-height: 46px;
+  padding: 10px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  color: var(--text-main);
+  background: var(--panel-bg-2);
+  border-bottom: 1px solid var(--panel-border);
+
+  font-size: 12px;
+}
+
+.storymap-aviso strong {
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+#storymap-embed {
+  width: 100%;
+  height: 690px;
+  background: var(--panel-bg);
+}
+
+.storymap-erro {
+  min-height: 500px;
+  padding: 30px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--text-main);
+  text-align: center;
+}
+
+.storymap-erro strong {
+  color: var(--accent);
+}
+
+/* Integração básica com o tema do sistema */
+.vco-storymap,
+.vco-storyslider,
+.vco-slider-container-mask,
+.vco-slide,
+.vco-map,
+.vco-menubar {
+  background-color: var(--panel-bg) !important;
+}
+
+.vco-text,
+.vco-text p,
+.vco-text h2,
+.vco-text h3,
+.vco-headline,
+.vco-headline-date {
+  color: var(--text-main) !important;
+}
+
+.vco-caption,
+.vco-credit,
+.vco-text p,
+.vco-headline-date {
+  color: var(--text-muted) !important;
+}
+
+.vco-menubar-button:hover,
+.vco-slidenav-previous:hover,
+.vco-slidenav-next:hover {
+  color: var(--accent) !important;
+}
+
+@media (max-width: 767.98px) {
+  .storymap-aviso {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  #storymap-embed {
+    height: 740px;
+  }
+}
+/* =========================================================
+   NÉVOA AUTOMÁTICA DO STORYMAP
+   Tema escuro: preta | Tema claro: branca
+   ========================================================= */
+
+:root,
+[data-bs-theme="dark"] {
+  --storymap-fog-solid: rgba(7, 10, 18, .97);
+  --storymap-fog-medium: rgba(7, 10, 18, .90);
+  --storymap-fog-soft: rgba(7, 10, 18, .56);
+  --storymap-fog-fade: rgba(7, 10, 18, 0);
+  --storymap-fog-text: #f7f8fc;
+  --storymap-fog-muted: #c5cad5;
+  --storymap-fog-border: rgba(255, 255, 255, .13);
+  --storymap-fog-shadow: rgba(0, 0, 0, .42);
+}
+
+[data-bs-theme="light"] {
+  --storymap-fog-solid: rgba(255, 255, 255, .98);
+  --storymap-fog-medium: rgba(255, 255, 255, .92);
+  --storymap-fog-soft: rgba(255, 255, 255, .62);
+  --storymap-fog-fade: rgba(255, 255, 255, 0);
+  --storymap-fog-text: #171923;
+  --storymap-fog-muted: #596070;
+  --storymap-fog-border: rgba(20, 24, 35, .13);
+  --storymap-fog-shadow: rgba(24, 28, 40, .18);
+}
+
+/*
+ * O texto do StoryMap fica sobre uma faixa que começa sólida
+ * e desaparece gradualmente sobre o mapa.
+ */
+#storymap-embed .vco-slide .vco-text,
+#storymap-embed .vco-slide .vco-text-content-container {
+  position: relative;
+  z-index: 4;
+
+  overflow: visible !important;
+  padding: 24px 25px !important;
+
+  color: var(--storymap-fog-text) !important;
+  background: var(--storymap-fog-medium) !important;
+
+  border: 1px solid var(--storymap-fog-border);
+  border-radius: 14px;
+
+  box-shadow:
+    0 16px 38px var(--storymap-fog-shadow);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Extensão da névoa em direção ao mapa */
+#storymap-embed .vco-slide .vco-text::after,
+#storymap-embed .vco-slide .vco-text-content-container::after {
+  content: "";
+  position: absolute;
+  top: -26px;
+  right: -150px;
+  bottom: -26px;
+  width: 210px;
+  z-index: -1;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    var(--storymap-fog-medium) 0%,
+    var(--storymap-fog-soft) 46%,
+    var(--storymap-fog-fade) 100%
+  );
+
+  filter: blur(7px);
+}
+
+/* Reforça o contraste do conteúdo */
+#storymap-embed .vco-text,
+#storymap-embed .vco-text h2,
+#storymap-embed .vco-text h3,
+#storymap-embed .vco-text .vco-headline,
+#storymap-embed .vco-text .vco-headline-date {
+  color: var(--storymap-fog-text) !important;
+  text-shadow: 0 1px 2px var(--storymap-fog-shadow);
+}
+
+#storymap-embed .vco-text p,
+#storymap-embed .vco-text li,
+#storymap-embed .vco-text small,
+#storymap-embed .vco-text .vco-caption,
+#storymap-embed .vco-text .vco-credit {
+  color: var(--storymap-fog-muted) !important;
+}
+
+/* Linha de destaque discreta */
+#storymap-embed .vco-text::before,
+#storymap-embed .vco-text-content-container::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 0;
+  width: 4px;
+
+  border-radius: 0 999px 999px 0;
+  background: var(--accent);
+  box-shadow: 0 0 16px rgba(var(--accent-rgb), .32);
+}
+
+/* Botões de navegação seguindo a cor do sistema */
+#storymap-embed .vco-slidenav-previous,
+#storymap-embed .vco-slidenav-next {
+  transition:
+    color .18s ease,
+    transform .18s ease;
+}
+
+#storymap-embed .vco-slidenav-previous:hover,
+#storymap-embed .vco-slidenav-next:hover {
+  color: var(--accent) !important;
+  transform: scale(1.04);
+}
+
+/* Entrada suave do conteúdo */
+#storymap-embed .vco-slide.vco-active .vco-text,
+#storymap-embed .vco-slide.vco-active .vco-text-content-container {
+  animation: storymapFogEnter .38s ease both;
+}
+
+@keyframes storymapFogEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  #storymap-embed .vco-slide .vco-text,
+  #storymap-embed .vco-slide .vco-text-content-container {
+    padding: 19px 20px !important;
+  }
+
+  #storymap-embed .vco-slide .vco-text::after,
+  #storymap-embed .vco-slide .vco-text-content-container::after {
+    right: -105px;
+    width: 150px;
+  }
+}
+
+/* Celular: painel mais sólido e sem extensão lateral */
+@media (max-width: 767.98px) {
+  #storymap-embed .vco-slide .vco-text,
+  #storymap-embed .vco-slide .vco-text-content-container {
+    padding: 16px !important;
+
+    background: var(--storymap-fog-solid) !important;
+
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  #storymap-embed .vco-slide .vco-text::after,
+  #storymap-embed .vco-slide .vco-text-content-container::after {
+    display: none;
+  }
+
+  #storymap-embed .vco-text::before,
+  #storymap-embed .vco-text-content-container::before {
+    top: 12px;
+    bottom: 12px;
+  }
+}
