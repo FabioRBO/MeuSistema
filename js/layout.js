@@ -15,7 +15,7 @@
     ['DIV'],
     ['#','anotacoes','📝','Anotações',true],
     ['#','arquivos','📁','Arquivos',true],
-    ['#','dicionario','Aa','Dicionário Strong',true],
+    ['dicionario-hebraico.html','dicionario','אΩ','Dicionário Bíblico'],
     ['#','favoritos','❤️','Favoritos',true]
   ];
 

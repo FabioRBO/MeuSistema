@@ -1,0 +1,275 @@
+{
+  "versao": "0.1.0",
+  "palavras": [
+    {
+      "id": "G1",
+      "original": "ἄλφα",
+      "semSinais": "αλφα",
+      "transliteracao": "alpha",
+      "pronuncia": "ál-fa",
+      "portugues": "alfa; primeira letra",
+      "categoria": "Alfabeto",
+      "classe": "substantivo",
+      "raiz": "ἄλφα",
+      "resumo": "Primeira letra do alfabeto grego.",
+      "significado": "Usada literalmente para a primeira letra e simbolicamente para o princípio.",
+      "ocorrencias": 4,
+      "primeiraOcorrencia": "Apocalipse 1:8",
+      "referencias": [
+        "Apocalipse 1:8",
+        "Apocalipse 21:6",
+        "Apocalipse 22:13"
+      ],
+      "relacionadas": [
+        "G5598"
+      ]
+    },
+    {
+      "id": "G26",
+      "original": "ἀγάπη",
+      "semSinais": "αγαπη",
+      "transliteracao": "agape",
+      "pronuncia": "a-gá-pe",
+      "portugues": "amor",
+      "categoria": "Vida espiritual",
+      "classe": "substantivo feminino",
+      "raiz": "ἀγαπάω",
+      "resumo": "Amor, afeição e benevolência.",
+      "significado": "Amor que busca o bem do outro; no Novo Testamento aparece com frequência para o amor de Deus e o amor cristão.",
+      "ocorrencias": 116,
+      "primeiraOcorrencia": "Mateus 24:12",
+      "referencias": [
+        "João 13:35",
+        "Romanos 5:5",
+        "1 Coríntios 13:1"
+      ],
+      "relacionadas": [
+        "G25"
+      ]
+    },
+    {
+      "id": "G32",
+      "original": "ἄγγελος",
+      "semSinais": "αγγελος",
+      "transliteracao": "angelos",
+      "pronuncia": "án-gue-los",
+      "portugues": "mensageiro; anjo",
+      "categoria": "Seres espirituais",
+      "classe": "substantivo masculino",
+      "raiz": "ἄγγελος",
+      "resumo": "Mensageiro humano ou celestial.",
+      "significado": "Pode designar um mensageiro enviado por uma pessoa ou um ser celestial enviado por Deus.",
+      "ocorrencias": 186,
+      "primeiraOcorrencia": "Mateus 1:20",
+      "referencias": [
+        "Mateus 1:20",
+        "Lucas 1:26",
+        "Hebreus 1:14"
+      ],
+      "relacionadas": []
+    },
+    {
+      "id": "G3056",
+      "original": "λόγος",
+      "semSinais": "λογος",
+      "transliteracao": "logos",
+      "pronuncia": "ló-gos",
+      "portugues": "palavra; mensagem; razão",
+      "categoria": "Teologia",
+      "classe": "substantivo masculino",
+      "raiz": "λέγω",
+      "resumo": "Palavra, discurso, mensagem, relato ou razão.",
+      "significado": "Termo amplo para palavra e discurso; em João 1 é usado como título para Cristo, o Logos.",
+      "ocorrencias": 330,
+      "primeiraOcorrencia": "Mateus 5:32",
+      "referencias": [
+        "João 1:1",
+        "João 1:14",
+        "Hebreus 4:12"
+      ],
+      "relacionadas": [
+        "G3004"
+      ]
+    },
+    {
+      "id": "G5485",
+      "original": "χάρις",
+      "semSinais": "χαρις",
+      "transliteracao": "charis",
+      "pronuncia": "rrá-ris",
+      "portugues": "graça; favor",
+      "categoria": "Teologia",
+      "classe": "substantivo feminino",
+      "raiz": "χαίρω",
+      "resumo": "Graça, favor, bondade ou gratidão.",
+      "significado": "Favor concedido livremente; também pode indicar gratidão e aquilo que produz alegria.",
+      "ocorrencias": 156,
+      "primeiraOcorrencia": "Lucas 1:30",
+      "referencias": [
+        "João 1:14",
+        "Romanos 3:24",
+        "Efésios 2:8"
+      ],
+      "relacionadas": [
+        "G5463"
+      ]
+    },
+    {
+      "id": "G4102",
+      "original": "πίστις",
+      "semSinais": "πιστις",
+      "transliteracao": "pistis",
+      "pronuncia": "pís-tis",
+      "portugues": "fé; fidelidade",
+      "categoria": "Vida espiritual",
+      "classe": "substantivo feminino",
+      "raiz": "πείθω",
+      "resumo": "Fé, confiança, crença ou fidelidade.",
+      "significado": "Confiança e compromisso; conforme o contexto pode destacar crença, fidelidade ou o conteúdo da fé.",
+      "ocorrencias": 243,
+      "primeiraOcorrencia": "Mateus 8:10",
+      "referencias": [
+        "Romanos 1:17",
+        "Gálatas 5:22",
+        "Hebreus 11:1"
+      ],
+      "relacionadas": [
+        "G4100"
+      ]
+    },
+    {
+      "id": "G4151",
+      "original": "πνεῦμα",
+      "semSinais": "πνευμα",
+      "transliteracao": "pneuma",
+      "pronuncia": "pneu-ma",
+      "portugues": "espírito; vento; sopro",
+      "categoria": "Teologia",
+      "classe": "substantivo neutro",
+      "raiz": "πνέω",
+      "resumo": "Espírito, vento ou sopro.",
+      "significado": "Pode indicar o Espírito Santo, o espírito humano, seres espirituais, vento ou sopro.",
+      "ocorrencias": 385,
+      "primeiraOcorrencia": "Mateus 1:18",
+      "referencias": [
+        "João 3:8",
+        "Atos 2:4",
+        "Gálatas 5:16"
+      ],
+      "relacionadas": [
+        "G4154"
+      ]
+    },
+    {
+      "id": "G2222",
+      "original": "ζωή",
+      "semSinais": "ζωη",
+      "transliteracao": "zoe",
+      "pronuncia": "zo-ê",
+      "portugues": "vida",
+      "categoria": "Vida espiritual",
+      "classe": "substantivo feminino",
+      "raiz": "ζάω",
+      "resumo": "Vida física ou vida em plenitude.",
+      "significado": "Vida natural e, especialmente em João, vida eterna e participação na vida de Deus.",
+      "ocorrencias": 135,
+      "primeiraOcorrencia": "Mateus 7:14",
+      "referencias": [
+        "João 1:4",
+        "João 3:16",
+        "João 10:10"
+      ],
+      "relacionadas": [
+        "G2198"
+      ]
+    },
+    {
+      "id": "G1680",
+      "original": "ἐλπίς",
+      "semSinais": "ελπις",
+      "transliteracao": "elpis",
+      "pronuncia": "el-pís",
+      "portugues": "esperança",
+      "categoria": "Vida espiritual",
+      "classe": "substantivo feminino",
+      "raiz": "ἔλπω",
+      "resumo": "Esperança e expectativa confiante.",
+      "significado": "Expectativa voltada para o futuro, frequentemente fundamentada na promessa e fidelidade de Deus.",
+      "ocorrencias": 54,
+      "primeiraOcorrencia": "Atos 2:26",
+      "referencias": [
+        "Romanos 5:5",
+        "Romanos 8:24",
+        "1 Pedro 1:3"
+      ],
+      "relacionadas": [
+        "G1679"
+      ]
+    },
+    {
+      "id": "G2316",
+      "original": "θεός",
+      "semSinais": "θεος",
+      "transliteracao": "theos",
+      "pronuncia": "the-ós",
+      "portugues": "Deus; deus",
+      "categoria": "Teologia",
+      "classe": "substantivo masculino",
+      "raiz": "θεός",
+      "resumo": "Deus ou uma divindade, conforme o contexto.",
+      "significado": "No Novo Testamento normalmente designa o Deus verdadeiro, embora também possa referir-se a deuses falsos.",
+      "ocorrencias": 1317,
+      "primeiraOcorrencia": "Mateus 1:23",
+      "referencias": [
+        "João 1:1",
+        "João 3:16",
+        "Romanos 8:31"
+      ],
+      "relacionadas": []
+    },
+    {
+      "id": "G4991",
+      "original": "σωτηρία",
+      "semSinais": "σωτηρια",
+      "transliteracao": "soteria",
+      "pronuncia": "so-te-rí-a",
+      "portugues": "salvação; livramento",
+      "categoria": "Teologia",
+      "classe": "substantivo feminino",
+      "raiz": "σῴζω",
+      "resumo": "Salvação, preservação ou livramento.",
+      "significado": "Livramento de perigo e, teologicamente, a obra salvadora de Deus em Cristo.",
+      "ocorrencias": 46,
+      "primeiraOcorrencia": "Lucas 1:69",
+      "referencias": [
+        "Lucas 2:30",
+        "Atos 4:12",
+        "Romanos 1:16"
+      ],
+      "relacionadas": [
+        "G4982"
+      ]
+    },
+    {
+      "id": "G1515",
+      "original": "εἰρήνη",
+      "semSinais": "ειρηνη",
+      "transliteracao": "eirene",
+      "pronuncia": "ei-rê-ne",
+      "portugues": "paz",
+      "categoria": "Vida espiritual",
+      "classe": "substantivo feminino",
+      "raiz": "εἴρω",
+      "resumo": "Paz, harmonia e bem-estar.",
+      "significado": "Ausência de hostilidade, reconciliação e bem-estar; também descreve a paz concedida por Deus.",
+      "ocorrencias": 92,
+      "primeiraOcorrencia": "Mateus 10:13",
+      "referencias": [
+        "João 14:27",
+        "Romanos 5:1",
+        "Filipenses 4:7"
+      ],
+      "relacionadas": []
+    }
+  ]
+}
