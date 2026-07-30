@@ -135,3 +135,243 @@
     padding: 1rem;
   }
 }
+
+/* ==================================================
+   CARDS COM IMAGEM — QUATRO LADO A LADO
+   ================================================== */
+#listaVisoes {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+.visao-card-imagem {
+  min-height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.visao-card-clicavel {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.visao-card-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bs-tertiary-bg);
+}
+
+.visao-card-media::after {
+  content: '';
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,.65));
+}
+
+.visao-card-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.visao-card:hover .visao-card-media img {
+  transform: scale(1.045);
+}
+
+.visao-card-corpo {
+  flex: 1;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.visao-card-corpo h3 {
+  margin: 0 0 .65rem;
+  font-size: 1.08rem;
+}
+
+.visao-card-corpo p {
+  margin: 0 0 1rem;
+  color: var(--bs-secondary-color);
+  line-height: 1.55;
+  font-size: .92rem;
+}
+
+.visao-card-corpo .visao-link {
+  margin-top: auto;
+}
+
+/* ==================================================
+   CAPA DO ESTUDO
+   ================================================== */
+.estudo-capa {
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
+  border: 1px solid var(--bs-border-color);
+  border-radius: 1rem;
+  background: var(--bs-tertiary-bg);
+}
+
+.estudo-capa img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.estudo-capa::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5,7,12,.96) 0%,
+    rgba(5,7,12,.56) 48%,
+    rgba(5,7,12,.05) 100%
+  );
+}
+
+.estudo-capa-overlay {
+  position: absolute;
+  z-index: 1;
+  left: 1.4rem;
+  right: 1.4rem;
+  bottom: 1.25rem;
+  color: #fff;
+}
+
+.estudo-capa-overlay h3 {
+  margin: 0 0 .4rem;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+}
+
+.estudo-capa-overlay p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(255,255,255,.78);
+}
+
+/* ==================================================
+   GRÁFICO PASSO A PASSO
+   ================================================== */
+.estudo-fluxo {
+  overflow: hidden;
+}
+
+.estudo-fluxo-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.15rem;
+}
+
+.estudo-fluxo-cabecalho h3 {
+  margin-bottom: .25rem;
+}
+
+.estudo-fluxo-cabecalho p {
+  margin: 0;
+  color: var(--bs-secondary-color);
+}
+
+.estudo-fluxo-cabecalho > span {
+  padding: .3rem .65rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--bs-border-color));
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: .78rem;
+  white-space: nowrap;
+}
+
+.fluxo-etapas {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(145px, 1fr));
+  gap: .75rem;
+  overflow-x: auto;
+  padding: .25rem .15rem .75rem;
+  scrollbar-width: thin;
+}
+
+.fluxo-etapa {
+  position: relative;
+  min-height: 190px;
+  padding: 1rem;
+  border: 1px solid var(--bs-border-color);
+  border-radius: .85rem;
+  background: var(--bs-tertiary-bg);
+}
+
+.fluxo-numero {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: .85rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.fluxo-conteudo strong {
+  display: block;
+  margin-bottom: .55rem;
+  line-height: 1.3;
+}
+
+.fluxo-conteudo p {
+  margin: 0;
+  color: var(--bs-secondary-color);
+  font-size: .83rem;
+  line-height: 1.5;
+}
+
+.fluxo-seta {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -.63rem;
+  transform: translateY(-50%);
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+@media (max-width: 1199.98px) {
+  .fluxo-etapas {
+    grid-template-columns: repeat(6, 170px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .visao-card-corpo {
+    padding: 1rem;
+  }
+
+  .estudo-capa img {
+    height: 230px;
+  }
+
+  .estudo-capa-overlay {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .fluxo-etapas {
+    grid-template-columns: repeat(6, 78vw);
+  }
+}

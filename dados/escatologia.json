@@ -42,6 +42,34 @@
         "É necessário distinguir claramente o preterismo parcial do completo.",
         "Nem toda linguagem apocalíptica é interpretada da mesma forma por todos os preteristas.",
         "Alguns textos permanecem debatidos, especialmente 1 Coríntios 15 e Apocalipse 20."
+      ],
+      "imagem": "imagens/escatologia/preterismo.jpg",
+      "imagemAlt": "Jerusalém e o templo durante a guerra judaico-romana do século I",
+      "passos": [
+        {
+          "titulo": "Contexto do século I",
+          "descricao": "As profecias são lidas inicialmente dentro da geração de Jesus e dos apóstolos."
+        },
+        {
+          "titulo": "Anúncio do juízo",
+          "descricao": "Jesus anuncia a crise de Jerusalém, do templo e da antiga ordem pactual."
+        },
+        {
+          "titulo": "Guerra judaico-romana",
+          "descricao": "A revolta iniciada em 66 d.C. conduz ao cerco romano."
+        },
+        {
+          "titulo": "Jerusalém em 70 d.C.",
+          "descricao": "A queda da cidade e do templo ocupa lugar central no cumprimento preterista."
+        },
+        {
+          "titulo": "Reino presente",
+          "descricao": "Cristo reina e a nova aliança alcança as nações."
+        },
+        {
+          "titulo": "Consumação",
+          "descricao": "No preterismo parcial, ressurreição e juízo final permanecem futuros."
+        }
       ]
     },
     {
@@ -83,6 +111,34 @@
         "A relação entre Apocalipse 19 e 20 é debatida.",
         "A natureza da primeira ressurreição recebe interpretações diferentes.",
         "Críticos afirmam que a leitura simbólica pode minimizar detalhes cronológicos."
+      ],
+      "imagem": "imagens/escatologia/amilenismo.jpg",
+      "imagemAlt": "Cristo reinando, representando o reino presente",
+      "passos": [
+        {
+          "titulo": "Primeira vinda",
+          "descricao": "Cristo inaugura o reino e vence decisivamente o poder do pecado e de Satanás."
+        },
+        {
+          "titulo": "Satanás limitado",
+          "descricao": "Sua ação é restringida quanto ao impedimento da missão entre as nações."
+        },
+        {
+          "titulo": "Milênio presente",
+          "descricao": "Os mil anos representam simbolicamente a era entre as duas vindas."
+        },
+        {
+          "titulo": "Igreja em missão",
+          "descricao": "O reino avança em meio a sofrimento, testemunho e perseverança."
+        },
+        {
+          "titulo": "Última oposição",
+          "descricao": "Antes do fim ocorre uma manifestação final de oposição ao povo de Deus."
+        },
+        {
+          "titulo": "Volta e consumação",
+          "descricao": "Cristo retorna, ocorre a ressurreição geral, o juízo e a nova criação."
+        }
       ]
     },
     {
@@ -125,6 +181,34 @@
         "Há diferentes graus de otimismo entre os pós-milenistas.",
         "Críticos apontam períodos históricos de perseguição e apostasia.",
         "A relação entre progresso histórico e consumação precisa ser bem definida."
+      ],
+      "imagem": "imagens/escatologia/pos-milenismo.jpg",
+      "imagemAlt": "O evangelho alcançando as nações e transformando o mundo",
+      "passos": [
+        {
+          "titulo": "Evangelho anunciado",
+          "descricao": "A missão começa com a autoridade universal de Cristo."
+        },
+        {
+          "titulo": "Crescimento do reino",
+          "descricao": "O reino cresce como a semente e o fermento nas parábolas de Jesus."
+        },
+        {
+          "titulo": "Conversão das nações",
+          "descricao": "Espera-se uma expansão ampla da fé e da obediência cristã."
+        },
+        {
+          "titulo": "Longo período de bênção",
+          "descricao": "Justiça, paz e influência do evangelho tornam-se historicamente predominantes."
+        },
+        {
+          "titulo": "Oposição final",
+          "descricao": "Algumas leituras admitem uma rebelião breve ao fim desse período."
+        },
+        {
+          "titulo": "Volta de Cristo",
+          "descricao": "Cristo retorna após o milênio, seguido pela ressurreição e pelo juízo."
+        }
       ]
     },
     {
@@ -167,6 +251,34 @@
         "A separação entre Israel e Igreja é amplamente debatida.",
         "A doutrina de um arrebatamento secreto pré-tribulacional não é aceita por todos os pré-milenistas.",
         "A leitura cronológica de Apocalipse é contestada por outras escolas."
+      ],
+      "imagem": "imagens/escatologia/pre-milenismo-dispensacionalista.jpg",
+      "imagemAlt": "Arrebatamento, trombetas e pessoas subindo entre as nuvens",
+      "passos": [
+        {
+          "titulo": "Era da Igreja",
+          "descricao": "A Igreja anuncia o evangelho durante a atual dispensação."
+        },
+        {
+          "titulo": "Arrebatamento",
+          "descricao": "Na forma pré-tribulacional, a Igreja é retirada antes da grande tribulação."
+        },
+        {
+          "titulo": "Grande tribulação",
+          "descricao": "Um período futuro de juízo e intensa crise ocorre sobre a terra."
+        },
+        {
+          "titulo": "Volta visível",
+          "descricao": "Cristo retorna publicamente, derrota seus inimigos e salva Israel."
+        },
+        {
+          "titulo": "Milênio literal",
+          "descricao": "Cristo governa a terra por mil anos, cumprindo promessas feitas a Israel."
+        },
+        {
+          "titulo": "Juízo e eternidade",
+          "descricao": "Após a rebelião final vêm o juízo do grande trono branco e o estado eterno."
+        }
       ]
     }
   ]

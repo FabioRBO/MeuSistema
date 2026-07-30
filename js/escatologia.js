@@ -12,15 +12,22 @@
 
   function criarCard(visao) {
     const col = document.createElement('div');
-    col.className = 'col-12 col-md-6';
+    col.className = 'col-12 col-sm-6 col-xl-3';
 
     col.innerHTML = `
-      <article class="visao-card p-3 p-lg-4">
-        <div class="visao-icone mb-3">${visao.icone}</div>
-        <h3 class="h5">${visao.titulo}</h3>
-        <p class="text-secondary">${visao.resumo}</p>
-        <button class="btn btn-link p-0 visao-link" type="button" data-visao="${visao.id}">
-          Abrir estudo
+      <article class="visao-card visao-card-imagem">
+        <button class="visao-card-clicavel" type="button" data-visao="${visao.id}">
+          <div class="visao-card-media">
+            <img src="${visao.imagem}"
+                 alt="${visao.imagemAlt || visao.titulo}"
+                 loading="lazy">
+          </div>
+
+          <div class="visao-card-corpo">
+            <h3>${visao.titulo}</h3>
+            <p>${visao.resumo}</p>
+            <span class="visao-link">Abrir estudo →</span>
+          </div>
         </button>
       </article>
     `;
@@ -30,6 +37,36 @@
 
   function chips(lista, classe = 'nome-chip') {
     return lista.map(item => `<button class="${classe}" type="button" data-pessoa="${item}">${item}</button>`).join('');
+  }
+
+
+  function graficoPassoAPasso(passos = []) {
+    if (!passos.length) return '';
+
+    return `
+      <section class="info-bloco estudo-fluxo">
+        <div class="estudo-fluxo-cabecalho">
+          <div>
+            <h3>Gráfico passo a passo</h3>
+            <p>Sequência resumida desta interpretação.</p>
+          </div>
+          <span>${passos.length} etapas</span>
+        </div>
+
+        <div class="fluxo-etapas">
+          ${passos.map((passo, indice) => `
+            <article class="fluxo-etapa">
+              <div class="fluxo-numero">${indice + 1}</div>
+              <div class="fluxo-conteudo">
+                <strong>${passo.titulo}</strong>
+                <p>${passo.descricao}</p>
+              </div>
+              ${indice < passos.length - 1 ? '<div class="fluxo-seta" aria-hidden="true">→</div>' : ''}
+            </article>
+          `).join('')}
+        </div>
+      </section>
+    `;
   }
 
   function listaHtml(lista) {
@@ -42,10 +79,13 @@
 
     $('#tituloPainel').textContent = visao.titulo;
     $('#conteudoPainel').innerHTML = `
-      <div class="text-center mb-4">
-        <div class="display-5 mb-2">${visao.icone}</div>
-        <h3 class="h3">${visao.titulo}</h3>
-        <p class="text-secondary">${visao.resumo}</p>
+      <div class="estudo-capa mb-4">
+        <img src="${visao.imagem}"
+             alt="${visao.imagemAlt || visao.titulo}">
+        <div class="estudo-capa-overlay">
+          <h3>${visao.titulo}</h3>
+          <p>${visao.resumo}</p>
+        </div>
       </div>
 
       <section class="info-bloco">
@@ -72,6 +112,8 @@
         <h3>Descrição completa</h3>
         <p class="mb-0">${visao.descricao}</p>
       </section>
+
+      ${graficoPassoAPasso(visao.passos)}
 
       <section class="info-bloco">
         <h3>Pontos defendidos</h3>

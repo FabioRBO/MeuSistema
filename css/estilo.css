@@ -45,6 +45,10 @@ body {
   transition: background .2s ease, color .2s ease;
 }
 
+.module-container {
+    padding: 0;
+}
+
 a { color: inherit; }
 
 .app-shell { padding-left: var(--sidebar-width); }
@@ -862,3 +866,101 @@ html[data-bs-theme="dark"] .sobre-modal .btn-close {
 .accent-orange{background:#ff8e00!important}
 .accent-red{background:#ff3f45!important}
 .accent-gray{background:#b8bec7!important}
+
+/* ==================================================
+   CABEÇALHO PADRÃO DOS MÓDULOS
+   ================================================== */
+.module-hero {
+  width: 100%;
+  min-height: 104px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(
+    in srgb,
+    var(--accent, #7c3aed) 25%,
+    var(--bs-border-color)
+  );
+  background:
+    linear-gradient(
+      120deg,
+      color-mix(in srgb, var(--accent, #7c3aed) 24%, #190e16),
+      color-mix(in srgb, var(--bs-body-bg) 92%, var(--accent, #7c3aed) 8%)
+    );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.module-hero-content {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.module-hero .eyebrow {
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+
+.module-hero h1,
+.module-hero h2 {
+  margin: .25rem 0 .35rem;
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
+  line-height: 1.15;
+}
+
+.module-hero p {
+  margin: 0;
+  color: var(--bs-secondary-color);
+}
+
+.module-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .5rem;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  .module-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .module-hero-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+/* ==================================================
+   APROVEITAMENTO MÁXIMO DA ÁREA ÚTIL
+   ================================================== */
+.app-main > .container-fluid {
+  width: 100%;
+  max-width: none;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.app-main .container,
+.app-main .container-sm,
+.app-main .container-md,
+.app-main .container-lg,
+.app-main .container-xl,
+.app-main .container-xxl {
+  max-width: none;
+}
+
+@media (max-width: 991.98px) {
+  .app-main > .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

@@ -1,15 +1,21 @@
-# Bíblia de Leitura — Protótipo
+# Padronização dos cabeçalhos
 
-Inclui seleção de livro/capítulo, busca, favoritos, anotações, marcações por cor, copiar versículo, ajuste de fonte e link para a Bíblia Interlinear.
+Arquivos atualizados:
 
-Base demonstrativa incluída: Gênesis 1, Salmos 23 e João 1.
+- cultura-israel.html
+- dicionario-hebraico.html
+- escatologia.html
+- css/estilo.css
 
-Teste com:
+Os três módulos agora usam o mesmo componente visual:
 
-```bash
-php -S localhost:8000
+```html
+<section class="module-hero">
+  <div class="module-hero-content">...</div>
+  <div class="module-hero-actions">...</div>
+</section>
 ```
 
-Depois abra `biblia-leitura.html`.
+O estilo compartilhado foi acrescentado ao final de `css/estilo.css`.
 
-Use `menu-fragmento.html` e `layout-fragmento.js` para acrescentar o módulo ao seu menu atual.
+Os demais conteúdos e funcionalidades das páginas foram preservados.
