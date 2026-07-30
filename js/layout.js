@@ -5,7 +5,8 @@
   const itens = [
     ['menu.html','menu','🏠','Menu Principal'],
     ['#','arqueologia','🏺','Arqueologia',true],
-    ['biblia.html','biblia','📖','Bíblia Interlinear'],
+    ['biblia-leitura.html','biblia-leitura','📖','Bíblia'],
+    ['biblia.html','biblia','📜','Bíblia Interlinear'],
     ['#','bibliologia','📚','Bibliologia',true],
     ['escatologia.html','escatologia','⌛','Escatologia'],
     ['cultura-israel.html','historia-israel','✡️','História de Israel',true],

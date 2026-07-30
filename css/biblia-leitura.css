@@ -1,0 +1,16 @@
+.biblia-toolbar,.biblia-reader{border:1px solid var(--bs-border-color);box-shadow:0 .35rem 1.25rem rgba(0,0,0,.06)}
+.btn-accent{background:var(--accent,#7c3aed);border-color:var(--accent,#7c3aed);color:#fff}
+.btn-outline-accent{color:var(--accent,#7c3aed);border-color:color-mix(in srgb,var(--accent,#7c3aed) 65%,var(--bs-border-color))}
+.btn-outline-accent:hover,.btn-outline-accent.active{background:var(--accent,#7c3aed);border-color:var(--accent,#7c3aed);color:#fff}
+.lista-versiculos{font-size:var(--biblia-font-size,1.15rem);line-height:1.85}
+.versiculo-item{position:relative;display:grid;grid-template-columns:2.25rem 1fr;gap:.65rem;padding:.7rem .8rem;margin-bottom:.25rem;border-radius:.7rem;cursor:pointer;transition:.15s}
+.versiculo-item:hover{background:color-mix(in srgb,var(--accent,#7c3aed) 10%,transparent);transform:translateX(2px)}
+.versiculo-numero{color:var(--accent,#7c3aed);font-size:.78em;font-weight:700;padding-top:.15rem;text-align:right}
+.versiculo-texto mark{background:color-mix(in srgb,var(--accent,#7c3aed) 28%,transparent);color:inherit;border-radius:.25rem;padding:0 .15rem}
+.marcacao-amarelo{background:rgba(255,220,80,.22)}.marcacao-verde{background:rgba(70,200,120,.19)}.marcacao-azul{background:rgba(65,150,255,.18)}.marcacao-rosa{background:rgba(255,100,170,.18)}
+.versiculo-item.tem-anotacao::after{content:'✎';position:absolute;right:.65rem;top:.4rem;color:var(--accent,#7c3aed);font-size:.8rem}
+.versiculo-item.eh-favorito::before{content:'♥';position:absolute;right:.65rem;bottom:.35rem;color:#dc3545;font-size:.8rem}
+.versiculo-citacao{padding:1rem;border-left:4px solid var(--accent,#7c3aed);background:var(--bs-tertiary-bg);border-radius:.55rem}
+.marcador-cor{width:2.25rem;height:2.25rem;border:2px solid var(--bs-border-color);border-radius:50%}.marcador-amarelo{background:#ffdc50}.marcador-verde{background:#46c878}.marcador-azul{background:#4196ff}.marcador-rosa{background:#ff64aa}
+.item-salvo{border:1px solid var(--bs-border-color);border-radius:.75rem;padding:.85rem;margin-bottom:.75rem}
+@media(max-width:575.98px){.versiculo-item{grid-template-columns:1.8rem 1fr;padding-inline:.35rem}}

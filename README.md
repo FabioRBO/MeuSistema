@@ -1,35 +1,15 @@
-# Atualização — Alfabeto + Escatologia + História da Igreja
+# Bíblia de Leitura — Protótipo
 
-## Dicionário
-- tooltip com nome e som aproximado das letras
-- botão **Alfabeto**
-- painel lateral com letras hebraicas e gregas
-- grego com maiúscula e minúscula
-- clique em cada letra para abrir som e exemplos
-- sinais massoréticos no hebraico
-- acentos e sinais no grego
+Inclui seleção de livro/capítulo, busca, favoritos, anotações, marcações por cor, copiar versículo, ajuste de fonte e link para a Bíblia Interlinear.
 
-## Escatologia
-- estudo principal agora abre em modal grande, centralizado
-- painel mais largo para leitura
-- nomes clicáveis
-- versículos clicáveis
-- modal auxiliar pronto para biografia, fotografia, explicação e integração com a Bíblia
+Base demonstrativa incluída: Gênesis 1, Salmos 23 e João 1.
 
-## Menu
-- item **História da Igreja** adicionado como “Em breve” em:
-  - `menu.html`
-  - `js/layout.js`
+Teste com:
 
-## Novo arquivo
-- `dados/alfabetos.json`
-
-## Teste
 ```bash
 php -S localhost:8000
 ```
 
-Abra:
-```text
-http://localhost:8000/menu.html
-```
+Depois abra `biblia-leitura.html`.
+
+Use `menu-fragmento.html` e `layout-fragmento.js` para acrescentar o módulo ao seu menu atual.

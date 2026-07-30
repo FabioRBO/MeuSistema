@@ -1,0 +1,8 @@
+{
+  "versao": "demo",
+  "livros": [
+    {"id":"genesis","nome":"Gênesis","abreviacao":"Gn","testamento":"Antigo","capitulosDisponiveis":[1]},
+    {"id":"salmos","nome":"Salmos","abreviacao":"Sl","testamento":"Antigo","capitulosDisponiveis":[23]},
+    {"id":"joao","nome":"João","abreviacao":"Jo","testamento":"Novo","capitulosDisponiveis":[1]}
+  ]
+}
