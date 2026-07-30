@@ -1,21 +1,16 @@
-# Padronização dos cabeçalhos
+# Cultura e História de Israel — cards com imagens
 
-Arquivos atualizados:
+## Alterações
+- História de Israel: imagem do templo;
+- Costumes e vestimentas: roupas tradicionais;
+- Escritos judaicos: pergaminhos;
+- Festas e calendário: celebração judaica;
+- Alimentação: prato típico;
+- Vida cotidiana: sinagoga;
+- cards responsivos em três, duas ou uma coluna;
+- cabeçalho mantido no padrão global `module-hero`.
 
+## Arquivos
 - cultura-israel.html
-- dicionario-hebraico.html
-- escatologia.html
-- css/estilo.css
-
-Os três módulos agora usam o mesmo componente visual:
-
-```html
-<section class="module-hero">
-  <div class="module-hero-content">...</div>
-  <div class="module-hero-actions">...</div>
-</section>
-```
-
-O estilo compartilhado foi acrescentado ao final de `css/estilo.css`.
-
-Os demais conteúdos e funcionalidades das páginas foram preservados.
+- css/cultura-israel.css
+- imagens/cultura-israel/*.jpg

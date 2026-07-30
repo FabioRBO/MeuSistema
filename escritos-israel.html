@@ -22,16 +22,95 @@
 <body class="app-shell">
   <div id="layoutSistema"></div>
   <main class="app-main cultura-main">
-<section class="cultura-hero">
-  <div><h2>Escritos judaicos</h2><p>Torá escrita, Torá oral e principais obras da tradição judaica.</p></div>
-  <div class="cultura-hero-acoes"><button class="btn-cultura" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuCultura">☰ Explorar Israel</button><a class="btn-cultura" href="cultura-israel.html">← Voltar</a></div>
-</section>
-<section class="cultura-grid">
-  <article class="cultura-card" id="shebichtav"><div class="cultura-card-icone">📜</div><h3>Torá Shebichtav</h3><p>Torá escrita e sua relação com o Tanakh.</p></article>
-  <article class="cultura-card" id="shebealpeh"><div class="cultura-card-icone">🗣️</div><h3>Torá Shebe’al Peh</h3><p>Tradição oral e seu desenvolvimento histórico.</p></article>
-  <article class="cultura-card" id="mishna"><div class="cultura-card-icone">📚</div><h3>Mishná</h3><p>Organização da tradição oral em tratados.</p></article>
-  <article class="cultura-card" id="talmude"><div class="cultura-card-icone">📖</div><h3>Talmude</h3><p>Mishná, Guemará e tradições interpretativas.</p></article>
-</section></main>
+    <section class="module-container">
+
+      <section class="module-hero">
+        <div class="module-hero-content">
+          <span class="eyebrow">TEOLOGIA NINJA</span>
+          <h2>Escritos judaicos</h2>
+          <p>Torá escrita, Torá oral e principais obras da tradição judaica.</p>
+        </div>
+
+        <div class="module-hero-actions">
+          <button class="btn btn-outline-light btn-sm"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#menuCultura">
+            ☰ Explorar Israel
+          </button>
+
+          <a class="btn btn-accent btn-sm" href="cultura-israel.html">
+            ← Voltar
+          </a>
+        </div>
+      </section>
+
+      <section class="escritos-grid">
+
+        <article class="escrito-card" id="shebichtav">
+          <a class="escrito-card-capa" href="#shebichtav">
+            <img src="imagens/escritos-israel/tora-shebichtav.jpg"
+                 alt="Rolo da Torá representando a Torá escrita"
+                 loading="lazy">
+          </a>
+
+          <div class="escrito-card-corpo">
+            <h3>Torá Shebichtav</h3>
+            <p>A Torá escrita e sua relação com o Tanakh.</p>
+            <a href="#shebichtav">Abrir estudo →</a>
+          </div>
+        </article>
+
+        <article class="escrito-card" id="shebealpeh">
+          <a class="escrito-card-capa" href="#shebealpeh">
+            <img src="imagens/escritos-israel/tora-shebeal-peh.jpg"
+                 alt="Rabinos ensinando e discutindo a tradição oral"
+                 loading="lazy">
+          </a>
+
+          <div class="escrito-card-corpo">
+            <h3>Torá Shebe’al Peh</h3>
+            <p>A tradição oral e seu desenvolvimento histórico.</p>
+            <a href="#shebealpeh">Abrir estudo →</a>
+          </div>
+        </article>
+
+        <article class="escrito-card" id="talmude">
+          <a class="escrito-card-capa" href="#talmude">
+            <img src="imagens/escritos-israel/talmude.jpg"
+                 alt="Página do Talmude com comentários rabínicos"
+                 loading="lazy">
+          </a>
+
+          <div class="escrito-card-corpo">
+            <h3>Talmude</h3>
+            <p>Coleção de discussões rabínicas sobre a Mishná e outras tradições.</p>
+            <a href="#talmude">Abrir estudo →</a>
+          </div>
+        </article>
+
+        <article class="escrito-card" id="mishna">
+          <a class="escrito-card-capa" href="#mishna">
+            <img src="imagens/escritos-israel/mishna.jpg"
+                 alt="Livro da Mishná aberto sobre uma mesa"
+                 loading="lazy">
+          </a>
+
+          <div class="escrito-card-corpo">
+            <h3>Mishná</h3>
+            <p>Organização da tradição oral em tratados sistemáticos.</p>
+            <a href="#mishna">Abrir estudo →</a>
+          </div>
+        </article>
+
+      </section>
+
+      <footer class="app-footer mt-4">
+        Teologia Ninja © 2026 — Cultura e História de Israel
+      </footer>
+
+    </section>
+  </main>
 
   <div class="offcanvas offcanvas-start menu-cultura" tabindex="-1" id="menuCultura">
     <div class="offcanvas-header border-bottom">

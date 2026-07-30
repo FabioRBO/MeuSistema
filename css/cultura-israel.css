@@ -405,3 +405,226 @@
     bottom: 12px;
   }
 }
+
+/* =========================================================
+   CARDS COM IMAGENS — CULTURA E HISTÓRIA DE ISRAEL
+   ========================================================= */
+
+.cultura-grid-imagens {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cultura-card-imagem {
+  min-height: 100%;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease;
+}
+
+.cultura-card-imagem:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(
+    in srgb,
+    var(--accent) 55%,
+    var(--panel-border)
+  );
+}
+
+.cultura-card-capa {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--panel-bg-2);
+}
+
+.cultura-card-capa::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, .38)
+  );
+}
+
+.cultura-card-capa img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.cultura-card-imagem:hover .cultura-card-capa img {
+  transform: scale(1.045);
+}
+
+.cultura-card-corpo {
+  flex: 1;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cultura-card-corpo h3 {
+  margin: 0 0 .55rem;
+  font-size: 1.08rem;
+}
+
+.cultura-card-corpo p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.cultura-card-corpo a,
+.cultura-card-status {
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cultura-card-corpo a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .cultura-grid-imagens {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cultura-grid-imagens {
+    grid-template-columns: 1fr;
+  }
+
+  .cultura-card-corpo {
+    padding: 1rem;
+  }
+}
+
+/* =========================================================
+   ESCRITOS JUDAICOS — QUATRO CARDS COM IMAGENS
+   ========================================================= */
+
+.escritos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.escrito-card {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+  transition:
+    transform .18s ease,
+    border-color .18s ease,
+    box-shadow .18s ease;
+}
+
+.escrito-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(
+    in srgb,
+    var(--accent) 55%,
+    var(--panel-border)
+  );
+}
+
+.escrito-card-capa {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--panel-bg-2);
+}
+
+.escrito-card-capa::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, .42)
+  );
+}
+
+.escrito-card-capa img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.escrito-card:hover .escrito-card-capa img {
+  transform: scale(1.045);
+}
+
+.escrito-card-corpo {
+  flex: 1;
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.escrito-card-corpo h3 {
+  margin: 0 0 .55rem;
+  color: var(--text-main);
+  font-size: 1.08rem;
+}
+
+.escrito-card-corpo p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-size: .92rem;
+}
+
+.escrito-card-corpo a {
+  margin-top: auto;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.escrito-card-corpo a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1199.98px) {
+  .escritos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .escritos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .escrito-card-corpo {
+    padding: 1rem;
+  }
+}
