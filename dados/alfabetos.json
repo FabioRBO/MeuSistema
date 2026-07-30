@@ -1,0 +1,632 @@
+{
+  "hebraico": {
+    "titulo": "Alfabeto Hebraico",
+    "descricao": "Letras, sons, exemplos e sinais massoréticos.",
+    "letras": [
+      {
+        "maiuscula": "א",
+        "minuscula": "א",
+        "nome": "Álef",
+        "som": "Parada glotal; muitas vezes sem som próprio",
+        "exemplos": [
+          "אָדָם — adam",
+          "אָב — av",
+          "אֱלֹהִים — elohim"
+        ]
+      },
+      {
+        "maiuscula": "ב",
+        "minuscula": "ב",
+        "nome": "Bet",
+        "som": "B; sem daguesh pode soar V",
+        "exemplos": [
+          "בַּיִת — bayit",
+          "בֵּן — ben",
+          "בְּרִית — berit"
+        ]
+      },
+      {
+        "maiuscula": "ג",
+        "minuscula": "ג",
+        "nome": "Guímel",
+        "som": "G como em gato",
+        "exemplos": [
+          "גָּדוֹל — gadol",
+          "גַּן — gan",
+          "גּוֹי — goy"
+        ]
+      },
+      {
+        "maiuscula": "ד",
+        "minuscula": "ד",
+        "nome": "Dálet",
+        "som": "D",
+        "exemplos": [
+          "דָּבָר — davar",
+          "דֶּרֶךְ — derekh",
+          "דָּוִד — David"
+        ]
+      },
+      {
+        "maiuscula": "ה",
+        "minuscula": "ה",
+        "nome": "He",
+        "som": "H aspirado leve",
+        "exemplos": [
+          "הַר — har",
+          "הוּא — hu",
+          "הָיָה — hayah"
+        ]
+      },
+      {
+        "maiuscula": "ו",
+        "minuscula": "ו",
+        "nome": "Vav",
+        "som": "V; também pode indicar O ou U",
+        "exemplos": [
+          "וְ — ve",
+          "וָו — vav",
+          "רוּחַ — ruach"
+        ]
+      },
+      {
+        "maiuscula": "ז",
+        "minuscula": "ז",
+        "nome": "Záin",
+        "som": "Z",
+        "exemplos": [
+          "זָכַר — zakhar",
+          "זֶרַע — zera",
+          "זָהָב — zahav"
+        ]
+      },
+      {
+        "maiuscula": "ח",
+        "minuscula": "ח",
+        "nome": "Chet",
+        "som": "Som gutural forte, semelhante a RR",
+        "exemplos": [
+          "חֶסֶד — chesed",
+          "חַיִּים — chayim",
+          "חָכְמָה — chokhmah"
+        ]
+      },
+      {
+        "maiuscula": "ט",
+        "minuscula": "ט",
+        "nome": "Tet",
+        "som": "T enfático",
+        "exemplos": [
+          "טוֹב — tov",
+          "טָהוֹר — tahor",
+          "טַל — tal"
+        ]
+      },
+      {
+        "maiuscula": "י",
+        "minuscula": "י",
+        "nome": "Yod",
+        "som": "Y; também pode indicar I",
+        "exemplos": [
+          "יוֹם — yom",
+          "יָד — yad",
+          "יְרוּשָׁלַיִם — Yerushalayim"
+        ]
+      },
+      {
+        "maiuscula": "כ",
+        "minuscula": "כ",
+        "nome": "Kaf",
+        "som": "K; sem daguesh pode soar gutural, KH",
+        "exemplos": [
+          "כֹּהֵן — kohen",
+          "כָּבוֹד — kavod",
+          "מֶלֶךְ — melekh"
+        ]
+      },
+      {
+        "maiuscula": "ל",
+        "minuscula": "ל",
+        "nome": "Lâmed",
+        "som": "L",
+        "exemplos": [
+          "לֵב — lev",
+          "לֶחֶם — lechem",
+          "לַיְלָה — laylah"
+        ]
+      },
+      {
+        "maiuscula": "מ",
+        "minuscula": "מ",
+        "nome": "Mem",
+        "som": "M",
+        "exemplos": [
+          "מֶלֶךְ — melekh",
+          "מַיִם — mayim",
+          "מֹשֶׁה — Moshe"
+        ]
+      },
+      {
+        "maiuscula": "נ",
+        "minuscula": "נ",
+        "nome": "Nun",
+        "som": "N",
+        "exemplos": [
+          "נֶפֶשׁ — nefesh",
+          "נָבִיא — navi",
+          "נֵר — ner"
+        ]
+      },
+      {
+        "maiuscula": "ס",
+        "minuscula": "ס",
+        "nome": "Sâmech",
+        "som": "S",
+        "exemplos": [
+          "סֵפֶר — sefer",
+          "סוּס — sus",
+          "סֶלָה — selah"
+        ]
+      },
+      {
+        "maiuscula": "ע",
+        "minuscula": "ע",
+        "nome": "Áyin",
+        "som": "Gutural; muitas vezes não possui equivalente exato em português",
+        "exemplos": [
+          "עַם — am",
+          "עוֹלָם — olam",
+          "עֵץ — etz"
+        ]
+      },
+      {
+        "maiuscula": "פ",
+        "minuscula": "פ",
+        "nome": "Pe",
+        "som": "P; sem daguesh pode soar F",
+        "exemplos": [
+          "פֶּה — peh",
+          "פָּנִים — panim",
+          "נֶפֶשׁ — nefesh"
+        ]
+      },
+      {
+        "maiuscula": "צ",
+        "minuscula": "צ",
+        "nome": "Tsádi",
+        "som": "TS",
+        "exemplos": [
+          "צַדִּיק — tsadiq",
+          "צִיּוֹן — Tsiyon",
+          "אֶרֶץ — eretz"
+        ]
+      },
+      {
+        "maiuscula": "ק",
+        "minuscula": "ק",
+        "nome": "Qof",
+        "som": "K profundo",
+        "exemplos": [
+          "קוֹל — qol",
+          "קָדוֹשׁ — qadosh",
+          "קֶדֶם — qedem"
+        ]
+      },
+      {
+        "maiuscula": "ר",
+        "minuscula": "ר",
+        "nome": "Resh",
+        "som": "R",
+        "exemplos": [
+          "רוּחַ — ruach",
+          "רֹאשׁ — rosh",
+          "רַב — rav"
+        ]
+      },
+      {
+        "maiuscula": "ש",
+        "minuscula": "ש",
+        "nome": "Shin",
+        "som": "SH com ponto à direita; S com ponto à esquerda",
+        "exemplos": [
+          "שָׁלוֹם — shalom",
+          "שֵׁם — shem",
+          "יִשְׂרָאֵל — Yisrael"
+        ]
+      },
+      {
+        "maiuscula": "ת",
+        "minuscula": "ת",
+        "nome": "Tav",
+        "som": "T",
+        "exemplos": [
+          "תּוֹרָה — torah",
+          "תָּמִיד — tamid",
+          "תְּפִלָּה — tefillah"
+        ]
+      }
+    ],
+    "sinais": [
+      {
+        "simbolo": "ָ",
+        "nome": "Qamats",
+        "som": "A longo ou O em alguns contextos",
+        "exemplo": "אָדָם — adam"
+      },
+      {
+        "simbolo": "ַ",
+        "nome": "Patach",
+        "som": "A breve",
+        "exemplo": "רוּחַ — ruach"
+      },
+      {
+        "simbolo": "ֶ",
+        "nome": "Segol",
+        "som": "É",
+        "exemplo": "מֶלֶךְ — melekh"
+      },
+      {
+        "simbolo": "ֵ",
+        "nome": "Tsere",
+        "som": "Ê",
+        "exemplo": "בֵּן — ben"
+      },
+      {
+        "simbolo": "ִ",
+        "nome": "Chiriq",
+        "som": "I",
+        "exemplo": "צִיּוֹן — Tsiyon"
+      },
+      {
+        "simbolo": "ֹ",
+        "nome": "Cholam",
+        "som": "O",
+        "exemplo": "שָׁלוֹם — shalom"
+      },
+      {
+        "simbolo": "ֻ",
+        "nome": "Qubuts",
+        "som": "U",
+        "exemplo": "קֻטָּל — quttal"
+      },
+      {
+        "simbolo": "ְ",
+        "nome": "Shevá",
+        "som": "Vogal muito breve ou ausência de vogal",
+        "exemplo": "בְּרִית — berit"
+      },
+      {
+        "simbolo": "ּ",
+        "nome": "Daguesh",
+        "som": "Pode reforçar ou endurecer a consoante",
+        "exemplo": "בּ — b; ב — v"
+      },
+      {
+        "simbolo": "ׁ",
+        "nome": "Ponto do Shin",
+        "som": "SH",
+        "exemplo": "שׁ — sh"
+      },
+      {
+        "simbolo": "ׂ",
+        "nome": "Ponto do Sin",
+        "som": "S",
+        "exemplo": "שׂ — s"
+      }
+    ]
+  },
+  "grego": {
+    "titulo": "Alfabeto Grego",
+    "descricao": "Letras maiúsculas e minúsculas, sons e exemplos bíblicos.",
+    "letras": [
+      {
+        "maiuscula": "Α",
+        "minuscula": "α",
+        "nome": "Alfa",
+        "som": "A",
+        "exemplos": [
+          "ἀγάπη — agápē",
+          "ἀμήν — amēn",
+          "ἀπόστολος — apóstolos"
+        ]
+      },
+      {
+        "maiuscula": "Β",
+        "minuscula": "β",
+        "nome": "Beta",
+        "som": "B",
+        "exemplos": [
+          "βασιλεία — basileía",
+          "βίβλος — bíblos",
+          "βλέπω — blépō"
+        ]
+      },
+      {
+        "maiuscula": "Γ",
+        "minuscula": "γ",
+        "nome": "Gama",
+        "som": "G; antes de γ, κ, ξ, χ pode soar N",
+        "exemplos": [
+          "γῆ — gē",
+          "γραφή — graphē",
+          "γινώσκω — ginōskō"
+        ]
+      },
+      {
+        "maiuscula": "Δ",
+        "minuscula": "δ",
+        "nome": "Delta",
+        "som": "D",
+        "exemplos": [
+          "δόξα — dóxa",
+          "δίκαιος — díkaios",
+          "διδάσκω — didáskō"
+        ]
+      },
+      {
+        "maiuscula": "Ε",
+        "minuscula": "ε",
+        "nome": "Épsilon",
+        "som": "É breve",
+        "exemplos": [
+          "ἐγώ — egō",
+          "ἐκκλησία — ekklēsía",
+          "ἐλπίς — elpís"
+        ]
+      },
+      {
+        "maiuscula": "Ζ",
+        "minuscula": "ζ",
+        "nome": "Zeta",
+        "som": "Z ou DZ",
+        "exemplos": [
+          "ζωή — zōē",
+          "ζάω — záō",
+          "ζυγός — zygós"
+        ]
+      },
+      {
+        "maiuscula": "Η",
+        "minuscula": "η",
+        "nome": "Eta",
+        "som": "Ê longo",
+        "exemplos": [
+          "ἡμέρα — hēmera",
+          "ἤδη — ēdē",
+          "ἡ — hē"
+        ]
+      },
+      {
+        "maiuscula": "Θ",
+        "minuscula": "θ",
+        "nome": "Teta",
+        "som": "TH aspirado",
+        "exemplos": [
+          "θεός — theós",
+          "θάνατος — thánatos",
+          "θέλημα — thélēma"
+        ]
+      },
+      {
+        "maiuscula": "Ι",
+        "minuscula": "ι",
+        "nome": "Iota",
+        "som": "I",
+        "exemplos": [
+          "Ἰησοῦς — Iēsous",
+          "ἱερός — hierós",
+          "ἰδού — idoú"
+        ]
+      },
+      {
+        "maiuscula": "Κ",
+        "minuscula": "κ",
+        "nome": "Kapa",
+        "som": "K",
+        "exemplos": [
+          "κύριος — kýrios",
+          "καρδία — kardía",
+          "καιρός — kairós"
+        ]
+      },
+      {
+        "maiuscula": "Λ",
+        "minuscula": "λ",
+        "nome": "Lambda",
+        "som": "L",
+        "exemplos": [
+          "λόγος — lógos",
+          "λαός — laós",
+          "λύω — lýō"
+        ]
+      },
+      {
+        "maiuscula": "Μ",
+        "minuscula": "μ",
+        "nome": "Mi",
+        "som": "M",
+        "exemplos": [
+          "μαθητής — mathētēs",
+          "μαρτυρία — martyría",
+          "μέγας — mégas"
+        ]
+      },
+      {
+        "maiuscula": "Ν",
+        "minuscula": "ν",
+        "nome": "Ni",
+        "som": "N",
+        "exemplos": [
+          "νόμος — nómos",
+          "νεκρός — nekrós",
+          "ναός — naós"
+        ]
+      },
+      {
+        "maiuscula": "Ξ",
+        "minuscula": "ξ",
+        "nome": "Xi",
+        "som": "KS",
+        "exemplos": [
+          "ξένος — xénos",
+          "ξύλον — xýlon",
+          "ξηρός — xērós"
+        ]
+      },
+      {
+        "maiuscula": "Ο",
+        "minuscula": "ο",
+        "nome": "Ômicron",
+        "som": "O breve",
+        "exemplos": [
+          "ὁδός — hodós",
+          "οὐρανός — ouranós",
+          "ὄνομα — ónoma"
+        ]
+      },
+      {
+        "maiuscula": "Π",
+        "minuscula": "π",
+        "nome": "Pi",
+        "som": "P",
+        "exemplos": [
+          "πίστις — pístis",
+          "πνεῦμα — pneuma",
+          "πατήρ — patēr"
+        ]
+      },
+      {
+        "maiuscula": "Ρ",
+        "minuscula": "ρ",
+        "nome": "Rô",
+        "som": "R",
+        "exemplos": [
+          "ῥῆμα — rhēma",
+          "ῥαββί — rhabbí",
+          "ρίζα — ríza"
+        ]
+      },
+      {
+        "maiuscula": "Σ",
+        "minuscula": "σ/ς",
+        "nome": "Sigma",
+        "som": "S",
+        "exemplos": [
+          "σωτηρία — sōtēría",
+          "σάρξ — sárx",
+          "σταυρός — staurós"
+        ]
+      },
+      {
+        "maiuscula": "Τ",
+        "minuscula": "τ",
+        "nome": "Tau",
+        "som": "T",
+        "exemplos": [
+          "τέκνον — téknon",
+          "τόπος — tópos",
+          "τιμή — timē"
+        ]
+      },
+      {
+        "maiuscula": "Υ",
+        "minuscula": "υ",
+        "nome": "Ípsilon",
+        "som": "U francês ou I em pronúncias posteriores",
+        "exemplos": [
+          "υἱός — hyiós",
+          "ὕδωρ — hýdōr",
+          "ὑπέρ — hypér"
+        ]
+      },
+      {
+        "maiuscula": "Φ",
+        "minuscula": "φ",
+        "nome": "Fi",
+        "som": "F",
+        "exemplos": [
+          "φῶς — phōs",
+          "φιλέω — philéō",
+          "φόβος — phóbos"
+        ]
+      },
+      {
+        "maiuscula": "Χ",
+        "minuscula": "χ",
+        "nome": "Chi",
+        "som": "KH aspirado",
+        "exemplos": [
+          "χάρις — cháris",
+          "Χριστός — Christós",
+          "χρόνος — chrónos"
+        ]
+      },
+      {
+        "maiuscula": "Ψ",
+        "minuscula": "ψ",
+        "nome": "Psi",
+        "som": "PS",
+        "exemplos": [
+          "ψυχή — psychē",
+          "ψαλμός — psalmós",
+          "ψευδής — pseudēs"
+        ]
+      },
+      {
+        "maiuscula": "Ω",
+        "minuscula": "ω",
+        "nome": "Ômega",
+        "som": "Ô longo",
+        "exemplos": [
+          "ὥρα — hōra",
+          "ὡς — hōs",
+          "ὦ — ō"
+        ]
+      }
+    ],
+    "sinais": [
+      {
+        "simbolo": "´",
+        "nome": "Acento agudo",
+        "som": "Marca sílaba tônica em edições modernas",
+        "exemplo": "ἀγάπη"
+      },
+      {
+        "simbolo": "`",
+        "nome": "Acento grave",
+        "som": "Substitui o agudo em certos contextos",
+        "exemplo": "καὶ"
+      },
+      {
+        "simbolo": "῀",
+        "nome": "Circunflexo",
+        "som": "Marca entonação histórica",
+        "exemplo": "πνεῦμα"
+      },
+      {
+        "simbolo": "᾿",
+        "nome": "Espírito brando",
+        "som": "Sem aspiração inicial",
+        "exemplo": "ἀγάπη"
+      },
+      {
+        "simbolo": "῾",
+        "nome": "Espírito áspero",
+        "som": "Aspiração inicial, transliterada com H",
+        "exemplo": "ἡμέρα"
+      },
+      {
+        "simbolo": "¨",
+        "nome": "Diérese",
+        "som": "Indica que duas vogais são pronunciadas separadamente",
+        "exemplo": "Μωϋσῆς"
+      },
+      {
+        "simbolo": "ͅ",
+        "nome": "Iota subscrito",
+        "som": "Marca antigo ditongo",
+        "exemplo": "τῷ"
+      }
+    ]
+  }
+}

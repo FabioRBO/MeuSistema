@@ -1,0 +1,173 @@
+{
+  "titulo": "Escatologia",
+  "subtitulo": "Visões cristãs sobre profecia, reino, milênio e consumação",
+  "visoes": [
+    {
+      "id": "preterismo",
+      "icone": "📜",
+      "titulo": "Preterismo",
+      "resumo": "Lê muitas profecias do Novo Testamento à luz dos acontecimentos do século I, especialmente a queda de Jerusalém em 70 d.C.",
+      "quandoComecou": "Possui antecedentes antigos na leitura histórica de profecias, mas sua formulação moderna ganhou força entre os séculos XVII e XIX. É importante distinguir o preterismo parcial, presente em círculos cristãos ortodoxos, do preterismo completo.",
+      "autores": [
+        "Luis de Alcázar",
+        "Hugo Grotius",
+        "John Lightfoot",
+        "J. Stuart Russell",
+        "R. C. Sproul (preterismo parcial)",
+        "Kenneth Gentry",
+        "Gary DeMar"
+      ],
+      "nomesImportantes": [
+        "John Lightfoot",
+        "R. C. Sproul",
+        "Kenneth Gentry",
+        "Gary DeMar"
+      ],
+      "versos": [
+        "Mateus 16:27-28",
+        "Mateus 24:1-34",
+        "Marcos 13",
+        "Lucas 21:5-32",
+        "Daniel 9:24-27",
+        "Apocalipse 1:1-3",
+        "Apocalipse 22:6-10"
+      ],
+      "descricao": "O preterismo entende que muitas profecias relacionadas ao juízo, à tribulação e à vinda do Filho do Homem tiveram cumprimento histórico próximo aos primeiros leitores. A destruição de Jerusalém e do templo em 70 d.C. ocupa lugar central nessa leitura. O preterismo parcial mantém futuras a ressurreição corporal, o juízo final e a consumação; o preterismo completo considera todos esses eventos realizados e, por isso, é rejeitado pela maior parte das tradições cristãs históricas.",
+      "pontos": [
+        "Leva a sério expressões temporais como “esta geração”, “em breve” e “perto”.",
+        "Destaca o contexto judaico e a crise do templo no século I.",
+        "Relaciona Mateus 24, Marcos 13 e Lucas 21 à guerra judaico-romana."
+      ],
+      "cuidados": [
+        "É necessário distinguir claramente o preterismo parcial do completo.",
+        "Nem toda linguagem apocalíptica é interpretada da mesma forma por todos os preteristas.",
+        "Alguns textos permanecem debatidos, especialmente 1 Coríntios 15 e Apocalipse 20."
+      ]
+    },
+    {
+      "id": "amilenismo",
+      "icone": "👑",
+      "titulo": "Amilenismo",
+      "resumo": "Entende o milênio de Apocalipse 20 como símbolo do reinado presente de Cristo entre sua primeira e sua segunda vinda.",
+      "quandoComecou": "Embora existam leituras não literalistas antigas, o amilenismo foi sistematizado especialmente por Agostinho de Hipona no início do século V e tornou-se predominante em grande parte do cristianismo ocidental.",
+      "autores": [
+        "Agostinho de Hipona",
+        "João Calvino",
+        "Herman Bavinck",
+        "Louis Berkhof",
+        "Anthony Hoekema",
+        "G. K. Beale"
+      ],
+      "nomesImportantes": [
+        "Agostinho de Hipona",
+        "João Calvino",
+        "Herman Bavinck",
+        "Anthony Hoekema"
+      ],
+      "versos": [
+        "João 5:28-29",
+        "Mateus 12:28-29",
+        "1 Coríntios 15:20-28",
+        "Efésios 1:20-23",
+        "Colossenses 1:13",
+        "Apocalipse 20:1-10",
+        "Apocalipse 21–22"
+      ],
+      "descricao": "O amilenismo não nega o milênio, mas interpreta os “mil anos” como linguagem simbólica para o período atual do reino de Cristo. Satanás está limitado quanto ao impedimento da missão entre as nações, os santos reinam com Cristo e a igreja vive entre vitória e sofrimento. Ao final dessa era ocorre a volta de Cristo, a ressurreição geral, o juízo final e a nova criação.",
+      "pontos": [
+        "Lê Apocalipse como literatura simbólica.",
+        "Enfatiza um único retorno de Cristo, uma ressurreição geral e um juízo final.",
+        "Vê o reino como já presente, embora ainda não consumado."
+      ],
+      "cuidados": [
+        "A relação entre Apocalipse 19 e 20 é debatida.",
+        "A natureza da primeira ressurreição recebe interpretações diferentes.",
+        "Críticos afirmam que a leitura simbólica pode minimizar detalhes cronológicos."
+      ]
+    },
+    {
+      "id": "pos-milenismo",
+      "icone": "🌍",
+      "titulo": "Pós-milenismo",
+      "resumo": "Espera um amplo avanço histórico do evangelho antes da volta de Cristo, produzindo um longo período de bênção e justiça.",
+      "quandoComecou": "Desenvolveu-se com maior clareza no período pós-Reforma, especialmente entre puritanos e teólogos dos séculos XVII a XIX, embora seus defensores identifiquem antecedentes em autores cristãos anteriores.",
+      "autores": [
+        "Daniel Whitby",
+        "Jonathan Edwards",
+        "Charles Hodge",
+        "B. B. Warfield",
+        "Loraine Boettner",
+        "Rousas Rushdoony",
+        "Kenneth Gentry"
+      ],
+      "nomesImportantes": [
+        "Jonathan Edwards",
+        "Charles Hodge",
+        "B. B. Warfield",
+        "Loraine Boettner"
+      ],
+      "versos": [
+        "Salmos 2",
+        "Salmos 22:27-31",
+        "Isaías 2:2-4",
+        "Isaías 11:6-9",
+        "Mateus 13:31-33",
+        "Mateus 28:18-20",
+        "1 Coríntios 15:25"
+      ],
+      "descricao": "O pós-milenismo ensina que o poder do evangelho produzirá progressiva expansão do reino de Deus na história. Não exige necessariamente uma sociedade sem pecado, mas espera um período prolongado de influência cristã, justiça e conversão das nações antes do retorno de Cristo. Depois desse período, Cristo volta, ocorre a ressurreição e o juízo final.",
+      "pontos": [
+        "Enfatiza o crescimento do reino e a eficácia da missão.",
+        "Lê as promessas de bênção às nações com forte expectativa histórica.",
+        "Incentiva atuação cristã na cultura, educação e justiça."
+      ],
+      "cuidados": [
+        "Há diferentes graus de otimismo entre os pós-milenistas.",
+        "Críticos apontam períodos históricos de perseguição e apostasia.",
+        "A relação entre progresso histórico e consumação precisa ser bem definida."
+      ]
+    },
+    {
+      "id": "pre-milenismo-dispensacionalista",
+      "icone": "🕊️",
+      "titulo": "Pré-milenismo dispensacionalista",
+      "resumo": "Afirma uma volta de Cristo antes de um reino milenar literal, distinguindo Israel e Igreja no plano profético.",
+      "quandoComecou": "O pré-milenismo possui formas antigas, mas o dispensacionalismo moderno surgiu no século XIX, especialmente com John Nelson Darby, e se popularizou por conferências proféticas e pela Bíblia de Referência Scofield.",
+      "autores": [
+        "John Nelson Darby",
+        "C. I. Scofield",
+        "Lewis Sperry Chafer",
+        "John Walvoord",
+        "Charles Ryrie",
+        "J. Dwight Pentecost",
+        "Tim LaHaye"
+      ],
+      "nomesImportantes": [
+        "John Nelson Darby",
+        "C. I. Scofield",
+        "Lewis Sperry Chafer",
+        "John Walvoord"
+      ],
+      "versos": [
+        "Daniel 9:24-27",
+        "1 Tessalonicenses 4:13-18",
+        "1 Coríntios 15:51-52",
+        "Mateus 24",
+        "Apocalipse 3:10",
+        "Apocalipse 19:11-21",
+        "Apocalipse 20:1-10"
+      ],
+      "descricao": "O pré-milenismo dispensacionalista organiza a história da redenção em dispensações e mantém uma distinção relevante entre Israel e Igreja. Em sua forma clássica, costuma ensinar um arrebatamento anterior à grande tribulação, seguido pela manifestação visível de Cristo, derrota de seus inimigos e estabelecimento de um reino milenar literal. Após o milênio ocorre o juízo final e o estado eterno. Existem variações pré-tribulacionistas, mesotribulacionistas e pós-tribulacionistas.",
+      "pontos": [
+        "Interpreta Apocalipse 20 de maneira cronológica e literal.",
+        "Destaca promessas nacionais feitas a Israel.",
+        "Oferece uma estrutura detalhada para tribulação, arrebatamento e milênio."
+      ],
+      "cuidados": [
+        "A separação entre Israel e Igreja é amplamente debatida.",
+        "A doutrina de um arrebatamento secreto pré-tribulacional não é aceita por todos os pré-milenistas.",
+        "A leitura cronológica de Apocalipse é contestada por outras escolas."
+      ]
+    }
+  ]
+}

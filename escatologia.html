@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Escatologia | Teologia Ninja</title>
+
+  <script>
+    (() => {
+      const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+      const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+      document.documentElement.setAttribute('data-bs-theme', tema);
+      document.documentElement.setAttribute('data-accent', cor);
+    })();
+  </script>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/escatologia.css">
+</head>
+<body class="app-shell">
+
+  <div id="layoutSistema"></div>
+
+  <main class="app-main">
+    <section class="container-fluid py-3 py-lg-4">
+      <section class="escatologia-hero mb-3">
+        <div>
+          <span class="eyebrow">TEOLOGIA NINJA</span>
+          <h2>Escatologia</h2>
+          <p>Estudo das diferentes interpretações sobre profecia, reino, milênio e consumação.</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-outline-light btn-sm" type="button" id="btnComparar">≡ Comparar visões</button>
+          <a class="btn btn-accent btn-sm" href="linha_tempo.html">📅 Linha do tempo</a>
+        </div>
+      </section>
+
+      <section id="listaVisoes" class="row g-3"></section>
+
+      <footer class="app-footer mt-4">Teologia Ninja © 2026 — Escatologia</footer>
+    </section>
+  </main>
+
+  <div class="offcanvas offcanvas-end escatologia-detalhe" tabindex="-1" id="painelEscatologia" aria-labelledby="tituloPainel">
+    <div class="offcanvas-header border-bottom">
+      <div>
+        <div class="small text-secondary">Escatologia</div>
+        <h2 class="offcanvas-title h5 mb-0" id="tituloPainel">Visão escatológica</h2>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+
+    <div class="offcanvas-body" id="conteudoPainel"></div>
+  </div>
+
+  <div class="modal fade" id="detalheReferenciaModal"  tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="detalheReferenciaTitulo">Detalhe</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="detalheReferenciaConteudo"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="comparativoModal"  tabindex="-1">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5">Comparativo inicial</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+              <thead>
+                <tr>
+                  <th>Tema</th>
+                  <th>Preterismo</th>
+                  <th>Amilenismo</th>
+                  <th>Pós-milenismo</th>
+                  <th>Pré-milenismo dispensacionalista</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Centro histórico</th>
+                  <td>Século I e 70 d.C.</td>
+                  <td>Era atual da Igreja</td>
+                  <td>Avanço histórico do evangelho</td>
+                  <td>Eventos futuros e Israel nacional</td>
+                </tr>
+                <tr>
+                  <th>Milênio</th>
+                  <td>Varia conforme a corrente</td>
+                  <td>Simbólico e presente</td>
+                  <td>Longo período de triunfo do evangelho</td>
+                  <td>Literal e futuro</td>
+                </tr>
+                <tr>
+                  <th>Volta de Cristo</th>
+                  <td>Futura no preterismo parcial</td>
+                  <td>Após a era atual</td>
+                  <td>Após o período de expansão</td>
+                  <td>Antes do milênio</td>
+                </tr>
+                <tr>
+                  <th>Israel e Igreja</th>
+                  <td>Ênfase na nova aliança</td>
+                  <td>Um povo de Deus em Cristo</td>
+                  <td>Um povo de Deus com expansão histórica</td>
+                  <td>Distinção relevante entre Israel e Igreja</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small text-secondary mb-0">Este quadro é apenas introdutório. Cada tradição possui variações internas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.TEOLOGIA_NINJA_PAGINA = {
+      pagina: 'escatologia.html',
+      ativo: 'escatologia',
+      titulo: 'Escatologia',
+      subtitulo: 'Profecia, reino, milênio e consumação',
+      secao: 'ESCATOLOGIA'
+    };
+  </script>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/sistema.js"></script>
+  <script src="js/escatologia.js"></script>
+  <script src="js/pwa.js"></script>
+</body>
+</html>

@@ -41,10 +41,22 @@
               <select id="categoria" class="form-select form-select-lg"><option value="">Todas as categorias</option></select>
             </div>
             <div class="col-5 col-lg-2">
-              <select id="idioma" class="form-select form-select-lg" title="Escolher idioma">
-                <option value="hebraico">Hebraico</option>
-                <option value="grego">Grego</option>
-              </select>
+              <div class="d-flex gap-2">
+                <select id="idioma" class="form-select form-select-lg" title="Escolher idioma">
+                  <option value="hebraico">Hebraico</option>
+                  <option value="grego">Grego</option>
+                </select>
+
+                <button
+                  id="btnAlfabeto"
+                  class="btn btn-outline-accent flex-shrink-0"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#painelAlfabeto"
+                  aria-controls="painelAlfabeto">
+                  Alfabeto
+                </button>
+              </div>
             </div>
           </div>
           <div id="alfabeto" class="alfabeto-hebraico mt-3"></div>
@@ -67,6 +79,107 @@
     <div class="offcanvas-body" id="conteudoPalavra"></div>
   </div>
 
+
+  <div class="offcanvas offcanvas-end detalhe-palavra" tabindex="-1" id="painelAlfabeto" aria-labelledby="tituloAlfabeto">
+    <div class="offcanvas-header border-bottom">
+      <div>
+        <small class="text-secondary">Dicionário Bíblico</small>
+        <h2 class="offcanvas-title fs-5" id="tituloAlfabeto">Alfabeto Hebraico</h2>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+    </div>
+
+    <div class="offcanvas-body">
+      <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+        <p id="descricaoAlfabeto" class="text-secondary mb-0"></p>
+
+        <button id="btnTrocarDicionarioAlfabeto"
+                class="btn btn-outline-accent btn-sm flex-shrink-0"
+                type="button">
+          Mudar para Grego
+        </button>
+      </div>
+
+      <section class="mb-4">
+        <h3 class="h6 text-uppercase text-secondary mb-3">Letras</h3>
+        <div id="listaAlfabetoPainel" class="row g-2"></div>
+      </section>
+
+      <section>
+        <h3 id="tituloSinais" class="h6 text-uppercase text-secondary mb-3">Pontos massoréticos</h3>
+        <div id="listaSinaisPainel" class="row g-2"></div>
+      </section>
+    </div>
+  </div>
+
+  <style>
+    #btnAlfabeto { min-width: 104px; }
+
+    .alfabeto-painel-card {
+      width: 100%;
+      min-height: 92px;
+      padding: .75rem;
+      border: 1px solid var(--bs-border-color);
+      border-radius: .8rem;
+      background: var(--bs-tertiary-bg);
+      color: inherit;
+      text-align: center;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+
+    .alfabeto-painel-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent, #7c3aed);
+    }
+
+    .alfabeto-painel-simbolo {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      margin-bottom: .25rem;
+    }
+
+    .alfabeto-painel-som {
+      font-size: .75rem;
+      color: var(--bs-secondary-color);
+    }
+
+    .sinal-com-base {
+      position: relative;
+      display: inline-grid;
+      place-items: center;
+      min-width: 2.6rem;
+      min-height: 2.6rem;
+      margin-bottom: .25rem;
+      border: 1px dashed var(--bs-border-color);
+      border-radius: .45rem;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .sinal-com-base::before {
+      content: '□';
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--bs-secondary-color);
+      opacity: .45;
+      font-size: 1.65rem;
+    }
+
+    .sinal-com-base > span {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 575.98px) {
+      #btnAlfabeto {
+        min-width: auto;
+        padding-inline: .65rem;
+      }
+    }
+  </style>
+
   <script>window.TEOLOGIA_NINJA_PAGINA={pagina:'dicionario-hebraico.html',ativo:'dicionario',titulo:'Dicionário Bíblico',subtitulo:'Hebraico e grego bíblicos',secao:'DICIONÁRIO BÍBLICO'};</script>
   <script src="js/layout.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
@@ -74,5 +187,205 @@
   <script src="js/sistema.js"></script>
   <script src="js/dicionario-hebraico.js"></script>
   <script src="js/pwa.js"></script>
+
+  <script>
+    (() => {
+      const alfabetos = {
+        hebraico: {
+          'א': ['א', 'Álef', 'parada glotal / sem som próprio'],
+          'ב': ['ב', 'Bet', 'B ou V'],
+          'ג': ['ג', 'Guímel', 'G'],
+          'ד': ['ד', 'Dálet', 'D'],
+          'ה': ['ה', 'He', 'H aspirado'],
+          'ו': ['ו', 'Vav', 'V, O ou U'],
+          'ז': ['ז', 'Záin', 'Z'],
+          'ח': ['ח', 'Chet', 'RR gutural'],
+          'ט': ['ט', 'Tet', 'T'],
+          'י': ['י', 'Yod', 'I ou Y'],
+          'כ': ['כ/ך', 'Kaf', 'K ou RR gutural'],
+          'ל': ['ל', 'Lâmed', 'L'],
+          'מ': ['מ/ם', 'Mem', 'M'],
+          'נ': ['נ/ן', 'Nun', 'N'],
+          'ס': ['ס', 'Sâmech', 'S'],
+          'ע': ['ע', 'Áyin', 'som gutural'],
+          'פ': ['פ/ף', 'Pe', 'P ou F'],
+          'צ': ['צ/ץ', 'Tsádi', 'TS'],
+          'ק': ['ק', 'Qof', 'K'],
+          'ר': ['ר', 'Resh', 'R'],
+          'ש': ['ש', 'Shin/Sin', 'SH ou S'],
+          'ת': ['ת', 'Tav', 'T']
+        },
+        grego: {
+          'Α': ['Α/α', 'Alfa', 'A'],
+          'Β': ['Β/β', 'Beta', 'B'],
+          'Γ': ['Γ/γ', 'Gama', 'G'],
+          'Δ': ['Δ/δ', 'Delta', 'D'],
+          'Ε': ['Ε/ε', 'Épsilon', 'É'],
+          'Ζ': ['Ζ/ζ', 'Zeta', 'Z'],
+          'Η': ['Η/η', 'Eta', 'Ê'],
+          'Θ': ['Θ/θ', 'Teta', 'TH'],
+          'Ι': ['Ι/ι', 'Iota', 'I'],
+          'Κ': ['Κ/κ', 'Kapa', 'K'],
+          'Λ': ['Λ/λ', 'Lambda', 'L'],
+          'Μ': ['Μ/μ', 'Mi', 'M'],
+          'Ν': ['Ν/ν', 'Ni', 'N'],
+          'Ξ': ['Ξ/ξ', 'Xi', 'KS'],
+          'Ο': ['Ο/ο', 'Ômicron', 'O breve'],
+          'Π': ['Π/π', 'Pi', 'P'],
+          'Ρ': ['Ρ/ρ', 'Rô', 'R'],
+          'Σ': ['Σ/σ/ς', 'Sigma', 'S'],
+          'Τ': ['Τ/τ', 'Tau', 'T'],
+          'Υ': ['Υ/υ', 'Ípsilon', 'Ü / I'],
+          'Φ': ['Φ/φ', 'Fi', 'F'],
+          'Χ': ['Χ/χ', 'Chi', 'KH'],
+          'Ψ': ['Ψ/ψ', 'Psi', 'PS'],
+          'Ω': ['Ω/ω', 'Ômega', 'Ô longo']
+        }
+      };
+
+      function aplicarTooltips() {
+        const idioma = document.getElementById('idioma')?.value || 'hebraico';
+        const mapa = alfabetos[idioma] || alfabetos.hebraico;
+
+        document.querySelectorAll('#alfabeto button').forEach(botao => {
+          const letra = botao.dataset.letra || botao.textContent.trim();
+          const info = mapa[letra.toUpperCase()] || mapa[letra];
+
+          if (!info) return;
+
+          const titulo = `${info[0]} - ${info[1]} - ${info[2]}`;
+          botao.setAttribute('title', titulo);
+          botao.setAttribute('aria-label', titulo);
+        });
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const alfabeto = document.getElementById('alfabeto');
+        const idioma = document.getElementById('idioma');
+
+        if (alfabeto) {
+          new MutationObserver(aplicarTooltips).observe(alfabeto, {
+            childList: true,
+            subtree: true
+          });
+        }
+
+        idioma?.addEventListener('change', () => setTimeout(aplicarTooltips, 0));
+        setTimeout(aplicarTooltips, 100);
+      });
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const alfabetosPainel = {
+        hebraico: {
+          titulo: 'Alfabeto Hebraico',
+          descricao: 'Letras e pontos massoréticos do hebraico bíblico.',
+          tituloSinais: 'Pontos massoréticos',
+          letras: [
+            ['א','Álef','parada glotal'],['ב','Bet','B ou V'],['ג','Guímel','G'],
+            ['ד','Dálet','D'],['ה','He','H aspirado'],['ו','Vav','V, O ou U'],
+            ['ז','Záin','Z'],['ח','Chet','RR gutural'],['ט','Tet','T'],
+            ['י','Yod','I ou Y'],['כ/ך','Kaf','K ou KH'],['ל','Lâmed','L'],
+            ['מ/ם','Mem','M'],['נ/ן','Nun','N'],['ס','Sâmech','S'],
+            ['ע','Áyin','som gutural'],['פ/ף','Pe','P ou F'],['צ/ץ','Tsádi','TS'],
+            ['ק','Qof','K'],['ר','Resh','R'],['ש','Shin/Sin','SH ou S'],['ת','Tav','T']
+          ],
+          sinais: [
+            ['ָ','Qamats','A longo ou O'],['ַ','Patach','A breve'],
+            ['ֶ','Segol','É'],['ֵ','Tsere','Ê'],['ִ','Chiriq','I'],
+            ['ֹ','Cholam','O'],['ֻ','Qubuts','U'],
+            ['ּ','Daguesh','reforça a consoante'],['ׁ','Ponto do Shin','SH'],['ׂ','Ponto do Sin','S'],
+            ['ְ','Shevá','vogal breve ou ausência']
+          ]
+        },
+
+        grego: {
+          titulo: 'Alfabeto Grego',
+          descricao: 'Letras maiúsculas, minúsculas, acentos e sinais do grego bíblico.',
+          tituloSinais: 'Acentos e sinais',
+          letras: [
+            ['Α/α','Alfa','A'],['Β/β','Beta','B'],['Γ/γ','Gama','G'],
+            ['Δ/δ','Delta','D'],['Ε/ε','Épsilon','É'],['Ζ/ζ','Zeta','Z'],
+            ['Η/η','Eta','Ê'],['Θ/θ','Teta','TH'],['Ι/ι','Iota','I'],
+            ['Κ/κ','Kapa','K'],['Λ/λ','Lambda','L'],['Μ/μ','Mi','M'],
+            ['Ν/ν','Ni','N'],['Ξ/ξ','Xi','KS'],['Ο/ο','Ômicron','O breve'],
+            ['Π/π','Pi','P'],['Ρ/ρ','Rô','R'],['Σ/σ/ς','Sigma','S'],
+            ['Τ/τ','Tau','T'],['Υ/υ','Ípsilon','Ü / I'],['Φ/φ','Fi','F'],
+            ['Χ/χ','Chi','KH'],['Ψ/ψ','Psi','PS'],['Ω/ω','Ômega','Ô longo']
+          ],
+          sinais: [
+            ['´','Acento agudo','marca a sílaba tônica'],
+            ['`','Acento grave','substitui o agudo em certos contextos'],
+            ['῀','Circunflexo','marca entonação histórica'],
+            ['᾿','Espírito brando','sem aspiração inicial'],
+            ['῾','Espírito áspero','aspiração inicial'],
+            ['¨','Diérese','separa duas vogais'],
+            ['ͅ','Iota subscrito','marca antigo ditongo']
+          ]
+        }
+      };
+
+      function renderizarPainelAlfabeto() {
+        const idioma = document.getElementById('idioma')?.value || 'hebraico';
+        const dados = alfabetosPainel[idioma];
+        const btnTrocar = document.getElementById('btnTrocarDicionarioAlfabeto');
+
+        if (btnTrocar) {
+          btnTrocar.textContent = idioma === 'hebraico'
+            ? 'Mudar para Grego'
+            : 'Mudar para Hebraico';
+        }
+
+        document.getElementById('tituloAlfabeto').textContent = dados.titulo;
+        document.getElementById('descricaoAlfabeto').textContent = dados.descricao;
+        document.getElementById('tituloSinais').textContent = dados.tituloSinais;
+
+        document.getElementById('listaAlfabetoPainel').innerHTML =
+          dados.letras.map(item => `
+            <div class="col-6 col-sm-4">
+              <div class="alfabeto-painel-card">
+                <div class="alfabeto-painel-simbolo">${item[0]}</div>
+                <strong>${item[1]}</strong>
+                <div class="alfabeto-painel-som">${item[2]}</div>
+              </div>
+            </div>
+          `).join('');
+
+        document.getElementById('listaSinaisPainel').innerHTML =
+          dados.sinais.map(item => `
+            <div class="col-6 col-sm-4">
+              <div class="alfabeto-painel-card">
+                <div class="sinal-com-base"><span>${item[0]}</span></div>
+                <div class="fw-semibold text-center">
+                  ${item[1]}
+                </div>
+                <div class="alfabeto-painel-som">${item[2]}</div>
+              </div>
+            </div>
+          `).join('');
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const painel = document.getElementById('painelAlfabeto');
+        const idioma = document.getElementById('idioma');
+        const btnTrocar = document.getElementById('btnTrocarDicionarioAlfabeto');
+
+        painel?.addEventListener('show.bs.offcanvas', renderizarPainelAlfabeto);
+        idioma?.addEventListener('change', renderizarPainelAlfabeto);
+
+        btnTrocar?.addEventListener('click', () => {
+          if (!idioma) return;
+
+          idioma.value = idioma.value === 'hebraico' ? 'grego' : 'hebraico';
+          idioma.dispatchEvent(new Event('change', { bubbles: true }));
+          renderizarPainelAlfabeto();
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>

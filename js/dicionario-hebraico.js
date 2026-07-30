@@ -27,4 +27,57 @@ async function carregarIdioma(idioma){E.idioma=idiomas[idioma]?idioma:'hebraico'
 function eventos(){$('#busca').addEventListener('input',()=>{E.pagina=1;filtrar()});$('#limparBusca').onclick=()=>{$('#busca').value='';filtrar();$('#busca').focus()};$('#categoria').onchange=()=>{E.pagina=1;filtrar()};$('#idioma').onchange=()=>carregarIdioma($('#idioma').value).catch(mostrarErro);$('#btnFavoritos').onclick=()=>{E.soFav=!E.soFav;E.pagina=1;atualizarFavs();filtrar()};$('#verTodas').onclick=limpar;$('#alfabeto').onclick=e=>{const b=e.target.closest('[data-letra]');if(!b)return;E.letra=b.dataset.letra;E.pagina=1;document.querySelectorAll('[data-letra]').forEach(x=>x.classList.toggle('active',x===b));filtrar()};$('#lista').onclick=e=>{const f=e.target.closest('[data-favorito]');if(f){e.stopPropagation();alternar(f.dataset.favorito);return}const c=e.target.closest('[data-id]');if(c)abrir(c.dataset.id)};$('#conteudoPalavra').onclick=e=>{const f=e.target.closest('[data-favorito]');if(f)alternar(f.dataset.favorito)};$('#paginacao').onclick=e=>{const b=e.target.closest('[data-pagina]');if(!b||b.closest('.disabled'))return;E.pagina=Number(b.dataset.pagina);render();scrollTo({top:0,behavior:'smooth'})};$('#painelPalavra').addEventListener('hidden.bs.offcanvas',()=>{const u=new URL(location.href);u.searchParams.delete('id');history.replaceState(null,'',u)})}
 function mostrarErro(e){console.error(e);$('#mensagem').className='alert alert-danger';$('#mensagem').textContent='Não foi possível carregar o JSON. Abra o projeto por um servidor local, por exemplo: php -S localhost:8000.'}
 async function iniciar(){try{E.painel=new bootstrap.Offcanvas('#painelPalavra');eventos();const p=new URLSearchParams(location.search);const idioma=p.get('idioma')||localStorage.getItem(C.idioma)||'hebraico';$('#idioma').value=idioma;E.soFav=p.get('fav')==='1';atualizarFavs();await carregarIdioma(idioma);$('#busca').value=p.get('q')||'';$('#categoria').value=p.get('cat')||'';E.letra=p.get('letra')||'';document.querySelectorAll('[data-letra]').forEach(b=>b.classList.toggle('active',b.dataset.letra===E.letra));filtrar();if(p.get('id'))abrir(p.get('id').toUpperCase(),false)}catch(e){mostrarErro(e)}}
-document.addEventListener('DOMContentLoaded',iniciar)})();
+document.addEventListener('DOMContentLoaded',iniciar)})();const ALFABETOS = {
+    hebraico: [
+      { letra: 'א', nome: 'Álef' },
+      { letra: 'ב', nome: 'Bet' },
+      { letra: 'ג', nome: 'Guímel' },
+      { letra: 'ד', nome: 'Dálet' },
+      { letra: 'ה', nome: 'He' },
+      { letra: 'ו', nome: 'Vav' },
+      { letra: 'ז', nome: 'Záin' },
+      { letra: 'ח', nome: 'Chet' },
+      { letra: 'ט', nome: 'Tet' },
+      { letra: 'י', nome: 'Yod' },
+      { letra: 'כ', nome: 'Kaf' },
+      { letra: 'ל', nome: 'Lâmed' },
+      { letra: 'מ', nome: 'Mem' },
+      { letra: 'נ', nome: 'Nun' },
+      { letra: 'ס', nome: 'Sâmech' },
+      { letra: 'ע', nome: 'Áyin' },
+      { letra: 'פ', nome: 'Pe' },
+      { letra: 'צ', nome: 'Tsádi' },
+      { letra: 'ק', nome: 'Qof' },
+      { letra: 'ר', nome: 'Resh' },
+      { letra: 'ש', nome: 'Shin' },
+      { letra: 'ת', nome: 'Tav' }
+    ],
+    grego: [
+      { letra: 'Α', nome: 'Alfa' },
+      { letra: 'Β', nome: 'Beta' },
+      { letra: 'Γ', nome: 'Gama' },
+      { letra: 'Δ', nome: 'Delta' },
+      { letra: 'Ε', nome: 'Épsilon' },
+      { letra: 'Ζ', nome: 'Zeta' },
+      { letra: 'Η', nome: 'Eta' },
+      { letra: 'Θ', nome: 'Teta' },
+      { letra: 'Ι', nome: 'Iota' },
+      { letra: 'Κ', nome: 'Kapa' },
+      { letra: 'Λ', nome: 'Lambda' },
+      { letra: 'Μ', nome: 'Mi' },
+      { letra: 'Ν', nome: 'Ni' },
+      { letra: 'Ξ', nome: 'Xi' },
+      { letra: 'Ο', nome: 'Ômicron' },
+      { letra: 'Π', nome: 'Pi' },
+      { letra: 'Ρ', nome: 'Rô' },
+      { letra: 'Σ', nome: 'Sigma' },
+      { letra: 'Τ', nome: 'Tau' },
+      { letra: 'Υ', nome: 'Ípsilon' },
+      { letra: 'Φ', nome: 'Fi' },
+      { letra: 'Χ', nome: 'Chi' },
+      { letra: 'Ψ', nome: 'Psi' },
+      { letra: 'Ω', nome: 'Ômega' }
+    ]
+  };
+
+  
