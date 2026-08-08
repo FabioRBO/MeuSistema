@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {"id":"salvacao","titulo":"Redenção e Salvação","tipo":"tema","descricao":"Textos relacionados à redenção, graça, fé e salvação."},
+    {"id":"misericordia","titulo":"Misericórdia","tipo":"tema","descricao":"Passagens relacionadas à misericórdia de Deus e à misericórdia entre pessoas."},
+    {"id":"temor","titulo":"Temor do Senhor","tipo":"tema","descricao":"Textos sobre reverência, sabedoria e temor do Senhor."},
+    {"id":"esperanca","titulo":"Esperança","tipo":"tema","descricao":"Passagens sobre esperança, perseverança e confiança em Deus."},
+    {"id":"graca","titulo":"Graça","tipo":"subtema","descricao":"A graça de Deus relacionada à salvação e à vida cristã."},
+    {"id":"sabedoria","titulo":"Sabedoria","tipo":"subtema","descricao":"Sabedoria bíblica e sua relação com o temor do Senhor."},
+    {"id":"jo3-16","titulo":"João 3:16-17","tipo":"passagem","referencia":"João 3:16-17"},
+    {"id":"rm3-21","titulo":"Romanos 3:21-22","tipo":"passagem","referencia":"Romanos 3:21-22"},
+    {"id":"ef2-8","titulo":"Efésios 2:8-9","tipo":"passagem","referencia":"Efésios 2:8-9"},
+    {"id":"lc6-36","titulo":"Lucas 6:36","tipo":"passagem","referencia":"Lucas 6:36"},
+    {"id":"mt5-7","titulo":"Mateus 5:7","tipo":"passagem","referencia":"Mateus 5:7"},
+    {"id":"pv1-7","titulo":"Provérbios 1:7","tipo":"passagem","referencia":"Provérbios 1:7"},
+    {"id":"pv9-10","titulo":"Provérbios 9:10","tipo":"passagem","referencia":"Provérbios 9:10"},
+    {"id":"sl111-10","titulo":"Salmos 111:10","tipo":"passagem","referencia":"Salmos 111:10"},
+    {"id":"hb6-19","titulo":"Hebreus 6:19","tipo":"passagem","referencia":"Hebreus 6:19"},
+    {"id":"rm5-5","titulo":"Romanos 5:5","tipo":"passagem","referencia":"Romanos 5:5"},
+    {"id":"cl1-27","titulo":"Colossenses 1:27","tipo":"passagem","referencia":"Colossenses 1:27"}
+  ],
+  "links": [
+    {"source":"salvacao","target":"jo3-16"},{"source":"salvacao","target":"rm3-21"},{"source":"salvacao","target":"ef2-8"},{"source":"salvacao","target":"graca"},
+    {"source":"graca","target":"ef2-8"},{"source":"graca","target":"rm3-21"},
+    {"source":"misericordia","target":"lc6-36"},{"source":"misericordia","target":"mt5-7"},{"source":"misericordia","target":"salvacao"},
+    {"source":"temor","target":"pv1-7"},{"source":"temor","target":"pv9-10"},{"source":"temor","target":"sl111-10"},{"source":"temor","target":"sabedoria"},
+    {"source":"sabedoria","target":"pv1-7"},{"source":"sabedoria","target":"pv9-10"},
+    {"source":"esperanca","target":"hb6-19"},{"source":"esperanca","target":"rm5-5"},{"source":"esperanca","target":"cl1-27"},{"source":"esperanca","target":"salvacao"}
+  ]
+}
