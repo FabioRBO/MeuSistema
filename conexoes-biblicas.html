@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Conexões Bíblicas | Teologia Ninja</title>
+  <script>
+    (() => {
+      const tema = localStorage.getItem('teologiaNinja_tema') || 'dark';
+      const cor = localStorage.getItem('teologiaNinja_corDestaque') || 'purple';
+      document.documentElement.setAttribute('data-bs-theme', tema);
+      document.documentElement.setAttribute('data-accent', cor);
+    })();
+  </script>
+  <link rel="manifest" href="manifest.json">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    .grafo-wrap{position:relative;height:calc(100vh - 150px);min-height:560px;border:1px solid var(--bs-border-color);border-radius:16px;overflow:hidden;background:var(--bs-body-bg)}
+    #grafoBiblico{width:100%;height:100%;display:block}
+    .grafo-toolbar{position:absolute;z-index:3;top:14px;left:14px;right:14px;display:flex;gap:8px;flex-wrap:wrap;pointer-events:none}
+    .grafo-toolbar>*{pointer-events:auto}
+    .grafo-legenda{position:absolute;z-index:3;bottom:14px;left:14px;padding:8px 12px;border:1px solid var(--bs-border-color);border-radius:10px;background:color-mix(in srgb,var(--bs-body-bg) 88%,transparent);font-size:.8rem}
+    .grafo-legenda span{margin-right:12px;white-space:nowrap}.grafo-legenda i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+    .grafo-info{position:absolute;z-index:4;top:0;right:0;width:min(390px,92vw);height:100%;padding:22px;background:var(--bs-body-bg);border-left:1px solid var(--bs-border-color);transform:translateX(102%);transition:.25s;overflow:auto}.grafo-info.aberto{transform:none}
+    .node-label{font-size:12px;fill:var(--bs-body-color);pointer-events:none}.node{cursor:pointer;stroke:var(--bs-body-bg);stroke-width:2}.link{stroke:var(--bs-secondary-color);stroke-opacity:.25}
+  </style>
+</head>
+<body class="app-shell">
+<div id="layoutSistema"></div>
+<main class="app-main">
+  <section class="module-container">
+    <div class="welcome-card welcome-card-compact mb-3">
+      <div><span class="eyebrow">TEOLOGIA NINJA</span><h2>Conexões Bíblicas</h2><p>Explore temas, textos e assuntos que se conectam por toda a Escritura.</p></div>
+    </div>
+    <div class="grafo-wrap">
+      <div class="grafo-toolbar">
+        <input id="buscaGrafo" class="form-control" style="max-width:280px" placeholder="Buscar tema ou passagem...">
+        <button id="btnCentralizar" class="btn btn-outline-accent">◎ Centralizar</button>
+      </div>
+      <svg id="grafoBiblico"></svg>
+      <div class="grafo-legenda"><span><i style="background:#84cc16"></i>Tema</span><span><i style="background:#22d3a6"></i>Passagem</span><span><i style="background:#f0c878"></i>Subtema</span></div>
+      <aside id="grafoInfo" class="grafo-info"><button id="fecharInfo" class="btn-close float-end"></button><div id="grafoInfoConteudo"></div></aside>
+    </div>
+  </section>
+</main>
+<script>window.TEOLOGIA_NINJA_PAGINA={pagina:'conexoes-biblicas.html',ativo:'conexoes',titulo:'Conexões Bíblicas',subtitulo:'Temas e passagens conectados',secao:'ESTUDO BÍBLICO'};</script>
+<script src="js/layout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="js/conexoes-biblicas.js"></script>
+<script src="js/tema.js"></script>
+<script src="js/pwa.js"></script>
+</body>
+</html>
